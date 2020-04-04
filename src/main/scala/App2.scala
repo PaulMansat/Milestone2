@@ -23,8 +23,8 @@ object App2 {
     // original codes
     //val t2 = t1.collect.groupBy(_._1).map(kv => kv._1 -> kv._2.map(_._2).sum)
     // optimized codes
-    // replace groupBy and sum by reduceByKey, map tp toMap
-    val t2 = t1.reduceByKey(_+_).collect.toMap
+    // replace groupBy and map-sum by reduceByKey
+    val t2 = t1.reduceByKey(_+_).collect.map(kv => kv._1 -> kv._2)
     t2.foreach(println)
   }
 }
