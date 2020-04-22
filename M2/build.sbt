@@ -8,6 +8,6 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.5"
 
 artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
 
- "Milestone3_Group" + "04" + "." + artifact.extension
-
+  "Milestone2_Group" + "04" + "." + artifact.extension
+  
 }

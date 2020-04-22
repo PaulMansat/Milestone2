@@ -125,7 +125,7 @@ object Milestone1 {
       // GroupBy application ID to create a map that can be used when creating applications data
       .groupBy(_.applicationId)
 
-    // Now that we have have the formated logs and attemps, we need to use that to create each app information
+    // Now that we have the formated logs and attemps, we need to use that to create each app information
     val apps = sc.parallelize(
       // Get each of the individual app without the attempts data (SimpleApplication), parallelize the result for better processing later on
       logsFormatted.groupBy(_.applicationId).aggregate[List[SimpleApplication]](Nil)(seqOpApps, listJoiner)
