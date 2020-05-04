@@ -93,8 +93,15 @@ object Milestone1 {
     val sourceCodeLinePattern = "" // TODO
     /////////////////////////
 
+    /////////////////////////
+    val fullLogFile = args(0)
+    val aggregatedLogFile = args(1)
+    val startId = Integer.valueOf(args(2))
+    val endId = Integer.valueOf(args(3))
+    /////////////////////////
+
     // Format and extract useful LineData out of the entire log file
-    val logsFormatted = sc.textFile(args.head)
+    val logsFormatted = sc.textFile(fullLogFile)
       // Filter for lines with date information
       .filter(_.matches("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3} INFO  .*$"))
       // Filter or lines with application information
@@ -144,6 +151,12 @@ object Milestone1 {
         case LineData(_, _, "", _, false, "", null, 0, "", Integer.MAX_VALUE, 0) => false
         case _ => true
       }
+      // Only retain the applications with ids between the provided interval endpoints
+      .filter(line => {
+        val appId = Integer.valueOf(line.applicationId)
+
+        appId >= startId && appId <= endId
+      })
       // Persist the result as it will be used multiple times
       .persist()
 
