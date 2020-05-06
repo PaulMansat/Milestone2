@@ -75,6 +75,11 @@ object Milestone1 {
     val conf = new SparkConf().setAppName("app").setMaster("local[*]")
     val sc = SparkContext.getOrCreate(conf)
 
+    // Delimiter for the aggregated application logs
+    val delimiter = "***********************************************************************\n"
+
+    sc.hadoopConfiguration.set("textinputformat.record.delimiter", delimiter)
+
     // Patterns declaration for parsing the data we're interested by or filtering it
     val datePattern = "(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3})".r
     val userPattern = ".*user: ([a-z]*).*".r
@@ -84,6 +89,7 @@ object Milestone1 {
     val appNumberPattern = ".*(application_1580812675067_|appattempt_1580812675067_|container_e02_1580812675067_)(\\d*).*".r
     val attemptNbPattern = ".*(appattempt_1580812675067_\\d*_|container_e02_1580812675067_\\d*_)(\\d*).*".r
     val containerPattern = ".*container_e02_1580812675067_\\d*_\\d*_(\\d*).*(iccluster\\d*\\.iccluster\\.epfl\\.ch).*".r
+    val appLogContainerPattern = "Container: container_e02_1580812675067_(\\d*)_\\d*_\\d* on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
 
 
     ////////////M3/////////////
@@ -101,7 +107,9 @@ object Milestone1 {
     /////////////////////////
 
     // Format and extract useful LineData out of the entire log file
-    val logsFormatted = sc.textFile(fullLogFile)
+    // /!\ Necessary work-around, as delimiter can't be set on a per-file basis, so manual split
+    // of the full log file needed
+    val logsFormatted = sc.textFile(fullLogFile).map(_.split("\n")).flatMap(x => x)
       // Filter for lines with date information
       .filter(_.matches("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3} INFO  .*$"))
       // Filter or lines with application information
@@ -159,6 +167,19 @@ object Milestone1 {
       })
       // Persist the result as it will be used multiple times
       .persist()
+
+    // RDD of the form (appId -> Array of logs of each containers)
+    // Note: key is only None for the end of file (that just contains blank space)
+    val appIdsContainersLogs = sc.textFile(aggregatedLogFile).map(x => {
+      val matchPattern = appLogContainerPattern.findFirstMatchIn(x)
+
+      (matchPattern, x)
+    }).filter(_._1.isDefined)
+      .map(x => (x._1.get.group(1).toInt, x._2))
+      // Only retain the applications with ids between the provided interval endpoints
+      .filter(x => x._1 >= startId && x._1 <= endId)
+      // AppId -> Array(log of containers..)
+      .groupByKey()
 
 
     // Get a map of applicationId => all Attempts made on that ID, sorted by attempt number
