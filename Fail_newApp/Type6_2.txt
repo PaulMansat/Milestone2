@@ -1,0 +1,810 @@
+
+Type6: 
+
+Container: container_e02_1580812675067_4481_01_000003 on iccluster057.iccluster.epfl.ch_45454_1586078473513
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Sun Apr 05 11:21:13 +0200 2020
+LogLength:15461
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdf/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/05 11:14:54 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 24554@iccluster057
+20/04/05 11:14:54 INFO SignalUtils: Registered signal handler for TERM
+20/04/05 11:14:54 INFO SignalUtils: Registered signal handler for HUP
+20/04/05 11:14:54 INFO SignalUtils: Registered signal handler for INT
+20/04/05 11:14:54 INFO SecurityManager: Changing view acls to: yarn,ellouz
+20/04/05 11:14:54 INFO SecurityManager: Changing modify acls to: yarn,ellouz
+20/04/05 11:14:54 INFO SecurityManager: Changing view acls groups to: 
+20/04/05 11:14:54 INFO SecurityManager: Changing modify acls groups to: 
+20/04/05 11:14:54 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, ellouz); groups with view permissions: Set(); users  with modify permissions: Set(yarn, ellouz); groups with modify permissions: Set()
+20/04/05 11:14:55 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:32791 after 69 ms (0 ms spent in bootstraps)
+20/04/05 11:14:55 INFO SecurityManager: Changing view acls to: yarn,ellouz
+20/04/05 11:14:55 INFO SecurityManager: Changing modify acls to: yarn,ellouz
+20/04/05 11:14:55 INFO SecurityManager: Changing view acls groups to: 
+20/04/05 11:14:55 INFO SecurityManager: Changing modify acls groups to: 
+20/04/05 11:14:55 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, ellouz); groups with view permissions: Set(); users  with modify permissions: Set(yarn, ellouz); groups with modify permissions: Set()
+20/04/05 11:14:55 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:32791 after 1 ms (0 ms spent in bootstraps)
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-b065a08c-6bec-4b0e-8e0d-4d6500d86dc6
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-16c37df7-4955-4a0a-a1c9-7d04abfb893f
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-dadf85f4-b01c-4bc2-83d5-8183d88409f4
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-a65d19bf-7db9-4788-92c3-aa8cb7c75f60
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-74da8465-0721-4ca8-bfc2-32d2c2523dc3
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-badc6a03-74eb-4b23-aace-0d0e108d80c0
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-b86bca3a-b29b-4b8c-b36b-49473e78773b
+20/04/05 11:14:55 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/05 11:14:55 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster063.iccluster.epfl.ch:32791
+20/04/05 11:14:55 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/05 11:14:55 INFO Executor: Starting executor ID 2 on host iccluster057.iccluster.epfl.ch
+20/04/05 11:14:55 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39968.
+20/04/05 11:14:55 INFO NettyBlockTransferService: Server created on iccluster057.iccluster.epfl.ch:39968
+20/04/05 11:14:55 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/05 11:14:55 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39968, None)
+20/04/05 11:14:55 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39968, None)
+20/04/05 11:14:55 INFO BlockManager: Initialized BlockManager: BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39968, None)
+20/04/05 11:14:56 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/04/05 11:14:56 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/04/05 11:14:56 INFO TorrentBroadcast: Started reading broadcast variable 2
+20/04/05 11:14:56 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:41643 after 1 ms (0 ms spent in bootstraps)
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.3 KB, free 408.9 MB)
+20/04/05 11:14:56 INFO TorrentBroadcast: Reading broadcast variable 2 took 110 ms
+20/04/05 11:14:57 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.0 KB, free 408.9 MB)
+20/04/05 11:14:57 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data4.csv:0+25
+20/04/05 11:14:57 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/05 11:14:57 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.9 MB)
+20/04/05 11:14:57 INFO TorrentBroadcast: Reading broadcast variable 1 took 11 ms
+20/04/05 11:14:57 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 673.8 KB, free 408.2 MB)
+20/04/05 11:14:58 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1047 bytes result sent to driver
+20/04/05 11:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+20/04/05 11:14:58 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+20/04/05 11:14:58 INFO TorrentBroadcast: Started reading broadcast variable 3
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.4 KB, free 408.2 MB)
+20/04/05 11:14:58 INFO TorrentBroadcast: Reading broadcast variable 3 took 9 ms
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 4.0 KB, free 408.2 MB)
+20/04/05 11:14:58 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:0+134217728
+20/04/05 11:14:58 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.1 MB)
+20/04/05 11:14:58 INFO TorrentBroadcast: Reading broadcast variable 0 took 11 ms
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 673.8 KB, free 407.5 MB)
+20/04/05 11:15:07 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 1047 bytes result sent to driver
+20/04/05 11:15:07 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+20/04/05 11:15:07 INFO Executor: Running task 1.0 in stage 1.0 (TID 4)
+20/04/05 11:15:07 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:134217728+134217728
+20/04/05 11:15:16 INFO Executor: Finished task 1.0 in stage 1.0 (TID 4). 1047 bytes result sent to driver
+20/04/05 11:15:16 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+20/04/05 11:15:16 INFO Executor: Running task 5.0 in stage 1.0 (TID 6)
+20/04/05 11:15:16 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:671088640+134217728
+20/04/05 11:15:24 INFO Executor: Finished task 5.0 in stage 1.0 (TID 6). 1047 bytes result sent to driver
+20/04/05 11:15:24 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+20/04/05 11:15:24 INFO Executor: Running task 8.0 in stage 1.0 (TID 8)
+20/04/05 11:15:24 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1073741824+134217728
+20/04/05 11:15:32 INFO Executor: Finished task 8.0 in stage 1.0 (TID 8). 1047 bytes result sent to driver
+20/04/05 11:15:32 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+20/04/05 11:15:32 INFO Executor: Running task 9.0 in stage 1.0 (TID 10)
+20/04/05 11:15:32 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1207959552+134217728
+20/04/05 11:15:40 INFO Executor: Finished task 9.0 in stage 1.0 (TID 10). 1047 bytes result sent to driver
+20/04/05 11:15:40 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+20/04/05 11:15:40 INFO Executor: Running task 10.0 in stage 1.0 (TID 12)
+20/04/05 11:15:40 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1342177280+59822480
+20/04/05 11:15:44 INFO Executor: Finished task 10.0 in stage 1.0 (TID 12). 1047 bytes result sent to driver
+20/04/05 11:15:50 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+20/04/05 11:15:50 INFO Executor: Running task 1.0 in stage 2.0 (TID 14)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Updating epoch to 2 and clearing cache
+20/04/05 11:15:50 INFO TorrentBroadcast: Started reading broadcast variable 4
+20/04/05 11:15:50 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.2 KB, free 407.5 MB)
+20/04/05 11:15:50 INFO TorrentBroadcast: Reading broadcast variable 4 took 8 ms
+20/04/05 11:15:50 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 4.4 KB, free 407.5 MB)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@iccluster063.iccluster.epfl.ch:32791)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Got the output locations
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 11 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@iccluster063.iccluster.epfl.ch:32791)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Got the output locations
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:50 INFO Executor: Finished task 1.0 in stage 2.0 (TID 14). 1219 bytes result sent to driver
+20/04/05 11:15:50 INFO CoarseGrainedExecutorBackend: Got assigned task 15
+20/04/05 11:15:50 INFO Executor: Running task 2.0 in stage 2.0 (TID 15)
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 11 non-empty blocks out of 11 blocks
+20/04/05 11:15:50 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:34663 after 1 ms (0 ms spent in bootstraps)
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 9 ms
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:57 INFO Executor: Finished task 2.0 in stage 2.0 (TID 15). 1391 bytes result sent to driver
+20/04/05 11:15:57 INFO CoarseGrainedExecutorBackend: Got assigned task 19
+20/04/05 11:15:57 INFO Executor: Running task 6.0 in stage 2.0 (TID 19)
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 11 blocks
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:57 INFO Executor: Finished task 6.0 in stage 2.0 (TID 19). 1219 bytes result sent to driver
+20/04/05 11:15:57 INFO CoarseGrainedExecutorBackend: Got assigned task 20
+20/04/05 11:15:57 INFO Executor: Running task 7.0 in stage 2.0 (TID 20)
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 11 blocks
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:57 INFO Executor: Finished task 7.0 in stage 2.0 (TID 20). 1219 bytes result sent to driver
+20/04/05 11:15:57 INFO CoarseGrainedExecutorBackend: Got assigned task 21
+20/04/05 11:15:57 INFO Executor: Running task 8.0 in stage 2.0 (TID 21)
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Getting 11 non-empty blocks out of 11 blocks
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+20/04/05 11:15:57 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/04/05 11:16:07 INFO Executor: Finished task 8.0 in stage 2.0 (TID 21). 1391 bytes result sent to driver
+20/04/05 11:16:07 INFO CoarseGrainedExecutorBackend: Got assigned task 22
+20/04/05 11:16:07 INFO Executor: Running task 9.0 in stage 2.0 (TID 22)
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 11 blocks
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:16:07 INFO Executor: Finished task 9.0 in stage 2.0 (TID 22). 1219 bytes result sent to driver
+20/04/05 11:16:07 INFO CoarseGrainedExecutorBackend: Got assigned task 23
+20/04/05 11:16:07 INFO Executor: Running task 10.0 in stage 2.0 (TID 23)
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 11 blocks
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+20/04/05 11:16:07 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:16:07 INFO Executor: Finished task 10.0 in stage 2.0 (TID 23). 1176 bytes result sent to driver
+20/04/05 11:21:11 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/04/05 11:21:11 INFO CoarseGrainedExecutorBackend: Driver from iccluster063.iccluster.epfl.ch:32791 disconnected during shutdown
+20/04/05 11:21:11 INFO CoarseGrainedExecutorBackend: Driver from iccluster063.iccluster.epfl.ch:32791 disconnected during shutdown
+20/04/05 11:21:12 INFO MemoryStore: MemoryStore cleared
+20/04/05 11:21:12 INFO BlockManager: BlockManager stopped
+20/04/05 11:21:12 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_4481_01_000002 on iccluster063.iccluster.epfl.ch_45454_1586078473560
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Sun Apr 05 11:21:13 +0200 2020
+LogLength:19082
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdd/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/05 11:14:54 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 23380@iccluster063
+20/04/05 11:14:54 INFO SignalUtils: Registered signal handler for TERM
+20/04/05 11:14:54 INFO SignalUtils: Registered signal handler for HUP
+20/04/05 11:14:54 INFO SignalUtils: Registered signal handler for INT
+20/04/05 11:14:54 INFO SecurityManager: Changing view acls to: yarn,ellouz
+20/04/05 11:14:54 INFO SecurityManager: Changing modify acls to: yarn,ellouz
+20/04/05 11:14:54 INFO SecurityManager: Changing view acls groups to: 
+20/04/05 11:14:54 INFO SecurityManager: Changing modify acls groups to: 
+20/04/05 11:14:54 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, ellouz); groups with view permissions: Set(); users  with modify permissions: Set(yarn, ellouz); groups with modify permissions: Set()
+20/04/05 11:14:55 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:32791 after 74 ms (0 ms spent in bootstraps)
+20/04/05 11:14:55 INFO SecurityManager: Changing view acls to: yarn,ellouz
+20/04/05 11:14:55 INFO SecurityManager: Changing modify acls to: yarn,ellouz
+20/04/05 11:14:55 INFO SecurityManager: Changing view acls groups to: 
+20/04/05 11:14:55 INFO SecurityManager: Changing modify acls groups to: 
+20/04/05 11:14:55 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, ellouz); groups with view permissions: Set(); users  with modify permissions: Set(yarn, ellouz); groups with modify permissions: Set()
+20/04/05 11:14:55 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:32791 after 1 ms (0 ms spent in bootstraps)
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-07cc6e3c-37f5-4c13-b12e-79627a22e9cb
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-5c144fd5-d799-4dfb-ade5-6745022764e2
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-bc708081-4c4d-450d-b1de-9787449fdf61
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-0ed1c16b-0775-47ac-bdeb-5b7b4beac0a6
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-f1ef3204-fba0-42af-9d62-cdb59f4629eb
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-c6b1920b-f4ef-41bd-a935-0c26c66961d6
+20/04/05 11:14:55 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-a6ea1d7f-d21a-4090-8cec-261c765bd6d9
+20/04/05 11:14:55 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/05 11:14:55 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster063.iccluster.epfl.ch:32791
+20/04/05 11:14:55 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/05 11:14:55 INFO Executor: Starting executor ID 1 on host iccluster063.iccluster.epfl.ch
+20/04/05 11:14:55 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34663.
+20/04/05 11:14:55 INFO NettyBlockTransferService: Server created on iccluster063.iccluster.epfl.ch:34663
+20/04/05 11:14:55 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/05 11:14:55 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, iccluster063.iccluster.epfl.ch, 34663, None)
+20/04/05 11:14:55 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, iccluster063.iccluster.epfl.ch, 34663, None)
+20/04/05 11:14:55 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, iccluster063.iccluster.epfl.ch, 34663, None)
+20/04/05 11:14:56 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/04/05 11:14:56 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/04/05 11:14:56 INFO TorrentBroadcast: Started reading broadcast variable 2
+20/04/05 11:14:56 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:41643 after 1 ms (0 ms spent in bootstraps)
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.3 KB, free 408.9 MB)
+20/04/05 11:14:56 INFO TorrentBroadcast: Reading broadcast variable 2 took 119 ms
+20/04/05 11:14:57 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.0 KB, free 408.9 MB)
+20/04/05 11:14:57 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data4.csv:25+26
+20/04/05 11:14:57 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/05 11:14:57 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.9 MB)
+20/04/05 11:14:57 INFO TorrentBroadcast: Reading broadcast variable 1 took 9 ms
+20/04/05 11:14:57 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 673.8 KB, free 408.2 MB)
+20/04/05 11:14:58 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1090 bytes result sent to driver
+20/04/05 11:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+20/04/05 11:14:58 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+20/04/05 11:14:58 INFO TorrentBroadcast: Started reading broadcast variable 3
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.4 KB, free 408.2 MB)
+20/04/05 11:14:58 INFO TorrentBroadcast: Reading broadcast variable 3 took 12 ms
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 4.0 KB, free 408.2 MB)
+20/04/05 11:14:58 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:268435456+134217728
+20/04/05 11:14:58 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.1 MB)
+20/04/05 11:14:58 INFO TorrentBroadcast: Reading broadcast variable 0 took 10 ms
+20/04/05 11:14:58 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 673.8 KB, free 407.5 MB)
+20/04/05 11:15:08 INFO Executor: Finished task 2.0 in stage 1.0 (TID 3). 1047 bytes result sent to driver
+20/04/05 11:15:08 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+20/04/05 11:15:08 INFO Executor: Running task 3.0 in stage 1.0 (TID 5)
+20/04/05 11:15:08 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:402653184+134217728
+20/04/05 11:15:19 INFO Executor: Finished task 3.0 in stage 1.0 (TID 5). 1047 bytes result sent to driver
+20/04/05 11:15:19 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+20/04/05 11:15:19 INFO Executor: Running task 6.0 in stage 1.0 (TID 7)
+20/04/05 11:15:19 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:805306368+134217728
+20/04/05 11:15:30 INFO Executor: Finished task 6.0 in stage 1.0 (TID 7). 1047 bytes result sent to driver
+20/04/05 11:15:30 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+20/04/05 11:15:30 INFO Executor: Running task 4.0 in stage 1.0 (TID 9)
+20/04/05 11:15:30 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:536870912+134217728
+20/04/05 11:15:39 INFO Executor: Finished task 4.0 in stage 1.0 (TID 9). 1047 bytes result sent to driver
+20/04/05 11:15:40 INFO CoarseGrainedExecutorBackend: Got assigned task 11
+20/04/05 11:15:40 INFO Executor: Running task 7.0 in stage 1.0 (TID 11)
+20/04/05 11:15:40 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:939524096+134217728
+20/04/05 11:15:50 INFO Executor: Finished task 7.0 in stage 1.0 (TID 11). 1047 bytes result sent to driver
+20/04/05 11:15:50 INFO CoarseGrainedExecutorBackend: Got assigned task 13
+20/04/05 11:15:50 INFO Executor: Running task 0.0 in stage 2.0 (TID 13)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Updating epoch to 2 and clearing cache
+20/04/05 11:15:50 INFO TorrentBroadcast: Started reading broadcast variable 4
+20/04/05 11:15:50 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.2 KB, free 407.5 MB)
+20/04/05 11:15:50 INFO TorrentBroadcast: Reading broadcast variable 4 took 7 ms
+20/04/05 11:15:50 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 4.4 KB, free 407.5 MB)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@iccluster063.iccluster.epfl.ch:32791)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Got the output locations
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 11 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 7 ms
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@iccluster063.iccluster.epfl.ch:32791)
+20/04/05 11:15:50 INFO MapOutputTrackerWorker: Got the output locations
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:50 INFO Executor: Finished task 0.0 in stage 2.0 (TID 13). 1262 bytes result sent to driver
+20/04/05 11:15:50 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+20/04/05 11:15:50 INFO Executor: Running task 3.0 in stage 2.0 (TID 16)
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 11 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:50 INFO Executor: Finished task 3.0 in stage 2.0 (TID 16). 1219 bytes result sent to driver
+20/04/05 11:15:50 INFO CoarseGrainedExecutorBackend: Got assigned task 17
+20/04/05 11:15:50 INFO Executor: Running task 4.0 in stage 2.0 (TID 17)
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 11 non-empty blocks out of 11 blocks
+20/04/05 11:15:50 INFO TransportClientFactory: Successfully created connection to iccluster057.iccluster.epfl.ch/10.90.39.8:39968 after 1 ms (0 ms spent in bootstraps)
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 10 ms
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+20/04/05 11:15:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/05 11:15:56 INFO Executor: Finished task 4.0 in stage 2.0 (TID 17). 1391 bytes result sent to driver
+20/04/05 11:15:56 INFO CoarseGrainedExecutorBackend: Got assigned task 18
+20/04/05 11:15:56 INFO Executor: Running task 5.0 in stage 2.0 (TID 18)
+20/04/05 11:15:56 INFO ShuffleBlockFetcherIterator: Getting 11 non-empty blocks out of 11 blocks
+20/04/05 11:15:56 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/04/05 11:15:56 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+20/04/05 11:15:56 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/04/05 11:16:29 INFO ExternalAppendOnlyMap: Thread 91 spilling in-memory map of 427.0 MB to disk (1 time so far)
+20/04/05 11:17:32 INFO ExternalAppendOnlyMap: Thread 91 spilling in-memory map of 427.0 MB to disk (2 times so far)
+20/04/05 11:18:46 INFO ExternalAppendOnlyMap: Thread 91 spilling in-memory map of 427.0 MB to disk (3 times so far)
+20/04/05 11:19:44 INFO ExternalAppendOnlyMap: Thread 91 spilling in-memory map of 427.0 MB to disk (4 times so far)
+20/04/05 11:21:10 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+20/04/05 11:21:10 INFO DiskBlockManager: Shutdown hook called
+20/04/05 11:21:10 ERROR Executor: Exception in task 5.0 in stage 2.0 (TID 18)
+java.lang.OutOfMemoryError: Java heap space
+	at java.io.ObjectInputStream$HandleTable.grow(ObjectInputStream.java:3494)
+	at java.io.ObjectInputStream$HandleTable.assign(ObjectInputStream.java:3300)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1799)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1714)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1347)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1714)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1347)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.DeserializationStream.readValue(Serializer.scala:158)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$DiskMapIterator.readNextItem(ExternalAppendOnlyMap.scala:513)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$DiskMapIterator.hasNext(ExternalAppendOnlyMap.scala:537)
+	at scala.collection.Iterator$$anon$1.hasNext(Iterator.scala:1004)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator.org$apache$spark$util$collection$ExternalAppendOnlyMap$ExternalIterator$$readNextHashCode(ExternalAppendOnlyMap.scala:334)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator$$anonfun$5.apply(ExternalAppendOnlyMap.scala:314)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator$$anonfun$5.apply(ExternalAppendOnlyMap.scala:312)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator.<init>(ExternalAppendOnlyMap.scala:312)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.iterator(ExternalAppendOnlyMap.scala:286)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:160)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+20/04/05 11:21:10 INFO Executor: Not reporting error to driver during JVM shutdown.
+20/04/05 11:21:10 ERROR SparkUncaughtExceptionHandler: [Container in shutdown] Uncaught exception in thread Thread[Executor task launch worker for task 18,5,main]
+java.lang.OutOfMemoryError: Java heap space
+	at java.io.ObjectInputStream$HandleTable.grow(ObjectInputStream.java:3494)
+	at java.io.ObjectInputStream$HandleTable.assign(ObjectInputStream.java:3300)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1799)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1714)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1347)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1714)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1347)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.DeserializationStream.readValue(Serializer.scala:158)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$DiskMapIterator.readNextItem(ExternalAppendOnlyMap.scala:513)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$DiskMapIterator.hasNext(ExternalAppendOnlyMap.scala:537)
+	at scala.collection.Iterator$$anon$1.hasNext(Iterator.scala:1004)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator.org$apache$spark$util$collection$ExternalAppendOnlyMap$ExternalIterator$$readNextHashCode(ExternalAppendOnlyMap.scala:334)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator$$anonfun$5.apply(ExternalAppendOnlyMap.scala:314)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator$$anonfun$5.apply(ExternalAppendOnlyMap.scala:312)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap$ExternalIterator.<init>(ExternalAppendOnlyMap.scala:312)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.iterator(ExternalAppendOnlyMap.scala:286)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:160)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+20/04/05 11:21:10 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_4481_01_000001 on iccluster063.iccluster.epfl.ch_45454_1586078473560
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Sun Apr 05 11:21:13 +0200 2020
+LogLength:47175
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdd/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/05 11:14:49 INFO SignalUtils: Registered signal handler for TERM
+20/04/05 11:14:49 INFO SignalUtils: Registered signal handler for HUP
+20/04/05 11:14:49 INFO SignalUtils: Registered signal handler for INT
+20/04/05 11:14:49 INFO SecurityManager: Changing view acls to: yarn,ellouz
+20/04/05 11:14:49 INFO SecurityManager: Changing modify acls to: yarn,ellouz
+20/04/05 11:14:49 INFO SecurityManager: Changing view acls groups to: 
+20/04/05 11:14:49 INFO SecurityManager: Changing modify acls groups to: 
+20/04/05 11:14:49 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, ellouz); groups with view permissions: Set(); users  with modify permissions: Set(yarn, ellouz); groups with modify permissions: Set()
+20/04/05 11:14:50 INFO ApplicationMaster: Preparing Local resources
+20/04/05 11:14:51 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1580812675067_4481_000001
+20/04/05 11:14:51 INFO ApplicationMaster: Starting the user application in a separate Thread
+20/04/05 11:14:51 INFO ApplicationMaster: Waiting for spark context initialization...
+20/04/05 11:14:51 INFO SparkContext: Running Spark version 2.3.1.3.0.1.0-187
+20/04/05 11:14:51 INFO SparkContext: Submitted application: M2 App7
+20/04/05 11:14:51 INFO SecurityManager: Changing view acls to: yarn,ellouz
+20/04/05 11:14:51 INFO SecurityManager: Changing modify acls to: yarn,ellouz
+20/04/05 11:14:51 INFO SecurityManager: Changing view acls groups to: 
+20/04/05 11:14:51 INFO SecurityManager: Changing modify acls groups to: 
+20/04/05 11:14:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, ellouz); groups with view permissions: Set(); users  with modify permissions: Set(yarn, ellouz); groups with modify permissions: Set()
+20/04/05 11:14:51 INFO Utils: Successfully started service 'sparkDriver' on port 32791.
+20/04/05 11:14:51 INFO SparkEnv: Registering MapOutputTracker
+20/04/05 11:14:51 INFO SparkEnv: Registering BlockManagerMaster
+20/04/05 11:14:51 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/04/05 11:14:51 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/04/05 11:14:51 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-592b3ca9-c17c-4642-aa05-9885e65784e7
+20/04/05 11:14:51 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-aa22ef6d-0549-4496-9e4c-b5fd5c438722
+20/04/05 11:14:51 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-8ea4e771-e0e2-4573-9676-99d4fa6b833b
+20/04/05 11:14:51 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-2050a0e4-37a1-46b5-8cd9-0b58c95aeb9b
+20/04/05 11:14:51 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-fca53129-afed-49ba-b414-7efb9e1d0a7a
+20/04/05 11:14:51 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-21abeb78-ea0f-499c-a0c6-f6b03dd736b5
+20/04/05 11:14:51 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/blockmgr-7a9aa1e5-2d4a-4361-9acd-5a8daac41f2d
+20/04/05 11:14:51 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/04/05 11:14:51 INFO SparkEnv: Registering OutputCommitCoordinator
+20/04/05 11:14:51 INFO log: Logging initialized @2903ms
+20/04/05 11:14:51 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /jobs, /jobs/json, /jobs/job, /jobs/job/json, /stages, /stages/json, /stages/stage, /stages/stage/json, /stages/pool, /stages/pool/json, /storage, /storage/json, /storage/rdd, /storage/rdd/json, /environment, /environment/json, /executors, /executors/json, /executors/threadDump, /executors/threadDump/json, /static, /, /api, /jobs/job/kill, /stages/stage/kill.
+20/04/05 11:14:51 INFO Server: jetty-9.3.z-SNAPSHOT, build timestamp: 2018-06-05T19:11:56+02:00, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+20/04/05 11:14:51 INFO Server: Started @2979ms
+20/04/05 11:14:51 INFO AbstractConnector: Started ServerConnector@49a36c5a{HTTP/1.1,[http/1.1]}{0.0.0.0:42264}
+20/04/05 11:14:51 INFO Utils: Successfully started service 'SparkUI' on port 42264.
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6eeae297{/jobs,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@69bf5206{/jobs/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@47009a79{/jobs/job,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4fcf7b6b{/jobs/job/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@c5ff3b9{/stages,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5e9c491b{/stages/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1bc6686c{/stages/stage,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@603fee32{/stages/stage/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@48126f51{/stages/pool,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@550b5ea3{/stages/pool/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@343c3290{/storage,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2bed145b{/storage/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@70de9e90{/storage/rdd,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7f2f286e{/storage/rdd/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2ad23da9{/environment,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@69debb64{/environment/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6d7082d1{/executors,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6b1aab49{/executors/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@509efcf6{/executors/threadDump,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4c07681a{/executors/threadDump/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@25081d41{/static,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@251d0381{/,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@65d932ed{/api,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@69ffffb5{/jobs/job/kill,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6dded67a{/stages/stage/kill,null,AVAILABLE,@Spark}
+20/04/05 11:14:51 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://iccluster063.iccluster.epfl.ch:42264
+20/04/05 11:14:52 INFO YarnClusterScheduler: Created YarnClusterScheduler
+20/04/05 11:14:52 INFO SchedulerExtensionServices: Starting Yarn extension services with app application_1580812675067_4481 and attemptId Some(appattempt_1580812675067_4481_000001)
+20/04/05 11:14:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41643.
+20/04/05 11:14:52 INFO NettyBlockTransferService: Server created on iccluster063.iccluster.epfl.ch:41643
+20/04/05 11:14:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/05 11:14:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 41643, None)
+20/04/05 11:14:52 INFO BlockManagerMasterEndpoint: Registering block manager iccluster063.iccluster.epfl.ch:41643 with 366.3 MB RAM, BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 41643, None)
+20/04/05 11:14:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 41643, None)
+20/04/05 11:14:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 41643, None)
+20/04/05 11:14:52 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+20/04/05 11:14:52 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3a82634e{/metrics/json,null,AVAILABLE,@Spark}
+20/04/05 11:14:52 INFO EventLoggingListener: Logging events to hdfs:/spark2-history/application_1580812675067_4481_1
+20/04/05 11:14:52 INFO ApplicationMaster: 
+===============================================================================
+YARN executor launch context:
+  env:
+    CLASSPATH -> {{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>$HADOOP_CONF_DIR<CPS>/usr/hdp/3.0.1.0-187/hadoop/*<CPS>/usr/hdp/3.0.1.0-187/hadoop/lib/*<CPS>/usr/hdp/current/hadoop-hdfs-client/*<CPS>/usr/hdp/current/hadoop-hdfs-client/lib/*<CPS>/usr/hdp/current/hadoop-yarn-client/*<CPS>/usr/hdp/current/hadoop-yarn-client/lib/*<CPS>$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/3.0.1.0-187/hadoop/lib/hadoop-lzo-0.6.0.3.0.1.0-187.jar:/etc/hadoop/conf/secure<CPS>{{PWD}}/__spark_conf__/__hadoop_conf__
+    SPARK_YARN_STAGING_DIR -> hdfs://iccluster040.iccluster.epfl.ch:8020/user/ellouz/.sparkStaging/application_1580812675067_4481
+    SPARK_USER -> ellouz
+
+  command:
+    LD_LIBRARY_PATH="/usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:$LD_LIBRARY_PATH" \ 
+      {{JAVA_HOME}}/bin/java \ 
+      -server \ 
+      -Xmx1024m \ 
+      '-XX:+UseNUMA' \ 
+      -Djava.io.tmpdir={{PWD}}/tmp \ 
+      '-Dspark.history.ui.port=18081' \ 
+      -Dspark.yarn.app.container.log.dir=<LOG_DIR> \ 
+      -XX:OnOutOfMemoryError='kill %p' \ 
+      org.apache.spark.executor.CoarseGrainedExecutorBackend \ 
+      --driver-url \ 
+      spark://CoarseGrainedScheduler@iccluster063.iccluster.epfl.ch:32791 \ 
+      --executor-id \ 
+      <executorId> \ 
+      --hostname \ 
+      <hostname> \ 
+      --cores \ 
+      1 \ 
+      --app-id \ 
+      application_1580812675067_4481 \ 
+      --user-class-path \ 
+      file:$PWD/__app__.jar \ 
+      1><LOG_DIR>/stdout \ 
+      2><LOG_DIR>/stderr
+
+  resources:
+    __app__.jar -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/ellouz/.sparkStaging/application_1580812675067_4481/Milestone2_Group14.jar" } size: 71190 timestamp: 1586078087540 type: FILE visibility: PRIVATE
+    __spark_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-yarn-archive.tar.gz" } size: 279537157 timestamp: 1580802651556 type: ARCHIVE visibility: PUBLIC
+    __spark_conf__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/ellouz/.sparkStaging/application_1580812675067_4481/__spark_conf__.zip" } size: 277630 timestamp: 1586078087967 type: ARCHIVE visibility: PRIVATE
+    __hive_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-hive-archive.tar.gz" } size: 43606863 timestamp: 1580802654613 type: ARCHIVE visibility: PUBLIC
+
+===============================================================================
+20/04/05 11:14:52 INFO RMProxy: Connecting to ResourceManager at iccluster040.iccluster.epfl.ch/10.90.38.16:8030
+20/04/05 11:14:52 INFO YarnRMClient: Registering the ApplicationMaster
+20/04/05 11:14:53 INFO Configuration: found resource resource-types.xml at file:/etc/hadoop/3.0.1.0-187/0/resource-types.xml
+20/04/05 11:14:53 INFO YarnAllocator: Will request 2 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+20/04/05 11:14:53 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark://YarnAM@iccluster063.iccluster.epfl.ch:32791)
+20/04/05 11:14:53 INFO YarnAllocator: Submitted 2 unlocalized container requests.
+20/04/05 11:14:53 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+20/04/05 11:14:53 INFO YarnAllocator: Launching container container_e02_1580812675067_4481_01_000002 on host iccluster063.iccluster.epfl.ch for executor with ID 1
+20/04/05 11:14:53 INFO YarnAllocator: Launching container container_e02_1580812675067_4481_01_000003 on host iccluster057.iccluster.epfl.ch for executor with ID 2
+20/04/05 11:14:53 INFO YarnAllocator: Received 2 containers from YARN, launching executors on 2 of them.
+20/04/05 11:14:55 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.14:44292) with ID 1
+20/04/05 11:14:55 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.8:51676) with ID 2
+20/04/05 11:14:55 INFO YarnClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+20/04/05 11:14:55 INFO YarnClusterScheduler: YarnClusterScheduler.postStartHook done
+20/04/05 11:14:55 INFO BlockManagerMasterEndpoint: Registering block manager iccluster063.iccluster.epfl.ch:34663 with 408.9 MB RAM, BlockManagerId(1, iccluster063.iccluster.epfl.ch, 34663, None)
+20/04/05 11:14:55 INFO BlockManagerMasterEndpoint: Registering block manager iccluster057.iccluster.epfl.ch:39968 with 408.9 MB RAM, BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39968, None)
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 427.7 KB, free 365.9 MB)
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 365.8 MB)
+20/04/05 11:14:56 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster063.iccluster.epfl.ch:41643 (size: 43.7 KB, free: 366.3 MB)
+20/04/05 11:14:56 INFO SparkContext: Created broadcast 0 from textFile at App7.scala:15
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 427.8 KB, free 365.4 MB)
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 43.7 KB, free 365.4 MB)
+20/04/05 11:14:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster063.iccluster.epfl.ch:41643 (size: 43.7 KB, free: 366.2 MB)
+20/04/05 11:14:56 INFO SparkContext: Created broadcast 1 from textFile at App7.scala:20
+20/04/05 11:14:56 INFO FileInputFormat: Total input files to process : 1
+20/04/05 11:14:56 INFO FileInputFormat: Total input files to process : 1
+20/04/05 11:14:56 INFO SparkContext: Starting job: collect at App7.scala:26
+20/04/05 11:14:56 INFO DAGScheduler: Registering RDD 5 (map at App7.scala:20)
+20/04/05 11:14:56 INFO DAGScheduler: Registering RDD 2 (map at App7.scala:16)
+20/04/05 11:14:56 INFO DAGScheduler: Registering RDD 10 (groupBy at App7.scala:25)
+20/04/05 11:14:56 INFO DAGScheduler: Got job 0 (collect at App7.scala:26) with 11 output partitions
+20/04/05 11:14:56 INFO DAGScheduler: Final stage: ResultStage 3 (collect at App7.scala:26)
+20/04/05 11:14:56 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+20/04/05 11:14:56 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+20/04/05 11:14:56 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[5] at map at App7.scala:20), which has no missing parents
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.0 KB, free 365.4 MB)
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.3 KB, free 365.4 MB)
+20/04/05 11:14:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on iccluster063.iccluster.epfl.ch:41643 (size: 2.3 KB, free: 366.2 MB)
+20/04/05 11:14:56 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1039
+20/04/05 11:14:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[5] at map at App7.scala:20) (first 15 tasks are for partitions Vector(0, 1))
+20/04/05 11:14:56 INFO YarnClusterScheduler: Adding task set 0.0 with 2 tasks
+20/04/05 11:14:56 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[2] at map at App7.scala:16), which has no missing parents
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 4.0 KB, free 365.4 MB)
+20/04/05 11:14:56 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.4 KB, free 365.4 MB)
+20/04/05 11:14:56 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on iccluster063.iccluster.epfl.ch:41643 (size: 2.4 KB, free: 366.2 MB)
+20/04/05 11:14:56 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1039
+20/04/05 11:14:56 INFO DAGScheduler: Submitting 11 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[2] at map at App7.scala:16) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+20/04/05 11:14:56 INFO YarnClusterScheduler: Adding task set 1.0 with 11 tasks
+20/04/05 11:14:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, iccluster057.iccluster.epfl.ch, executor 2, partition 0, NODE_LOCAL, 7883 bytes)
+20/04/05 11:14:56 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, iccluster063.iccluster.epfl.ch, executor 1, partition 1, NODE_LOCAL, 7883 bytes)
+20/04/05 11:14:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on iccluster057.iccluster.epfl.ch:39968 (size: 2.3 KB, free: 408.9 MB)
+20/04/05 11:14:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on iccluster063.iccluster.epfl.ch:34663 (size: 2.3 KB, free: 408.9 MB)
+20/04/05 11:14:57 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster057.iccluster.epfl.ch:39968 (size: 43.7 KB, free: 408.9 MB)
+20/04/05 11:14:57 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster063.iccluster.epfl.ch:34663 (size: 43.7 KB, free: 408.9 MB)
+20/04/05 11:14:58 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2, partition 0, NODE_LOCAL, 7889 bytes)
+20/04/05 11:14:58 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1388 ms on iccluster057.iccluster.epfl.ch (executor 2) (1/2)
+20/04/05 11:14:58 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on iccluster057.iccluster.epfl.ch:39968 (size: 2.4 KB, free: 408.9 MB)
+20/04/05 11:14:58 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster057.iccluster.epfl.ch:39968 (size: 43.7 KB, free: 408.8 MB)
+20/04/05 11:14:58 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3, iccluster063.iccluster.epfl.ch, executor 1, partition 2, NODE_LOCAL, 7889 bytes)
+20/04/05 11:14:58 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1457 ms on iccluster063.iccluster.epfl.ch (executor 1) (2/2)
+20/04/05 11:14:58 INFO DAGScheduler: ShuffleMapStage 0 (map at App7.scala:20) finished in 1.551 s
+20/04/05 11:14:58 INFO DAGScheduler: looking for newly runnable stages
+20/04/05 11:14:58 INFO DAGScheduler: running: Set(ShuffleMapStage 1)
+20/04/05 11:14:58 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ResultStage 3)
+20/04/05 11:14:58 INFO DAGScheduler: failed: Set()
+20/04/05 11:14:58 INFO YarnClusterScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/04/05 11:14:58 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on iccluster063.iccluster.epfl.ch:34663 (size: 2.4 KB, free: 408.9 MB)
+20/04/05 11:14:58 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster063.iccluster.epfl.ch:34663 (size: 43.7 KB, free: 408.8 MB)
+20/04/05 11:15:07 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 4, iccluster057.iccluster.epfl.ch, executor 2, partition 1, NODE_LOCAL, 7889 bytes)
+20/04/05 11:15:07 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 9548 ms on iccluster057.iccluster.epfl.ch (executor 2) (1/11)
+20/04/05 11:15:08 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 5, iccluster063.iccluster.epfl.ch, executor 1, partition 3, NODE_LOCAL, 7889 bytes)
+20/04/05 11:15:08 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 3) in 10762 ms on iccluster063.iccluster.epfl.ch (executor 1) (2/11)
+20/04/05 11:15:16 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 6, iccluster057.iccluster.epfl.ch, executor 2, partition 5, NODE_LOCAL, 7889 bytes)
+20/04/05 11:15:16 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 4) in 8594 ms on iccluster057.iccluster.epfl.ch (executor 2) (3/11)
+20/04/05 11:15:19 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 7, iccluster063.iccluster.epfl.ch, executor 1, partition 6, NODE_LOCAL, 7889 bytes)
+20/04/05 11:15:19 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 5) in 10433 ms on iccluster063.iccluster.epfl.ch (executor 1) (4/11)
+20/04/05 11:15:24 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 8, iccluster057.iccluster.epfl.ch, executor 2, partition 8, NODE_LOCAL, 7889 bytes)
+20/04/05 11:15:24 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 6) in 7984 ms on iccluster057.iccluster.epfl.ch (executor 2) (5/11)
+20/04/05 11:15:30 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 9, iccluster063.iccluster.epfl.ch, executor 1, partition 4, RACK_LOCAL, 7889 bytes)
+20/04/05 11:15:30 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 7) in 10869 ms on iccluster063.iccluster.epfl.ch (executor 1) (6/11)
+20/04/05 11:15:32 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 10, iccluster057.iccluster.epfl.ch, executor 2, partition 9, NODE_LOCAL, 7889 bytes)
+20/04/05 11:15:32 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 8) in 8229 ms on iccluster057.iccluster.epfl.ch (executor 2) (7/11)
+20/04/05 11:15:39 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 11, iccluster063.iccluster.epfl.ch, executor 1, partition 7, RACK_LOCAL, 7889 bytes)
+20/04/05 11:15:39 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 9) in 9751 ms on iccluster063.iccluster.epfl.ch (executor 1) (8/11)
+20/04/05 11:15:40 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 12, iccluster057.iccluster.epfl.ch, executor 2, partition 10, NODE_LOCAL, 7889 bytes)
+20/04/05 11:15:40 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 10) in 8268 ms on iccluster057.iccluster.epfl.ch (executor 2) (9/11)
+20/04/05 11:15:44 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 12) in 3780 ms on iccluster057.iccluster.epfl.ch (executor 2) (10/11)
+20/04/05 11:15:50 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 11) in 10355 ms on iccluster063.iccluster.epfl.ch (executor 1) (11/11)
+20/04/05 11:15:50 INFO YarnClusterScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/04/05 11:15:50 INFO DAGScheduler: ShuffleMapStage 1 (map at App7.scala:16) finished in 53.638 s
+20/04/05 11:15:50 INFO DAGScheduler: looking for newly runnable stages
+20/04/05 11:15:50 INFO DAGScheduler: running: Set()
+20/04/05 11:15:50 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ResultStage 3)
+20/04/05 11:15:50 INFO DAGScheduler: failed: Set()
+20/04/05 11:15:50 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[10] at groupBy at App7.scala:25), which has no missing parents
+20/04/05 11:15:50 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 4.4 KB, free 365.4 MB)
+20/04/05 11:15:50 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.2 KB, free 365.4 MB)
+20/04/05 11:15:50 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on iccluster063.iccluster.epfl.ch:41643 (size: 2.2 KB, free: 366.2 MB)
+20/04/05 11:15:50 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1039
+20/04/05 11:15:50 INFO DAGScheduler: Submitting 11 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[10] at groupBy at App7.scala:25) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+20/04/05 11:15:50 INFO YarnClusterScheduler: Adding task set 2.0 with 11 tasks
+20/04/05 11:15:50 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 13, iccluster063.iccluster.epfl.ch, executor 1, partition 0, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:50 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 14, iccluster057.iccluster.epfl.ch, executor 2, partition 1, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:50 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on iccluster063.iccluster.epfl.ch:34663 (size: 2.2 KB, free: 408.8 MB)
+20/04/05 11:15:50 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on iccluster057.iccluster.epfl.ch:39968 (size: 2.2 KB, free: 408.8 MB)
+20/04/05 11:15:50 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.90.39.8:51676
+20/04/05 11:15:50 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.90.39.14:44292
+20/04/05 11:15:50 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.90.39.8:51676
+20/04/05 11:15:50 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.90.39.14:44292
+20/04/05 11:15:50 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 15, iccluster057.iccluster.epfl.ch, executor 2, partition 2, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:50 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 14) in 96 ms on iccluster057.iccluster.epfl.ch (executor 2) (1/11)
+20/04/05 11:15:50 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 16, iccluster063.iccluster.epfl.ch, executor 1, partition 3, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:50 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 13) in 117 ms on iccluster063.iccluster.epfl.ch (executor 1) (2/11)
+20/04/05 11:15:50 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 17, iccluster063.iccluster.epfl.ch, executor 1, partition 4, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:50 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 16) in 10 ms on iccluster063.iccluster.epfl.ch (executor 1) (3/11)
+20/04/05 11:15:56 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 18, iccluster063.iccluster.epfl.ch, executor 1, partition 5, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:56 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 17) in 5921 ms on iccluster063.iccluster.epfl.ch (executor 1) (4/11)
+20/04/05 11:15:57 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 19, iccluster057.iccluster.epfl.ch, executor 2, partition 6, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:57 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 15) in 7061 ms on iccluster057.iccluster.epfl.ch (executor 2) (5/11)
+20/04/05 11:15:57 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 20, iccluster057.iccluster.epfl.ch, executor 2, partition 7, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:57 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 19) in 11 ms on iccluster057.iccluster.epfl.ch (executor 2) (6/11)
+20/04/05 11:15:57 INFO TaskSetManager: Starting task 8.0 in stage 2.0 (TID 21, iccluster057.iccluster.epfl.ch, executor 2, partition 8, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:15:57 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 20) in 11 ms on iccluster057.iccluster.epfl.ch (executor 2) (7/11)
+20/04/05 11:16:07 INFO TaskSetManager: Starting task 9.0 in stage 2.0 (TID 22, iccluster057.iccluster.epfl.ch, executor 2, partition 9, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:16:07 INFO TaskSetManager: Finished task 8.0 in stage 2.0 (TID 21) in 10194 ms on iccluster057.iccluster.epfl.ch (executor 2) (8/11)
+20/04/05 11:16:07 INFO TaskSetManager: Starting task 10.0 in stage 2.0 (TID 23, iccluster057.iccluster.epfl.ch, executor 2, partition 10, PROCESS_LOCAL, 7717 bytes)
+20/04/05 11:16:07 INFO TaskSetManager: Finished task 9.0 in stage 2.0 (TID 22) in 8 ms on iccluster057.iccluster.epfl.ch (executor 2) (9/11)
+20/04/05 11:16:07 INFO TaskSetManager: Finished task 10.0 in stage 2.0 (TID 23) in 12 ms on iccluster057.iccluster.epfl.ch (executor 2) (10/11)
+20/04/05 11:21:10 INFO YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 1.
+20/04/05 11:21:10 INFO DAGScheduler: Executor lost: 1 (epoch 2)
+20/04/05 11:21:10 INFO BlockManagerMasterEndpoint: Trying to remove executor 1 from BlockManagerMaster.
+20/04/05 11:21:10 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(1, iccluster063.iccluster.epfl.ch, 34663, None)
+20/04/05 11:21:10 INFO BlockManagerMaster: Removed 1 successfully in removeExecutor
+20/04/05 11:21:10 INFO DAGScheduler: Shuffle files lost for executor: 1 (epoch 2)
+20/04/05 11:21:11 INFO YarnAllocator: Completed container container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch (state: COMPLETE, exit status: 143)
+20/04/05 11:21:11 WARN YarnAllocator: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+20/04/05 11:21:11 WARN YarnSchedulerBackend$YarnSchedulerEndpoint: Requesting driver to remove executor 1 for reason Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+20/04/05 11:21:11 ERROR YarnClusterScheduler: Lost executor 1 on iccluster063.iccluster.epfl.ch: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+20/04/05 11:21:11 INFO DAGScheduler: Resubmitted ShuffleMapTask(2, 4), so marking it as still running
+20/04/05 11:21:11 INFO DAGScheduler: Resubmitted ShuffleMapTask(2, 0), so marking it as still running
+20/04/05 11:21:11 INFO DAGScheduler: Resubmitted ShuffleMapTask(2, 3), so marking it as still running
+20/04/05 11:21:11 WARN TaskSetManager: Lost task 5.0 in stage 2.0 (TID 18, iccluster063.iccluster.epfl.ch, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+20/04/05 11:21:11 ERROR TaskSetManager: Task 5 in stage 2.0 failed 1 times; aborting job
+20/04/05 11:21:11 INFO YarnClusterScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+20/04/05 11:21:11 INFO BlockManagerMasterEndpoint: Trying to remove executor 1 from BlockManagerMaster.
+20/04/05 11:21:11 INFO BlockManagerMaster: Removal of executor 1 requested
+20/04/05 11:21:11 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 1
+20/04/05 11:21:11 INFO YarnClusterScheduler: Cancelling stage 2
+20/04/05 11:21:11 INFO DAGScheduler: ShuffleMapStage 2 (groupBy at App7.scala:25) failed in 320.740 s due to Job aborted due to stage failure: Task 5 in stage 2.0 failed 1 times, most recent failure: Lost task 5.0 in stage 2.0 (TID 18, iccluster063.iccluster.epfl.ch, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+Driver stacktrace:
+20/04/05 11:21:11 INFO DAGScheduler: Job 0 failed: collect at App7.scala:26, took 374.508924 s
+20/04/05 11:21:11 ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Task 5 in stage 2.0 failed 1 times, most recent failure: Lost task 5.0 in stage 2.0 (TID 18, iccluster063.iccluster.epfl.ch, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+Driver stacktrace:
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 5 in stage 2.0 failed 1 times, most recent failure: Lost task 5.0 in stage 2.0 (TID 18, iccluster063.iccluster.epfl.ch, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App7$.main(App7.scala:26)
+	at App7.main(App7.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+20/04/05 11:21:11 INFO ApplicationMaster: Final app status: FAILED, exitCode: 15, (reason: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Task 5 in stage 2.0 failed 1 times, most recent failure: Lost task 5.0 in stage 2.0 (TID 18, iccluster063.iccluster.epfl.ch, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App7$.main(App7.scala:26)
+	at App7.main(App7.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+)
+20/04/05 11:21:11 INFO SparkContext: Invoking stop() from shutdown hook
+20/04/05 11:21:11 INFO AbstractConnector: Stopped Spark@49a36c5a{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+20/04/05 11:21:11 INFO SparkUI: Stopped Spark web UI at http://iccluster063.iccluster.epfl.ch:42264
+20/04/05 11:21:11 INFO ContextCleaner: Cleaned accumulator 15
+20/04/05 11:21:11 INFO YarnAllocator: Driver requested a total number of 0 executor(s).
+20/04/05 11:21:11 INFO YarnClusterSchedulerBackend: Shutting down all executors
+20/04/05 11:21:11 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+20/04/05 11:21:11 INFO SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+20/04/05 11:21:11 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/04/05 11:21:11 INFO MemoryStore: MemoryStore cleared
+20/04/05 11:21:11 INFO BlockManager: BlockManager stopped
+20/04/05 11:21:11 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/04/05 11:21:11 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/04/05 11:21:11 INFO SparkContext: Successfully stopped SparkContext
+20/04/05 11:21:11 INFO ApplicationMaster: Unregistering ApplicationMaster with FAILED (diag message: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Task 5 in stage 2.0 failed 1 times, most recent failure: Lost task 5.0 in stage 2.0 (TID 18, iccluster063.iccluster.epfl.ch, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container marked as failed: container_e02_1580812675067_4481_01_000002 on host: iccluster063.iccluster.epfl.ch. Exit status: 143. Diagnostics: [2020-04-05 11:21:10.871]Container killed on request. Exit code is 143
+[2020-04-05 11:21:10.871]Container exited with a non-zero exit code 143. 
+[2020-04-05 11:21:10.874]Killed by external signal
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App7$.main(App7.scala:26)
+	at App7.main(App7.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+)
+20/04/05 11:21:11 INFO AMRMClientImpl: Waiting for application to be successfully unregistered.
+20/04/05 11:21:11 INFO ApplicationMaster: Deleting staging directory hdfs://iccluster040.iccluster.epfl.ch:8020/user/ellouz/.sparkStaging/application_1580812675067_4481
+20/04/05 11:21:12 INFO ShutdownHookManager: Shutdown hook called
+20/04/05 11:21:12 INFO ShutdownHookManager: Deleting directory /hdata/sdf/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/spark-6cb3a572-fdcc-4f81-9428-e9c9eecc6bec
+20/04/05 11:21:12 INFO ShutdownHookManager: Deleting directory /hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/spark-c3a52885-b050-4d25-ae49-b349d2e06063
+20/04/05 11:21:12 INFO ShutdownHookManager: Deleting directory /hdata/sdg/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/spark-c15c3bab-5fa8-42bb-b5d5-5abe821c9d9b
+20/04/05 11:21:12 INFO ShutdownHookManager: Deleting directory /hdata/sdb/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/spark-d7e8da3c-8cd5-4d13-acf7-c0e2e4c92581
+20/04/05 11:21:12 INFO ShutdownHookManager: Deleting directory /hdata/sde/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/spark-07d558d0-0a29-43ef-91cc-94de2bf1a360
+20/04/05 11:21:12 INFO ShutdownHookManager: Deleting directory /hdata/sdd/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/spark-31b74af7-d44d-4b44-9b7f-2192a23c7586
+20/04/05 11:21:12 INFO ShutdownHookManager: Deleting directory /hdata/sdc/hadoop/yarn/local/usercache/ellouz/appcache/application_1580812675067_4481/spark-573c136a-3e54-4890-bf5b-86f8cd9497a7
+
+End of LogType:stderr
+***********************************************************************

@@ -1,0 +1,1362 @@
+Container: container_e02_1580812675067_5023_01_000003 on iccluster056.iccluster.epfl.ch_45454_1586267974352
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Tue Apr 07 15:59:34 +0200 2020
+LogLength:27156
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdg/hadoop/yarn/local/filecache/12/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/07 15:58:27 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 28133@iccluster056
+20/04/07 15:58:27 INFO SignalUtils: Registered signal handler for TERM
+20/04/07 15:58:27 INFO SignalUtils: Registered signal handler for HUP
+20/04/07 15:58:27 INFO SignalUtils: Registered signal handler for INT
+20/04/07 15:58:28 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:58:28 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:58:28 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:58:28 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:58:28 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:58:28 INFO TransportClientFactory: Successfully created connection to iccluster056.iccluster.epfl.ch/10.90.39.7:41536 after 124 ms (0 ms spent in bootstraps)
+20/04/07 15:58:28 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:58:28 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:58:28 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:58:28 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:58:28 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:58:28 INFO TransportClientFactory: Successfully created connection to iccluster056.iccluster.epfl.ch/10.90.39.7:41536 after 27 ms (0 ms spent in bootstraps)
+20/04/07 15:58:29 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-58b3802a-b266-41f7-941b-7a0a52cd9f27
+20/04/07 15:58:29 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-b4a9e9a0-4d0a-4205-b7b9-16d11593f27e
+20/04/07 15:58:29 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-3147a994-c6ac-43bf-a503-9cadedadb6e1
+20/04/07 15:58:29 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-04ca5a2d-00af-4e72-9d3f-2806d99e86cd
+20/04/07 15:58:29 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-1ce7ddf1-583a-4ea4-8e8d-3394ab7d8259
+20/04/07 15:58:29 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-6de8b202-2bbc-4865-985e-ae87f4f62196
+20/04/07 15:58:29 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-5d2ebded-271d-452e-b681-85c490094536
+20/04/07 15:58:29 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/07 15:58:29 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster056.iccluster.epfl.ch:41536
+20/04/07 15:58:29 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/07 15:58:29 INFO Executor: Starting executor ID 2 on host iccluster056.iccluster.epfl.ch
+20/04/07 15:58:29 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44640.
+20/04/07 15:58:29 INFO NettyBlockTransferService: Server created on iccluster056.iccluster.epfl.ch:44640
+20/04/07 15:58:29 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/07 15:58:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(2, iccluster056.iccluster.epfl.ch, 44640, None)
+20/04/07 15:58:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(2, iccluster056.iccluster.epfl.ch, 44640, None)
+20/04/07 15:58:29 INFO BlockManager: Initialized BlockManager: BlockManagerId(2, iccluster056.iccluster.epfl.ch, 44640, None)
+20/04/07 15:58:30 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/04/07 15:58:30 INFO Executor: Running task 20.0 in stage 0.0 (TID 0)
+20/04/07 15:58:31 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/07 15:58:31 INFO TransportClientFactory: Successfully created connection to iccluster056.iccluster.epfl.ch/10.90.39.7:40456 after 6 ms (0 ms spent in bootstraps)
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 408.9 MB)
+20/04/07 15:58:31 INFO TorrentBroadcast: Reading broadcast variable 1 took 95 ms
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 408.9 MB)
+20/04/07 15:58:31 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:140199960+7009998
+20/04/07 15:58:31 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.9 MB)
+20/04/07 15:58:31 INFO TorrentBroadcast: Reading broadcast variable 0 took 27 ms
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 673.8 KB, free 408.2 MB)
+20/04/07 15:58:34 INFO MemoryStore: Block taskresult_0 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:34 INFO Executor: Finished task 20.0 in stage 0.0 (TID 0). 10551732 bytes result sent via BlockManager)
+20/04/07 15:58:34 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+20/04/07 15:58:34 INFO Executor: Running task 21.0 in stage 0.0 (TID 4)
+20/04/07 15:58:34 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:147209958+7009998
+20/04/07 15:58:35 INFO MemoryStore: Block taskresult_4 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:35 INFO Executor: Finished task 21.0 in stage 0.0 (TID 4). 10551732 bytes result sent via BlockManager)
+20/04/07 15:58:35 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+20/04/07 15:58:35 INFO Executor: Running task 22.0 in stage 0.0 (TID 7)
+20/04/07 15:58:35 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:154219956+7009998
+20/04/07 15:58:37 INFO MemoryStore: Block taskresult_7 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:37 INFO Executor: Finished task 22.0 in stage 0.0 (TID 7). 10552131 bytes result sent via BlockManager)
+20/04/07 15:58:37 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+20/04/07 15:58:37 INFO Executor: Running task 23.0 in stage 0.0 (TID 9)
+20/04/07 15:58:37 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:161229954+7009998
+20/04/07 15:58:38 INFO MemoryStore: Block taskresult_9 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:38 INFO Executor: Finished task 23.0 in stage 0.0 (TID 9). 10551393 bytes result sent via BlockManager)
+20/04/07 15:58:38 INFO CoarseGrainedExecutorBackend: Got assigned task 11
+20/04/07 15:58:38 INFO Executor: Running task 24.0 in stage 0.0 (TID 11)
+20/04/07 15:58:38 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:168239952+7009998
+20/04/07 15:58:39 INFO MemoryStore: Block taskresult_11 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:39 INFO Executor: Finished task 24.0 in stage 0.0 (TID 11). 10551627 bytes result sent via BlockManager)
+20/04/07 15:58:39 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+20/04/07 15:58:39 INFO Executor: Running task 25.0 in stage 0.0 (TID 14)
+20/04/07 15:58:39 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:175249950+7009998
+20/04/07 15:58:41 INFO MemoryStore: Block taskresult_14 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:41 INFO Executor: Finished task 25.0 in stage 0.0 (TID 14). 10552173 bytes result sent via BlockManager)
+20/04/07 15:58:41 INFO CoarseGrainedExecutorBackend: Got assigned task 17
+20/04/07 15:58:41 INFO Executor: Running task 26.0 in stage 0.0 (TID 17)
+20/04/07 15:58:41 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:182259948+7009998
+20/04/07 15:58:42 INFO MemoryStore: Block taskresult_17 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:42 INFO Executor: Finished task 26.0 in stage 0.0 (TID 17). 10551648 bytes result sent via BlockManager)
+20/04/07 15:58:42 INFO CoarseGrainedExecutorBackend: Got assigned task 19
+20/04/07 15:58:42 INFO Executor: Running task 27.0 in stage 0.0 (TID 19)
+20/04/07 15:58:42 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:189269946+7009998
+20/04/07 15:58:43 INFO MemoryStore: Block taskresult_19 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:43 INFO Executor: Finished task 27.0 in stage 0.0 (TID 19). 10552829 bytes result sent via BlockManager)
+20/04/07 15:58:43 INFO CoarseGrainedExecutorBackend: Got assigned task 22
+20/04/07 15:58:43 INFO Executor: Running task 28.0 in stage 0.0 (TID 22)
+20/04/07 15:58:43 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:196279944+7009998
+20/04/07 15:58:45 INFO MemoryStore: Block taskresult_22 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:45 INFO Executor: Finished task 28.0 in stage 0.0 (TID 22). 10551752 bytes result sent via BlockManager)
+20/04/07 15:58:45 INFO CoarseGrainedExecutorBackend: Got assigned task 24
+20/04/07 15:58:45 INFO Executor: Running task 29.0 in stage 0.0 (TID 24)
+20/04/07 15:58:45 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:203289942+7009998
+20/04/07 15:58:46 INFO MemoryStore: Block taskresult_24 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:46 INFO Executor: Finished task 29.0 in stage 0.0 (TID 24). 10551522 bytes result sent via BlockManager)
+20/04/07 15:58:46 INFO CoarseGrainedExecutorBackend: Got assigned task 27
+20/04/07 15:58:46 INFO Executor: Running task 30.0 in stage 0.0 (TID 27)
+20/04/07 15:58:46 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:210299940+7009998
+20/04/07 15:58:47 INFO MemoryStore: Block taskresult_27 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:47 INFO Executor: Finished task 30.0 in stage 0.0 (TID 27). 10553419 bytes result sent via BlockManager)
+20/04/07 15:58:47 INFO CoarseGrainedExecutorBackend: Got assigned task 29
+20/04/07 15:58:47 INFO Executor: Running task 31.0 in stage 0.0 (TID 29)
+20/04/07 15:58:47 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:217309938+7009998
+20/04/07 15:58:48 INFO MemoryStore: Block taskresult_29 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:48 INFO Executor: Finished task 31.0 in stage 0.0 (TID 29). 10551246 bytes result sent via BlockManager)
+20/04/07 15:58:48 INFO CoarseGrainedExecutorBackend: Got assigned task 32
+20/04/07 15:58:48 INFO Executor: Running task 33.0 in stage 0.0 (TID 32)
+20/04/07 15:58:48 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:231329934+7009998
+20/04/07 15:58:50 INFO MemoryStore: Block taskresult_32 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:50 INFO Executor: Finished task 33.0 in stage 0.0 (TID 32). 10551309 bytes result sent via BlockManager)
+20/04/07 15:58:50 INFO CoarseGrainedExecutorBackend: Got assigned task 34
+20/04/07 15:58:50 INFO Executor: Running task 35.0 in stage 0.0 (TID 34)
+20/04/07 15:58:50 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:245349930+7009998
+20/04/07 15:58:51 INFO MemoryStore: Block taskresult_34 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:51 INFO Executor: Finished task 35.0 in stage 0.0 (TID 34). 10551225 bytes result sent via BlockManager)
+20/04/07 15:58:51 INFO CoarseGrainedExecutorBackend: Got assigned task 37
+20/04/07 15:58:51 INFO Executor: Running task 135.0 in stage 0.0 (TID 37)
+20/04/07 15:58:51 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:946349730+7009998
+20/04/07 15:58:52 INFO MemoryStore: Block taskresult_37 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:52 INFO Executor: Finished task 135.0 in stage 0.0 (TID 37). 10553419 bytes result sent via BlockManager)
+20/04/07 15:58:52 INFO CoarseGrainedExecutorBackend: Got assigned task 39
+20/04/07 15:58:52 INFO Executor: Running task 136.0 in stage 0.0 (TID 39)
+20/04/07 15:58:52 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:953359728+7009998
+20/04/07 15:58:53 INFO MemoryStore: Block taskresult_39 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:53 INFO Executor: Finished task 136.0 in stage 0.0 (TID 39). 10554285 bytes result sent via BlockManager)
+20/04/07 15:58:53 INFO CoarseGrainedExecutorBackend: Got assigned task 42
+20/04/07 15:58:53 INFO Executor: Running task 137.0 in stage 0.0 (TID 42)
+20/04/07 15:58:53 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:960369726+7009998
+20/04/07 15:58:55 INFO MemoryStore: Block taskresult_42 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:55 INFO Executor: Finished task 137.0 in stage 0.0 (TID 42). 10551160 bytes result sent via BlockManager)
+20/04/07 15:58:55 INFO CoarseGrainedExecutorBackend: Got assigned task 45
+20/04/07 15:58:55 INFO Executor: Running task 138.0 in stage 0.0 (TID 45)
+20/04/07 15:58:55 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:967379724+7009998
+20/04/07 15:58:56 INFO MemoryStore: Block taskresult_45 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:56 INFO Executor: Finished task 138.0 in stage 0.0 (TID 45). 10553463 bytes result sent via BlockManager)
+20/04/07 15:58:56 INFO CoarseGrainedExecutorBackend: Got assigned task 47
+20/04/07 15:58:56 INFO Executor: Running task 139.0 in stage 0.0 (TID 47)
+20/04/07 15:58:56 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:974389722+7009998
+20/04/07 15:58:57 INFO MemoryStore: Block taskresult_47 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:57 INFO Executor: Finished task 139.0 in stage 0.0 (TID 47). 10553695 bytes result sent via BlockManager)
+20/04/07 15:58:57 INFO CoarseGrainedExecutorBackend: Got assigned task 49
+20/04/07 15:58:57 INFO Executor: Running task 140.0 in stage 0.0 (TID 49)
+20/04/07 15:58:57 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:981399720+7009998
+20/04/07 15:58:58 INFO MemoryStore: Block taskresult_49 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:58 INFO Executor: Finished task 140.0 in stage 0.0 (TID 49). 10551075 bytes result sent via BlockManager)
+20/04/07 15:58:58 INFO CoarseGrainedExecutorBackend: Got assigned task 51
+20/04/07 15:58:58 INFO Executor: Running task 141.0 in stage 0.0 (TID 51)
+20/04/07 15:58:58 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:988409718+7009998
+20/04/07 15:58:59 INFO MemoryStore: Block taskresult_51 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:59 INFO Executor: Finished task 141.0 in stage 0.0 (TID 51). 10551479 bytes result sent via BlockManager)
+20/04/07 15:58:59 INFO CoarseGrainedExecutorBackend: Got assigned task 54
+20/04/07 15:58:59 INFO Executor: Running task 142.0 in stage 0.0 (TID 54)
+20/04/07 15:58:59 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:995419716+7009998
+20/04/07 15:59:00 INFO MemoryStore: Block taskresult_54 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:00 INFO Executor: Finished task 142.0 in stage 0.0 (TID 54). 10551879 bytes result sent via BlockManager)
+20/04/07 15:59:00 INFO CoarseGrainedExecutorBackend: Got assigned task 56
+20/04/07 15:59:00 INFO Executor: Running task 143.0 in stage 0.0 (TID 56)
+20/04/07 15:59:00 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1002429714+7009998
+20/04/07 15:59:01 INFO MemoryStore: Block taskresult_56 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:01 INFO Executor: Finished task 143.0 in stage 0.0 (TID 56). 10552216 bytes result sent via BlockManager)
+20/04/07 15:59:01 INFO CoarseGrainedExecutorBackend: Got assigned task 58
+20/04/07 15:59:01 INFO Executor: Running task 144.0 in stage 0.0 (TID 58)
+20/04/07 15:59:01 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1009439712+7009998
+20/04/07 15:59:03 INFO MemoryStore: Block taskresult_58 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:03 INFO Executor: Finished task 144.0 in stage 0.0 (TID 58). 10552406 bytes result sent via BlockManager)
+20/04/07 15:59:03 INFO CoarseGrainedExecutorBackend: Got assigned task 61
+20/04/07 15:59:03 INFO Executor: Running task 145.0 in stage 0.0 (TID 61)
+20/04/07 15:59:03 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1016449710+7009998
+20/04/07 15:59:04 INFO MemoryStore: Block taskresult_61 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:04 INFO Executor: Finished task 145.0 in stage 0.0 (TID 61). 10551921 bytes result sent via BlockManager)
+20/04/07 15:59:04 INFO CoarseGrainedExecutorBackend: Got assigned task 63
+20/04/07 15:59:04 INFO Executor: Running task 146.0 in stage 0.0 (TID 63)
+20/04/07 15:59:04 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1023459708+7009998
+20/04/07 15:59:05 INFO MemoryStore: Block taskresult_63 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:05 INFO Executor: Finished task 146.0 in stage 0.0 (TID 63). 10551267 bytes result sent via BlockManager)
+20/04/07 15:59:05 INFO CoarseGrainedExecutorBackend: Got assigned task 66
+20/04/07 15:59:05 INFO Executor: Running task 147.0 in stage 0.0 (TID 66)
+20/04/07 15:59:05 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1030469706+7009998
+20/04/07 15:59:06 INFO MemoryStore: Block taskresult_66 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:06 INFO Executor: Finished task 147.0 in stage 0.0 (TID 66). 10551732 bytes result sent via BlockManager)
+20/04/07 15:59:06 INFO CoarseGrainedExecutorBackend: Got assigned task 68
+20/04/07 15:59:06 INFO Executor: Running task 148.0 in stage 0.0 (TID 68)
+20/04/07 15:59:06 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1037479704+7009998
+20/04/07 15:59:08 INFO MemoryStore: Block taskresult_68 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:08 INFO Executor: Finished task 148.0 in stage 0.0 (TID 68). 10551669 bytes result sent via BlockManager)
+20/04/07 15:59:08 INFO CoarseGrainedExecutorBackend: Got assigned task 71
+20/04/07 15:59:08 INFO Executor: Running task 149.0 in stage 0.0 (TID 71)
+20/04/07 15:59:08 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1044489702+7009998
+20/04/07 15:59:09 INFO MemoryStore: Block taskresult_71 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:09 INFO Executor: Finished task 149.0 in stage 0.0 (TID 71). 10552258 bytes result sent via BlockManager)
+20/04/07 15:59:09 INFO CoarseGrainedExecutorBackend: Got assigned task 73
+20/04/07 15:59:09 INFO Executor: Running task 150.0 in stage 0.0 (TID 73)
+20/04/07 15:59:09 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1051499700+7009998
+20/04/07 15:59:10 INFO MemoryStore: Block taskresult_73 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:10 INFO Executor: Finished task 150.0 in stage 0.0 (TID 73). 10551183 bytes result sent via BlockManager)
+20/04/07 15:59:10 INFO CoarseGrainedExecutorBackend: Got assigned task 76
+20/04/07 15:59:10 INFO Executor: Running task 151.0 in stage 0.0 (TID 76)
+20/04/07 15:59:10 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1058509698+7009998
+20/04/07 15:59:12 INFO MemoryStore: Block taskresult_76 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:12 INFO Executor: Finished task 151.0 in stage 0.0 (TID 76). 10553419 bytes result sent via BlockManager)
+20/04/07 15:59:12 INFO CoarseGrainedExecutorBackend: Got assigned task 79
+20/04/07 15:59:12 INFO Executor: Running task 152.0 in stage 0.0 (TID 79)
+20/04/07 15:59:12 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1065519696+7009998
+20/04/07 15:59:13 INFO MemoryStore: Block taskresult_79 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:13 INFO Executor: Finished task 152.0 in stage 0.0 (TID 79). 10552829 bytes result sent via BlockManager)
+20/04/07 15:59:13 INFO CoarseGrainedExecutorBackend: Got assigned task 81
+20/04/07 15:59:13 INFO Executor: Running task 192.0 in stage 0.0 (TID 81)
+20/04/07 15:59:13 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1345919616+7009998
+20/04/07 15:59:14 INFO MemoryStore: Block taskresult_81 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:59:21 INFO Executor: Finished task 192.0 in stage 0.0 (TID 81). 10552576 bytes result sent via BlockManager)
+20/04/07 15:59:21 INFO CoarseGrainedExecutorBackend: Got assigned task 83
+20/04/07 15:59:21 INFO Executor: Running task 193.0 in stage 0.0 (TID 83)
+20/04/07 15:59:21 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1352929614+7009998
+20/04/07 15:59:22 INFO MemoryStore: Block taskresult_83 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:22 INFO Executor: Finished task 193.0 in stage 0.0 (TID 83). 10551773 bytes result sent via BlockManager)
+20/04/07 15:59:22 INFO CoarseGrainedExecutorBackend: Got assigned task 85
+20/04/07 15:59:22 INFO Executor: Running task 194.0 in stage 0.0 (TID 85)
+20/04/07 15:59:22 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1359939612+7009998
+20/04/07 15:59:23 INFO MemoryStore: Block taskresult_85 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:23 INFO Executor: Finished task 194.0 in stage 0.0 (TID 85). 10552471 bytes result sent via BlockManager)
+20/04/07 15:59:23 INFO CoarseGrainedExecutorBackend: Got assigned task 87
+20/04/07 15:59:23 INFO Executor: Running task 195.0 in stage 0.0 (TID 87)
+20/04/07 15:59:23 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1366949610+7009998
+20/04/07 15:59:25 INFO MemoryStore: Block taskresult_87 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:25 INFO Executor: Finished task 195.0 in stage 0.0 (TID 87). 10551795 bytes result sent via BlockManager)
+20/04/07 15:59:25 INFO CoarseGrainedExecutorBackend: Got assigned task 90
+20/04/07 15:59:25 INFO Executor: Running task 196.0 in stage 0.0 (TID 90)
+20/04/07 15:59:25 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1373959608+7009998
+20/04/07 15:59:26 INFO MemoryStore: Block taskresult_90 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:26 INFO Executor: Finished task 196.0 in stage 0.0 (TID 90). 10551795 bytes result sent via BlockManager)
+20/04/07 15:59:26 INFO CoarseGrainedExecutorBackend: Got assigned task 93
+20/04/07 15:59:26 INFO Executor: Running task 197.0 in stage 0.0 (TID 93)
+20/04/07 15:59:26 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1380969606+7009998
+20/04/07 15:59:27 INFO MemoryStore: Block taskresult_93 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:27 INFO Executor: Finished task 197.0 in stage 0.0 (TID 93). 10551942 bytes result sent via BlockManager)
+20/04/07 15:59:27 INFO CoarseGrainedExecutorBackend: Got assigned task 95
+20/04/07 15:59:27 INFO Executor: Running task 198.0 in stage 0.0 (TID 95)
+20/04/07 15:59:27 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1387979604+7009998
+20/04/07 15:59:28 INFO MemoryStore: Block taskresult_95 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:28 INFO Executor: Finished task 198.0 in stage 0.0 (TID 95). 10552619 bytes result sent via BlockManager)
+20/04/07 15:59:28 INFO CoarseGrainedExecutorBackend: Got assigned task 98
+20/04/07 15:59:28 INFO Executor: Running task 199.0 in stage 0.0 (TID 98)
+20/04/07 15:59:28 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1394989602+7010158
+20/04/07 15:59:30 INFO MemoryStore: Block taskresult_98 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:30 INFO Executor: Finished task 199.0 in stage 0.0 (TID 98). 10553207 bytes result sent via BlockManager)
+20/04/07 15:59:32 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/04/07 15:59:32 INFO CoarseGrainedExecutorBackend: Driver from iccluster056.iccluster.epfl.ch:41536 disconnected during shutdown
+20/04/07 15:59:32 INFO CoarseGrainedExecutorBackend: Driver from iccluster056.iccluster.epfl.ch:41536 disconnected during shutdown
+20/04/07 15:59:32 INFO MemoryStore: MemoryStore cleared
+20/04/07 15:59:32 INFO BlockManager: BlockManager stopped
+20/04/07 15:59:32 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_5023_01_000001 on iccluster056.iccluster.epfl.ch_45454_1586267974352
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Tue Apr 07 15:59:34 +0200 2020
+LogLength:91716
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdg/hadoop/yarn/local/filecache/12/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/07 15:58:20 INFO SignalUtils: Registered signal handler for TERM
+20/04/07 15:58:20 INFO SignalUtils: Registered signal handler for HUP
+20/04/07 15:58:20 INFO SignalUtils: Registered signal handler for INT
+20/04/07 15:58:20 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:58:20 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:58:20 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:58:20 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:58:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:58:21 INFO ApplicationMaster: Preparing Local resources
+20/04/07 15:58:22 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1580812675067_5023_000001
+20/04/07 15:58:22 INFO ApplicationMaster: Starting the user application in a separate Thread
+20/04/07 15:58:22 INFO ApplicationMaster: Waiting for spark context initialization...
+20/04/07 15:58:22 INFO SparkContext: Running Spark version 2.3.1.3.0.1.0-187
+20/04/07 15:58:22 INFO SparkContext: Submitted application: M2 App4
+20/04/07 15:58:22 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:58:22 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:58:22 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:58:22 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:58:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:58:23 INFO Utils: Successfully started service 'sparkDriver' on port 41536.
+20/04/07 15:58:23 INFO SparkEnv: Registering MapOutputTracker
+20/04/07 15:58:23 INFO SparkEnv: Registering BlockManagerMaster
+20/04/07 15:58:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/04/07 15:58:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/04/07 15:58:23 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-29db6a49-622b-4407-b45b-e484cd26fc63
+20/04/07 15:58:23 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-85a6e3e1-adf6-4167-b562-533d906084c0
+20/04/07 15:58:23 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-29aea030-6aa7-435f-a3dd-0aed89e0de43
+20/04/07 15:58:23 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-105d2c1c-74ea-422b-ae7f-bb6b50b25aef
+20/04/07 15:58:23 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-1baf2fa7-4779-402c-b8b5-2c85dd00abc4
+20/04/07 15:58:23 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-faa51eed-91ed-44ad-a86f-de9e1503ef5a
+20/04/07 15:58:23 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-5583a440-5b39-4311-a0dd-f7310707891c
+20/04/07 15:58:23 INFO MemoryStore: MemoryStore started with capacity 5.2 GB
+20/04/07 15:58:23 INFO SparkEnv: Registering OutputCommitCoordinator
+20/04/07 15:58:23 INFO log: Logging initialized @4268ms
+20/04/07 15:58:23 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /jobs, /jobs/json, /jobs/job, /jobs/job/json, /stages, /stages/json, /stages/stage, /stages/stage/json, /stages/pool, /stages/pool/json, /storage, /storage/json, /storage/rdd, /storage/rdd/json, /environment, /environment/json, /executors, /executors/json, /executors/threadDump, /executors/threadDump/json, /static, /, /api, /jobs/job/kill, /stages/stage/kill.
+20/04/07 15:58:23 INFO Server: jetty-9.3.z-SNAPSHOT, build timestamp: 2018-06-05T19:11:56+02:00, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+20/04/07 15:58:23 INFO Server: Started @4434ms
+20/04/07 15:58:23 INFO AbstractConnector: Started ServerConnector@5bcef982{HTTP/1.1,[http/1.1]}{0.0.0.0:44980}
+20/04/07 15:58:23 INFO Utils: Successfully started service 'SparkUI' on port 44980.
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@bbff991{/jobs,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@52e8a972{/jobs/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@37221f0a{/jobs/job,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7cbac38f{/jobs/job/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5b47495d{/stages,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@744e30cb{/stages/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6d7ce90b{/stages/stage,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@23d1e9f2{/stages/stage/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@296f7832{/stages/pool,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@699338f6{/stages/pool/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2d27189b{/storage,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@195eab4{/storage/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5369bc5c{/storage/rdd,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@234d7a4f{/storage/rdd/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@363b4d7d{/environment,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@18d5c144{/environment/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6c0155e{/executors,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4e9798cb{/executors/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@222b64c1{/executors/threadDump,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@14424e21{/executors/threadDump/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@12aec312{/static,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2578f4ac{/,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1e32f588{/api,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6a94440a{/jobs/job/kill,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@102e36a2{/stages/stage/kill,null,AVAILABLE,@Spark}
+20/04/07 15:58:23 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://iccluster056.iccluster.epfl.ch:44980
+20/04/07 15:58:23 INFO YarnClusterScheduler: Created YarnClusterScheduler
+20/04/07 15:58:23 INFO SchedulerExtensionServices: Starting Yarn extension services with app application_1580812675067_5023 and attemptId Some(appattempt_1580812675067_5023_000001)
+20/04/07 15:58:23 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40456.
+20/04/07 15:58:23 INFO NettyBlockTransferService: Server created on iccluster056.iccluster.epfl.ch:40456
+20/04/07 15:58:23 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/07 15:58:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, iccluster056.iccluster.epfl.ch, 40456, None)
+20/04/07 15:58:23 INFO BlockManagerMasterEndpoint: Registering block manager iccluster056.iccluster.epfl.ch:40456 with 5.2 GB RAM, BlockManagerId(driver, iccluster056.iccluster.epfl.ch, 40456, None)
+20/04/07 15:58:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, iccluster056.iccluster.epfl.ch, 40456, None)
+20/04/07 15:58:23 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, iccluster056.iccluster.epfl.ch, 40456, None)
+20/04/07 15:58:24 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+20/04/07 15:58:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@63647f10{/metrics/json,null,AVAILABLE,@Spark}
+20/04/07 15:58:24 INFO EventLoggingListener: Logging events to hdfs:/spark2-history/application_1580812675067_5023_1
+20/04/07 15:58:25 INFO ApplicationMaster: 
+===============================================================================
+YARN executor launch context:
+  env:
+    CLASSPATH -> {{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>$HADOOP_CONF_DIR<CPS>/usr/hdp/3.0.1.0-187/hadoop/*<CPS>/usr/hdp/3.0.1.0-187/hadoop/lib/*<CPS>/usr/hdp/current/hadoop-hdfs-client/*<CPS>/usr/hdp/current/hadoop-hdfs-client/lib/*<CPS>/usr/hdp/current/hadoop-yarn-client/*<CPS>/usr/hdp/current/hadoop-yarn-client/lib/*<CPS>$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/3.0.1.0-187/hadoop/lib/hadoop-lzo-0.6.0.3.0.1.0-187.jar:/etc/hadoop/conf/secure<CPS>{{PWD}}/__spark_conf__/__hadoop_conf__
+    SPARK_YARN_STAGING_DIR -> hdfs://iccluster040.iccluster.epfl.ch:8020/user/basil/.sparkStaging/application_1580812675067_5023
+    SPARK_USER -> basil
+
+  command:
+    LD_LIBRARY_PATH="/usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:$LD_LIBRARY_PATH" \ 
+      {{JAVA_HOME}}/bin/java \ 
+      -server \ 
+      -Xmx1024m \ 
+      '-XX:+UseNUMA' \ 
+      -Djava.io.tmpdir={{PWD}}/tmp \ 
+      '-Dspark.history.ui.port=18081' \ 
+      -Dspark.yarn.app.container.log.dir=<LOG_DIR> \ 
+      -XX:OnOutOfMemoryError='kill %p' \ 
+      org.apache.spark.executor.CoarseGrainedExecutorBackend \ 
+      --driver-url \ 
+      spark://CoarseGrainedScheduler@iccluster056.iccluster.epfl.ch:41536 \ 
+      --executor-id \ 
+      <executorId> \ 
+      --hostname \ 
+      <hostname> \ 
+      --cores \ 
+      1 \ 
+      --app-id \ 
+      application_1580812675067_5023 \ 
+      --user-class-path \ 
+      file:$PWD/__app__.jar \ 
+      1><LOG_DIR>/stdout \ 
+      2><LOG_DIR>/stderr
+
+  resources:
+    __app__.jar -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/basil/.sparkStaging/application_1580812675067_5023/Milestone2_faulty.jar" } size: 71190 timestamp: 1586267897838 type: FILE visibility: PRIVATE
+    __spark_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-yarn-archive.tar.gz" } size: 279537157 timestamp: 1580802651556 type: ARCHIVE visibility: PUBLIC
+    __spark_conf__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/basil/.sparkStaging/application_1580812675067_5023/__spark_conf__.zip" } size: 277651 timestamp: 1586267898264 type: ARCHIVE visibility: PRIVATE
+    __hive_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-hive-archive.tar.gz" } size: 43606863 timestamp: 1580802654613 type: ARCHIVE visibility: PUBLIC
+
+===============================================================================
+20/04/07 15:58:25 INFO RMProxy: Connecting to ResourceManager at iccluster040.iccluster.epfl.ch/10.90.38.16:8030
+20/04/07 15:58:25 INFO YarnRMClient: Registering the ApplicationMaster
+20/04/07 15:58:25 INFO Configuration: found resource resource-types.xml at file:/etc/hadoop/3.0.1.0-187/0/resource-types.xml
+20/04/07 15:58:25 INFO YarnAllocator: Will request 2 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+20/04/07 15:58:25 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark://YarnAM@iccluster056.iccluster.epfl.ch:41536)
+20/04/07 15:58:25 INFO YarnAllocator: Submitted 2 unlocalized container requests.
+20/04/07 15:58:25 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+20/04/07 15:58:25 INFO YarnAllocator: Launching container container_e02_1580812675067_5023_01_000002 on host iccluster057.iccluster.epfl.ch for executor with ID 1
+20/04/07 15:58:25 INFO YarnAllocator: Launching container container_e02_1580812675067_5023_01_000003 on host iccluster056.iccluster.epfl.ch for executor with ID 2
+20/04/07 15:58:25 INFO YarnAllocator: Received 2 containers from YARN, launching executors on 2 of them.
+20/04/07 15:58:28 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.8:54092) with ID 1
+20/04/07 15:58:28 INFO BlockManagerMasterEndpoint: Registering block manager iccluster057.iccluster.epfl.ch:44266 with 408.9 MB RAM, BlockManagerId(1, iccluster057.iccluster.epfl.ch, 44266, None)
+20/04/07 15:58:29 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.7:40098) with ID 2
+20/04/07 15:58:29 INFO YarnClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+20/04/07 15:58:29 INFO YarnClusterScheduler: YarnClusterScheduler.postStartHook done
+20/04/07 15:58:29 INFO BlockManagerMasterEndpoint: Registering block manager iccluster056.iccluster.epfl.ch:44640 with 408.9 MB RAM, BlockManagerId(2, iccluster056.iccluster.epfl.ch, 44640, None)
+20/04/07 15:58:30 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 427.7 KB, free 5.2 GB)
+20/04/07 15:58:30 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 5.2 GB)
+20/04/07 15:58:30 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster056.iccluster.epfl.ch:40456 (size: 43.7 KB, free: 5.2 GB)
+20/04/07 15:58:30 INFO SparkContext: Created broadcast 0 from textFile at App4.scala:17
+20/04/07 15:58:30 INFO FileInputFormat: Total input files to process : 1
+20/04/07 15:58:30 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.8:50010
+20/04/07 15:58:30 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.13:50010
+20/04/07 15:58:30 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.6:50010
+20/04/07 15:58:30 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.7:50010
+20/04/07 15:58:30 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.12:50010
+20/04/07 15:58:30 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.14:50010
+20/04/07 15:58:30 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.11:50010
+20/04/07 15:58:30 INFO SparkContext: Starting job: collect at App4.scala:24
+20/04/07 15:58:30 INFO DAGScheduler: Got job 0 (collect at App4.scala:24) with 200 output partitions
+20/04/07 15:58:30 INFO DAGScheduler: Final stage: ResultStage 0 (collect at App4.scala:24)
+20/04/07 15:58:30 INFO DAGScheduler: Parents of final stage: List()
+20/04/07 15:58:30 INFO DAGScheduler: Missing parents: List()
+20/04/07 15:58:30 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at map at App4.scala:23), which has no missing parents
+20/04/07 15:58:30 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 5.2 GB)
+20/04/07 15:58:30 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 5.2 GB)
+20/04/07 15:58:30 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster056.iccluster.epfl.ch:40456 (size: 2.0 KB, free: 5.2 GB)
+20/04/07 15:58:30 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1039
+20/04/07 15:58:30 INFO DAGScheduler: Submitting 200 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at map at App4.scala:23) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/04/07 15:58:30 INFO YarnClusterScheduler: Adding task set 0.0 with 200 tasks
+20/04/07 15:58:30 INFO TaskSetManager: Starting task 20.0 in stage 0.0 (TID 0, iccluster056.iccluster.epfl.ch, executor 2, partition 20, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:30 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 1, iccluster057.iccluster.epfl.ch, executor 1, partition 0, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:31 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 2.0 KB, free: 408.9 MB)
+20/04/07 15:58:31 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 2.0 KB, free: 408.9 MB)
+20/04/07 15:58:31 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 43.7 KB, free: 408.9 MB)
+20/04/07 15:58:31 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 43.7 KB, free: 408.9 MB)
+20/04/07 15:58:33 INFO BlockManagerInfo: Added taskresult_1 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:33 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 1, partition 1, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:33 INFO TransportClientFactory: Successfully created connection to iccluster057.iccluster.epfl.ch/10.90.39.8:44266 after 18 ms (0 ms spent in bootstraps)
+20/04/07 15:58:33 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 1) in 2937 ms on iccluster057.iccluster.epfl.ch (executor 1) (1/200)
+20/04/07 15:58:33 INFO BlockManagerInfo: Removed taskresult_1 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:34 INFO BlockManagerInfo: Added taskresult_2 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:34 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 3, iccluster057.iccluster.epfl.ch, executor 1, partition 2, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:34 INFO BlockManagerInfo: Added taskresult_0 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:34 INFO TaskSetManager: Starting task 21.0 in stage 0.0 (TID 4, iccluster056.iccluster.epfl.ch, executor 2, partition 21, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:34 INFO TransportClientFactory: Successfully created connection to iccluster056.iccluster.epfl.ch/10.90.39.7:44640 after 17 ms (0 ms spent in bootstraps)
+20/04/07 15:58:34 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 2) in 1458 ms on iccluster057.iccluster.epfl.ch (executor 1) (2/200)
+20/04/07 15:58:34 INFO BlockManagerInfo: Removed taskresult_2 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:34 INFO TaskSetManager: Finished task 20.0 in stage 0.0 (TID 0) in 3944 ms on iccluster056.iccluster.epfl.ch (executor 2) (3/200)
+20/04/07 15:58:34 INFO BlockManagerInfo: Removed taskresult_0 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:34 INFO BlockManagerInfo: Added taskresult_3 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:34 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 5, iccluster057.iccluster.epfl.ch, executor 1, partition 3, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:35 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 3) in 1126 ms on iccluster057.iccluster.epfl.ch (executor 1) (4/200)
+20/04/07 15:58:35 INFO BlockManagerInfo: Removed taskresult_3 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:35 INFO BlockManagerInfo: Added taskresult_5 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:35 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 6, iccluster057.iccluster.epfl.ch, executor 1, partition 4, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:35 INFO BlockManagerInfo: Added taskresult_4 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:35 INFO TaskSetManager: Starting task 22.0 in stage 0.0 (TID 7, iccluster056.iccluster.epfl.ch, executor 2, partition 22, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:35 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 5) in 1030 ms on iccluster057.iccluster.epfl.ch (executor 1) (5/200)
+20/04/07 15:58:35 INFO BlockManagerInfo: Removed taskresult_5 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:36 INFO TaskSetManager: Finished task 21.0 in stage 0.0 (TID 4) in 1855 ms on iccluster056.iccluster.epfl.ch (executor 2) (6/200)
+20/04/07 15:58:36 INFO BlockManagerInfo: Removed taskresult_4 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:36 INFO BlockManagerInfo: Added taskresult_6 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:36 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 8, iccluster057.iccluster.epfl.ch, executor 1, partition 5, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:37 INFO BlockManagerInfo: Added taskresult_7 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:37 INFO TaskSetManager: Starting task 23.0 in stage 0.0 (TID 9, iccluster056.iccluster.epfl.ch, executor 2, partition 23, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:37 INFO BlockManagerInfo: Removed taskresult_6 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:37 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 6) in 1558 ms on iccluster057.iccluster.epfl.ch (executor 1) (7/200)
+20/04/07 15:58:37 INFO BlockManagerInfo: Added taskresult_8 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:37 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 10, iccluster057.iccluster.epfl.ch, executor 1, partition 6, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:37 INFO TaskSetManager: Finished task 22.0 in stage 0.0 (TID 7) in 1672 ms on iccluster056.iccluster.epfl.ch (executor 2) (8/200)
+20/04/07 15:58:37 INFO BlockManagerInfo: Removed taskresult_7 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:37 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 8) in 1303 ms on iccluster057.iccluster.epfl.ch (executor 1) (9/200)
+20/04/07 15:58:37 INFO BlockManagerInfo: Removed taskresult_8 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:38 INFO BlockManagerInfo: Added taskresult_9 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:38 INFO BlockManagerInfo: Added taskresult_10 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:38 INFO TaskSetManager: Starting task 24.0 in stage 0.0 (TID 11, iccluster056.iccluster.epfl.ch, executor 2, partition 24, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:38 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 12, iccluster057.iccluster.epfl.ch, executor 1, partition 7, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:38 INFO TaskSetManager: Finished task 23.0 in stage 0.0 (TID 9) in 1487 ms on iccluster056.iccluster.epfl.ch (executor 2) (10/200)
+20/04/07 15:58:38 INFO BlockManagerInfo: Removed taskresult_9 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:38 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 10) in 1291 ms on iccluster057.iccluster.epfl.ch (executor 1) (11/200)
+20/04/07 15:58:38 INFO BlockManagerInfo: Removed taskresult_10 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:39 INFO BlockManagerInfo: Added taskresult_12 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:39 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 13, iccluster057.iccluster.epfl.ch, executor 1, partition 8, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:39 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 12) in 1154 ms on iccluster057.iccluster.epfl.ch (executor 1) (12/200)
+20/04/07 15:58:39 INFO BlockManagerInfo: Removed taskresult_12 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:39 INFO BlockManagerInfo: Added taskresult_11 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:39 INFO TaskSetManager: Starting task 25.0 in stage 0.0 (TID 14, iccluster056.iccluster.epfl.ch, executor 2, partition 25, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:40 INFO TaskSetManager: Finished task 24.0 in stage 0.0 (TID 11) in 1713 ms on iccluster056.iccluster.epfl.ch (executor 2) (13/200)
+20/04/07 15:58:40 INFO BlockManagerInfo: Removed taskresult_11 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:40 INFO BlockManagerInfo: Added taskresult_13 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:40 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 15, iccluster057.iccluster.epfl.ch, executor 1, partition 9, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:40 INFO BlockManagerInfo: Removed taskresult_13 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:40 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 13) in 1090 ms on iccluster057.iccluster.epfl.ch (executor 1) (14/200)
+20/04/07 15:58:40 INFO BlockManagerInfo: Added taskresult_15 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:40 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 16, iccluster057.iccluster.epfl.ch, executor 1, partition 10, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:41 INFO BlockManagerInfo: Added taskresult_14 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:41 INFO TaskSetManager: Starting task 26.0 in stage 0.0 (TID 17, iccluster056.iccluster.epfl.ch, executor 2, partition 26, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:41 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 15) in 1570 ms on iccluster057.iccluster.epfl.ch (executor 1) (15/200)
+20/04/07 15:58:41 INFO BlockManagerInfo: Removed taskresult_15 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:41 INFO TaskSetManager: Finished task 25.0 in stage 0.0 (TID 14) in 2126 ms on iccluster056.iccluster.epfl.ch (executor 2) (16/200)
+20/04/07 15:58:41 INFO BlockManagerInfo: Removed taskresult_14 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:41 INFO BlockManagerInfo: Added taskresult_16 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:41 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 18, iccluster057.iccluster.epfl.ch, executor 1, partition 11, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:42 INFO BlockManagerInfo: Removed taskresult_16 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:42 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 16) in 1233 ms on iccluster057.iccluster.epfl.ch (executor 1) (17/200)
+20/04/07 15:58:42 INFO BlockManagerInfo: Added taskresult_17 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:42 INFO TaskSetManager: Starting task 27.0 in stage 0.0 (TID 19, iccluster056.iccluster.epfl.ch, executor 2, partition 27, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:42 INFO BlockManagerInfo: Added taskresult_18 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:42 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 20, iccluster057.iccluster.epfl.ch, executor 1, partition 12, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:42 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 18) in 953 ms on iccluster057.iccluster.epfl.ch (executor 1) (18/200)
+20/04/07 15:58:42 INFO TaskSetManager: Finished task 26.0 in stage 0.0 (TID 17) in 1402 ms on iccluster056.iccluster.epfl.ch (executor 2) (19/200)
+20/04/07 15:58:42 INFO BlockManagerInfo: Removed taskresult_18 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:42 INFO BlockManagerInfo: Removed taskresult_17 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:43 INFO BlockManagerInfo: Added taskresult_20 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:43 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 21, iccluster057.iccluster.epfl.ch, executor 1, partition 13, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:43 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 20) in 1178 ms on iccluster057.iccluster.epfl.ch (executor 1) (20/200)
+20/04/07 15:58:43 INFO BlockManagerInfo: Removed taskresult_20 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:43 INFO BlockManagerInfo: Added taskresult_19 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:43 INFO TaskSetManager: Starting task 28.0 in stage 0.0 (TID 22, iccluster056.iccluster.epfl.ch, executor 2, partition 28, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:44 INFO TaskSetManager: Finished task 27.0 in stage 0.0 (TID 19) in 1766 ms on iccluster056.iccluster.epfl.ch (executor 2) (21/200)
+20/04/07 15:58:44 INFO BlockManagerInfo: Removed taskresult_19 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:44 INFO BlockManagerInfo: Added taskresult_21 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:44 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 23, iccluster057.iccluster.epfl.ch, executor 1, partition 14, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:45 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 21) in 1524 ms on iccluster057.iccluster.epfl.ch (executor 1) (22/200)
+20/04/07 15:58:45 INFO BlockManagerInfo: Removed taskresult_21 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:45 INFO BlockManagerInfo: Added taskresult_22 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:45 INFO TaskSetManager: Starting task 29.0 in stage 0.0 (TID 24, iccluster056.iccluster.epfl.ch, executor 2, partition 29, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:45 INFO BlockManagerInfo: Added taskresult_23 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:45 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 25, iccluster057.iccluster.epfl.ch, executor 1, partition 15, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:45 INFO TaskSetManager: Finished task 28.0 in stage 0.0 (TID 22) in 1601 ms on iccluster056.iccluster.epfl.ch (executor 2) (23/200)
+20/04/07 15:58:45 INFO BlockManagerInfo: Removed taskresult_22 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:45 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 23) in 1265 ms on iccluster057.iccluster.epfl.ch (executor 1) (24/200)
+20/04/07 15:58:45 INFO BlockManagerInfo: Removed taskresult_23 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:46 INFO BlockManagerInfo: Added taskresult_25 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:46 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 26, iccluster057.iccluster.epfl.ch, executor 1, partition 16, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:46 INFO BlockManagerInfo: Added taskresult_24 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:46 INFO TaskSetManager: Starting task 30.0 in stage 0.0 (TID 27, iccluster056.iccluster.epfl.ch, executor 2, partition 30, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:46 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 25) in 1222 ms on iccluster057.iccluster.epfl.ch (executor 1) (25/200)
+20/04/07 15:58:46 INFO BlockManagerInfo: Removed taskresult_25 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:46 INFO TaskSetManager: Finished task 29.0 in stage 0.0 (TID 24) in 1538 ms on iccluster056.iccluster.epfl.ch (executor 2) (26/200)
+20/04/07 15:58:46 INFO BlockManagerInfo: Removed taskresult_24 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:46 INFO BlockManagerInfo: Added taskresult_26 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:46 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 28, iccluster057.iccluster.epfl.ch, executor 1, partition 17, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:47 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 26) in 1059 ms on iccluster057.iccluster.epfl.ch (executor 1) (27/200)
+20/04/07 15:58:47 INFO BlockManagerInfo: Removed taskresult_26 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:47 INFO BlockManagerInfo: Added taskresult_27 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:47 INFO TaskSetManager: Starting task 31.0 in stage 0.0 (TID 29, iccluster056.iccluster.epfl.ch, executor 2, partition 31, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:47 INFO BlockManagerInfo: Added taskresult_28 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:47 INFO TaskSetManager: Starting task 18.0 in stage 0.0 (TID 30, iccluster057.iccluster.epfl.ch, executor 1, partition 18, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:47 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 28) in 1065 ms on iccluster057.iccluster.epfl.ch (executor 1) (28/200)
+20/04/07 15:58:47 INFO BlockManagerInfo: Removed taskresult_28 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:48 INFO TaskSetManager: Finished task 30.0 in stage 0.0 (TID 27) in 1735 ms on iccluster056.iccluster.epfl.ch (executor 2) (29/200)
+20/04/07 15:58:48 INFO BlockManagerInfo: Removed taskresult_27 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:48 INFO BlockManagerInfo: Added taskresult_30 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:48 INFO TaskSetManager: Starting task 32.0 in stage 0.0 (TID 31, iccluster057.iccluster.epfl.ch, executor 1, partition 32, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:48 INFO BlockManagerInfo: Added taskresult_29 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:48 INFO TaskSetManager: Starting task 33.0 in stage 0.0 (TID 32, iccluster056.iccluster.epfl.ch, executor 2, partition 33, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:49 INFO TaskSetManager: Finished task 18.0 in stage 0.0 (TID 30) in 1408 ms on iccluster057.iccluster.epfl.ch (executor 1) (30/200)
+20/04/07 15:58:49 INFO BlockManagerInfo: Removed taskresult_30 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:49 INFO TaskSetManager: Finished task 31.0 in stage 0.0 (TID 29) in 1628 ms on iccluster056.iccluster.epfl.ch (executor 2) (31/200)
+20/04/07 15:58:49 INFO BlockManagerInfo: Removed taskresult_29 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:49 INFO BlockManagerInfo: Added taskresult_31 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:49 INFO TaskSetManager: Starting task 34.0 in stage 0.0 (TID 33, iccluster057.iccluster.epfl.ch, executor 1, partition 34, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:49 INFO TaskSetManager: Finished task 32.0 in stage 0.0 (TID 31) in 1108 ms on iccluster057.iccluster.epfl.ch (executor 1) (32/200)
+20/04/07 15:58:49 INFO BlockManagerInfo: Removed taskresult_31 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:50 INFO BlockManagerInfo: Added taskresult_32 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:50 INFO TaskSetManager: Starting task 35.0 in stage 0.0 (TID 34, iccluster056.iccluster.epfl.ch, executor 2, partition 35, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:50 INFO BlockManagerInfo: Added taskresult_33 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:50 INFO TaskSetManager: Starting task 36.0 in stage 0.0 (TID 35, iccluster057.iccluster.epfl.ch, executor 1, partition 36, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:50 INFO BlockManagerInfo: Removed taskresult_32 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:50 INFO TaskSetManager: Finished task 33.0 in stage 0.0 (TID 32) in 1701 ms on iccluster056.iccluster.epfl.ch (executor 2) (33/200)
+20/04/07 15:58:51 INFO BlockManagerInfo: Added taskresult_35 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:58:51 INFO TaskSetManager: Starting task 37.0 in stage 0.0 (TID 36, iccluster057.iccluster.epfl.ch, executor 1, partition 37, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:51 INFO TaskSetManager: Finished task 34.0 in stage 0.0 (TID 33) in 1637 ms on iccluster057.iccluster.epfl.ch (executor 1) (34/200)
+20/04/07 15:58:51 INFO BlockManagerInfo: Removed taskresult_33 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:51 INFO BlockManagerInfo: Added taskresult_34 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:51 INFO TaskSetManager: Starting task 135.0 in stage 0.0 (TID 37, iccluster056.iccluster.epfl.ch, executor 2, partition 135, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:51 INFO BlockManagerInfo: Removed taskresult_35 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:51 INFO TaskSetManager: Finished task 36.0 in stage 0.0 (TID 35) in 1194 ms on iccluster057.iccluster.epfl.ch (executor 1) (35/200)
+20/04/07 15:58:51 INFO TaskSetManager: Finished task 35.0 in stage 0.0 (TID 34) in 1576 ms on iccluster056.iccluster.epfl.ch (executor 2) (36/200)
+20/04/07 15:58:51 INFO BlockManagerInfo: Removed taskresult_34 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:51 INFO BlockManagerInfo: Added taskresult_36 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:51 INFO TaskSetManager: Starting task 96.0 in stage 0.0 (TID 38, iccluster057.iccluster.epfl.ch, executor 1, partition 96, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:52 INFO BlockManagerInfo: Removed taskresult_36 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:52 INFO TaskSetManager: Finished task 37.0 in stage 0.0 (TID 36) in 1027 ms on iccluster057.iccluster.epfl.ch (executor 1) (37/200)
+20/04/07 15:58:52 INFO BlockManagerInfo: Added taskresult_37 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:52 INFO TaskSetManager: Starting task 136.0 in stage 0.0 (TID 39, iccluster056.iccluster.epfl.ch, executor 2, partition 136, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:52 INFO BlockManagerInfo: Added taskresult_38 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:52 INFO TaskSetManager: Starting task 97.0 in stage 0.0 (TID 40, iccluster057.iccluster.epfl.ch, executor 1, partition 97, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:53 INFO TaskSetManager: Finished task 96.0 in stage 0.0 (TID 38) in 1123 ms on iccluster057.iccluster.epfl.ch (executor 1) (38/200)
+20/04/07 15:58:53 INFO BlockManagerInfo: Removed taskresult_38 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:53 INFO TaskSetManager: Finished task 135.0 in stage 0.0 (TID 37) in 1612 ms on iccluster056.iccluster.epfl.ch (executor 2) (39/200)
+20/04/07 15:58:53 INFO BlockManagerInfo: Removed taskresult_37 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:53 INFO BlockManagerInfo: Added taskresult_40 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:53 INFO TaskSetManager: Starting task 98.0 in stage 0.0 (TID 41, iccluster057.iccluster.epfl.ch, executor 1, partition 98, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:53 INFO TaskSetManager: Finished task 97.0 in stage 0.0 (TID 40) in 1097 ms on iccluster057.iccluster.epfl.ch (executor 1) (40/200)
+20/04/07 15:58:53 INFO BlockManagerInfo: Removed taskresult_40 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:53 INFO BlockManagerInfo: Added taskresult_39 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:53 INFO TaskSetManager: Starting task 137.0 in stage 0.0 (TID 42, iccluster056.iccluster.epfl.ch, executor 2, partition 137, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:54 INFO BlockManagerInfo: Added taskresult_41 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:54 INFO TaskSetManager: Starting task 99.0 in stage 0.0 (TID 43, iccluster057.iccluster.epfl.ch, executor 1, partition 99, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:54 INFO TaskSetManager: Finished task 136.0 in stage 0.0 (TID 39) in 1600 ms on iccluster056.iccluster.epfl.ch (executor 2) (41/200)
+20/04/07 15:58:54 INFO BlockManagerInfo: Removed taskresult_39 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:54 INFO TaskSetManager: Finished task 98.0 in stage 0.0 (TID 41) in 1051 ms on iccluster057.iccluster.epfl.ch (executor 1) (42/200)
+20/04/07 15:58:54 INFO BlockManagerInfo: Removed taskresult_41 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:55 INFO BlockManagerInfo: Added taskresult_43 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:55 INFO TaskSetManager: Starting task 100.0 in stage 0.0 (TID 44, iccluster057.iccluster.epfl.ch, executor 1, partition 100, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:55 INFO TaskSetManager: Finished task 99.0 in stage 0.0 (TID 43) in 1097 ms on iccluster057.iccluster.epfl.ch (executor 1) (43/200)
+20/04/07 15:58:55 INFO BlockManagerInfo: Removed taskresult_43 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:55 INFO BlockManagerInfo: Added taskresult_42 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:55 INFO TaskSetManager: Starting task 138.0 in stage 0.0 (TID 45, iccluster056.iccluster.epfl.ch, executor 2, partition 138, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:55 INFO BlockManagerInfo: Removed taskresult_42 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:55 INFO TaskSetManager: Finished task 137.0 in stage 0.0 (TID 42) in 1903 ms on iccluster056.iccluster.epfl.ch (executor 2) (44/200)
+20/04/07 15:58:55 INFO BlockManagerInfo: Added taskresult_44 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:55 INFO TaskSetManager: Starting task 101.0 in stage 0.0 (TID 46, iccluster057.iccluster.epfl.ch, executor 1, partition 101, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:56 INFO TaskSetManager: Finished task 100.0 in stage 0.0 (TID 44) in 1177 ms on iccluster057.iccluster.epfl.ch (executor 1) (45/200)
+20/04/07 15:58:56 INFO BlockManagerInfo: Removed taskresult_44 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:56 INFO BlockManagerInfo: Added taskresult_45 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:56 INFO TaskSetManager: Starting task 139.0 in stage 0.0 (TID 47, iccluster056.iccluster.epfl.ch, executor 2, partition 139, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:57 INFO BlockManagerInfo: Added taskresult_46 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:57 INFO TaskSetManager: Starting task 102.0 in stage 0.0 (TID 48, iccluster057.iccluster.epfl.ch, executor 1, partition 102, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:57 INFO TaskSetManager: Finished task 138.0 in stage 0.0 (TID 45) in 1812 ms on iccluster056.iccluster.epfl.ch (executor 2) (46/200)
+20/04/07 15:58:57 INFO BlockManagerInfo: Removed taskresult_45 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:57 INFO TaskSetManager: Finished task 101.0 in stage 0.0 (TID 46) in 1451 ms on iccluster057.iccluster.epfl.ch (executor 1) (47/200)
+20/04/07 15:58:57 INFO BlockManagerInfo: Removed taskresult_46 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:57 INFO BlockManagerInfo: Added taskresult_47 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:57 INFO TaskSetManager: Starting task 140.0 in stage 0.0 (TID 49, iccluster056.iccluster.epfl.ch, executor 2, partition 140, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:57 INFO TaskSetManager: Finished task 139.0 in stage 0.0 (TID 47) in 1428 ms on iccluster056.iccluster.epfl.ch (executor 2) (48/200)
+20/04/07 15:58:57 INFO BlockManagerInfo: Removed taskresult_47 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:57 INFO BlockManagerInfo: Added taskresult_48 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:57 INFO TaskSetManager: Starting task 103.0 in stage 0.0 (TID 50, iccluster057.iccluster.epfl.ch, executor 1, partition 103, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:58 INFO TaskSetManager: Finished task 102.0 in stage 0.0 (TID 48) in 1179 ms on iccluster057.iccluster.epfl.ch (executor 1) (49/200)
+20/04/07 15:58:58 INFO BlockManagerInfo: Removed taskresult_48 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:58 INFO BlockManagerInfo: Added taskresult_49 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:58 INFO TaskSetManager: Starting task 141.0 in stage 0.0 (TID 51, iccluster056.iccluster.epfl.ch, executor 2, partition 141, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:58 INFO BlockManagerInfo: Added taskresult_50 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:58 INFO TaskSetManager: Starting task 104.0 in stage 0.0 (TID 52, iccluster057.iccluster.epfl.ch, executor 1, partition 104, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:58 INFO TaskSetManager: Finished task 140.0 in stage 0.0 (TID 49) in 1344 ms on iccluster056.iccluster.epfl.ch (executor 2) (50/200)
+20/04/07 15:58:58 INFO BlockManagerInfo: Removed taskresult_49 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:59 INFO TaskSetManager: Finished task 103.0 in stage 0.0 (TID 50) in 1147 ms on iccluster057.iccluster.epfl.ch (executor 1) (51/200)
+20/04/07 15:58:59 INFO BlockManagerInfo: Removed taskresult_50 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:59 INFO BlockManagerInfo: Added taskresult_52 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:59 INFO TaskSetManager: Starting task 105.0 in stage 0.0 (TID 53, iccluster057.iccluster.epfl.ch, executor 1, partition 105, NODE_LOCAL, 7900 bytes)
+20/04/07 15:58:59 INFO BlockManagerInfo: Added taskresult_51 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:58:59 INFO BlockManagerInfo: Removed taskresult_52 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:58:59 INFO TaskSetManager: Finished task 104.0 in stage 0.0 (TID 52) in 1122 ms on iccluster057.iccluster.epfl.ch (executor 1) (52/200)
+20/04/07 15:58:59 INFO TaskSetManager: Starting task 142.0 in stage 0.0 (TID 54, iccluster056.iccluster.epfl.ch, executor 2, partition 142, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:00 INFO TaskSetManager: Finished task 141.0 in stage 0.0 (TID 51) in 1687 ms on iccluster056.iccluster.epfl.ch (executor 2) (53/200)
+20/04/07 15:59:00 INFO BlockManagerInfo: Removed taskresult_51 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:00 INFO BlockManagerInfo: Added taskresult_53 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:00 INFO TaskSetManager: Starting task 106.0 in stage 0.0 (TID 55, iccluster057.iccluster.epfl.ch, executor 1, partition 106, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:00 INFO TaskSetManager: Finished task 105.0 in stage 0.0 (TID 53) in 1122 ms on iccluster057.iccluster.epfl.ch (executor 1) (54/200)
+20/04/07 15:59:00 INFO BlockManagerInfo: Removed taskresult_53 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:00 INFO BlockManagerInfo: Added taskresult_54 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:00 INFO TaskSetManager: Starting task 143.0 in stage 0.0 (TID 56, iccluster056.iccluster.epfl.ch, executor 2, partition 143, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:01 INFO BlockManagerInfo: Added taskresult_55 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:01 INFO TaskSetManager: Starting task 107.0 in stage 0.0 (TID 57, iccluster057.iccluster.epfl.ch, executor 1, partition 107, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:01 INFO TaskSetManager: Finished task 142.0 in stage 0.0 (TID 54) in 1540 ms on iccluster056.iccluster.epfl.ch (executor 2) (55/200)
+20/04/07 15:59:01 INFO BlockManagerInfo: Removed taskresult_54 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:01 INFO TaskSetManager: Finished task 106.0 in stage 0.0 (TID 55) in 1077 ms on iccluster057.iccluster.epfl.ch (executor 1) (56/200)
+20/04/07 15:59:01 INFO BlockManagerInfo: Removed taskresult_55 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:01 INFO BlockManagerInfo: Added taskresult_56 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:01 INFO TaskSetManager: Starting task 144.0 in stage 0.0 (TID 58, iccluster056.iccluster.epfl.ch, executor 2, partition 144, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:02 INFO BlockManagerInfo: Added taskresult_57 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:02 INFO TaskSetManager: Starting task 108.0 in stage 0.0 (TID 59, iccluster057.iccluster.epfl.ch, executor 1, partition 108, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:02 INFO TaskSetManager: Finished task 143.0 in stage 0.0 (TID 56) in 1439 ms on iccluster056.iccluster.epfl.ch (executor 2) (57/200)
+20/04/07 15:59:02 INFO BlockManagerInfo: Removed taskresult_56 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:02 INFO TaskSetManager: Finished task 107.0 in stage 0.0 (TID 57) in 1139 ms on iccluster057.iccluster.epfl.ch (executor 1) (58/200)
+20/04/07 15:59:02 INFO BlockManagerInfo: Removed taskresult_57 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:03 INFO BlockManagerInfo: Added taskresult_59 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:03 INFO TaskSetManager: Starting task 109.0 in stage 0.0 (TID 60, iccluster057.iccluster.epfl.ch, executor 1, partition 109, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:03 INFO BlockManagerInfo: Added taskresult_58 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:03 INFO TaskSetManager: Starting task 145.0 in stage 0.0 (TID 61, iccluster056.iccluster.epfl.ch, executor 2, partition 145, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:03 INFO TaskSetManager: Finished task 108.0 in stage 0.0 (TID 59) in 1173 ms on iccluster057.iccluster.epfl.ch (executor 1) (59/200)
+20/04/07 15:59:03 INFO BlockManagerInfo: Removed taskresult_59 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:03 INFO TaskSetManager: Finished task 144.0 in stage 0.0 (TID 58) in 1461 ms on iccluster056.iccluster.epfl.ch (executor 2) (60/200)
+20/04/07 15:59:03 INFO BlockManagerInfo: Removed taskresult_58 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:03 INFO BlockManagerInfo: Added taskresult_60 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:03 INFO TaskSetManager: Starting task 110.0 in stage 0.0 (TID 62, iccluster057.iccluster.epfl.ch, executor 1, partition 110, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:04 INFO TaskSetManager: Finished task 109.0 in stage 0.0 (TID 60) in 1078 ms on iccluster057.iccluster.epfl.ch (executor 1) (61/200)
+20/04/07 15:59:04 INFO BlockManagerInfo: Removed taskresult_60 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:04 INFO BlockManagerInfo: Added taskresult_61 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:04 INFO TaskSetManager: Starting task 146.0 in stage 0.0 (TID 63, iccluster056.iccluster.epfl.ch, executor 2, partition 146, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:04 INFO TaskSetManager: Finished task 145.0 in stage 0.0 (TID 61) in 1378 ms on iccluster056.iccluster.epfl.ch (executor 2) (62/200)
+20/04/07 15:59:04 INFO BlockManagerInfo: Removed taskresult_61 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:04 INFO BlockManagerInfo: Added taskresult_62 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:04 INFO TaskSetManager: Starting task 111.0 in stage 0.0 (TID 64, iccluster057.iccluster.epfl.ch, executor 1, partition 111, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:05 INFO BlockManagerInfo: Added taskresult_64 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:59:05 INFO TaskSetManager: Starting task 112.0 in stage 0.0 (TID 65, iccluster057.iccluster.epfl.ch, executor 1, partition 112, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:05 INFO BlockManagerInfo: Removed taskresult_62 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:05 INFO TaskSetManager: Finished task 110.0 in stage 0.0 (TID 62) in 1973 ms on iccluster057.iccluster.epfl.ch (executor 1) (63/200)
+20/04/07 15:59:05 INFO BlockManagerInfo: Added taskresult_63 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:05 INFO TaskSetManager: Starting task 147.0 in stage 0.0 (TID 66, iccluster056.iccluster.epfl.ch, executor 2, partition 147, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:05 INFO TaskSetManager: Finished task 111.0 in stage 0.0 (TID 64) in 1144 ms on iccluster057.iccluster.epfl.ch (executor 1) (64/200)
+20/04/07 15:59:05 INFO BlockManagerInfo: Removed taskresult_64 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:06 INFO TaskSetManager: Finished task 146.0 in stage 0.0 (TID 63) in 1828 ms on iccluster056.iccluster.epfl.ch (executor 2) (65/200)
+20/04/07 15:59:06 INFO BlockManagerInfo: Removed taskresult_63 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:06 INFO BlockManagerInfo: Added taskresult_65 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:06 INFO TaskSetManager: Starting task 113.0 in stage 0.0 (TID 67, iccluster057.iccluster.epfl.ch, executor 1, partition 113, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:06 INFO TaskSetManager: Finished task 112.0 in stage 0.0 (TID 65) in 948 ms on iccluster057.iccluster.epfl.ch (executor 1) (66/200)
+20/04/07 15:59:06 INFO BlockManagerInfo: Removed taskresult_65 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:06 INFO BlockManagerInfo: Added taskresult_66 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:06 INFO TaskSetManager: Starting task 148.0 in stage 0.0 (TID 68, iccluster056.iccluster.epfl.ch, executor 2, partition 148, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:07 INFO BlockManagerInfo: Added taskresult_67 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:07 INFO TaskSetManager: Starting task 154.0 in stage 0.0 (TID 69, iccluster057.iccluster.epfl.ch, executor 1, partition 154, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:07 INFO BlockManagerInfo: Removed taskresult_66 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:07 INFO TaskSetManager: Finished task 147.0 in stage 0.0 (TID 66) in 1494 ms on iccluster056.iccluster.epfl.ch (executor 2) (67/200)
+20/04/07 15:59:07 INFO TaskSetManager: Finished task 113.0 in stage 0.0 (TID 67) in 1063 ms on iccluster057.iccluster.epfl.ch (executor 1) (68/200)
+20/04/07 15:59:07 INFO BlockManagerInfo: Removed taskresult_67 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:08 INFO BlockManagerInfo: Added taskresult_69 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:08 INFO TaskSetManager: Starting task 155.0 in stage 0.0 (TID 70, iccluster057.iccluster.epfl.ch, executor 1, partition 155, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:08 INFO BlockManagerInfo: Added taskresult_68 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:08 INFO TaskSetManager: Starting task 149.0 in stage 0.0 (TID 71, iccluster056.iccluster.epfl.ch, executor 2, partition 149, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:08 INFO TaskSetManager: Finished task 154.0 in stage 0.0 (TID 69) in 1312 ms on iccluster057.iccluster.epfl.ch (executor 1) (69/200)
+20/04/07 15:59:08 INFO BlockManagerInfo: Removed taskresult_69 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:08 INFO TaskSetManager: Finished task 148.0 in stage 0.0 (TID 68) in 1584 ms on iccluster056.iccluster.epfl.ch (executor 2) (70/200)
+20/04/07 15:59:08 INFO BlockManagerInfo: Removed taskresult_68 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:08 INFO BlockManagerInfo: Added taskresult_70 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:08 INFO TaskSetManager: Starting task 156.0 in stage 0.0 (TID 72, iccluster057.iccluster.epfl.ch, executor 1, partition 156, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:09 INFO TaskSetManager: Finished task 155.0 in stage 0.0 (TID 70) in 1018 ms on iccluster057.iccluster.epfl.ch (executor 1) (71/200)
+20/04/07 15:59:09 INFO BlockManagerInfo: Removed taskresult_70 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:09 INFO BlockManagerInfo: Added taskresult_71 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:09 INFO TaskSetManager: Starting task 150.0 in stage 0.0 (TID 73, iccluster056.iccluster.epfl.ch, executor 2, partition 150, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:09 INFO BlockManagerInfo: Added taskresult_72 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:09 INFO TaskSetManager: Starting task 157.0 in stage 0.0 (TID 74, iccluster057.iccluster.epfl.ch, executor 1, partition 157, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:09 INFO TaskSetManager: Finished task 156.0 in stage 0.0 (TID 72) in 893 ms on iccluster057.iccluster.epfl.ch (executor 1) (72/200)
+20/04/07 15:59:09 INFO TaskSetManager: Finished task 149.0 in stage 0.0 (TID 71) in 1560 ms on iccluster056.iccluster.epfl.ch (executor 2) (73/200)
+20/04/07 15:59:09 INFO BlockManagerInfo: Removed taskresult_71 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:09 INFO BlockManagerInfo: Removed taskresult_72 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:10 INFO BlockManagerInfo: Added taskresult_74 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:10 INFO TaskSetManager: Starting task 158.0 in stage 0.0 (TID 75, iccluster057.iccluster.epfl.ch, executor 1, partition 158, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:10 INFO BlockManagerInfo: Added taskresult_73 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:10 INFO TaskSetManager: Starting task 151.0 in stage 0.0 (TID 76, iccluster056.iccluster.epfl.ch, executor 2, partition 151, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:10 INFO TaskSetManager: Finished task 157.0 in stage 0.0 (TID 74) in 1289 ms on iccluster057.iccluster.epfl.ch (executor 1) (74/200)
+20/04/07 15:59:10 INFO BlockManagerInfo: Removed taskresult_74 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:10 INFO TaskSetManager: Finished task 150.0 in stage 0.0 (TID 73) in 1361 ms on iccluster056.iccluster.epfl.ch (executor 2) (75/200)
+20/04/07 15:59:10 INFO BlockManagerInfo: Removed taskresult_73 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:11 INFO BlockManagerInfo: Added taskresult_75 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:11 INFO TaskSetManager: Starting task 159.0 in stage 0.0 (TID 77, iccluster057.iccluster.epfl.ch, executor 1, partition 159, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:11 INFO BlockManagerInfo: Removed taskresult_75 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:11 INFO TaskSetManager: Finished task 158.0 in stage 0.0 (TID 75) in 1078 ms on iccluster057.iccluster.epfl.ch (executor 1) (76/200)
+20/04/07 15:59:12 INFO BlockManagerInfo: Added taskresult_77 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:12 INFO TaskSetManager: Starting task 160.0 in stage 0.0 (TID 78, iccluster057.iccluster.epfl.ch, executor 1, partition 160, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:12 INFO BlockManagerInfo: Added taskresult_76 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:12 INFO TaskSetManager: Starting task 152.0 in stage 0.0 (TID 79, iccluster056.iccluster.epfl.ch, executor 2, partition 152, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:12 INFO TaskSetManager: Finished task 159.0 in stage 0.0 (TID 77) in 1164 ms on iccluster057.iccluster.epfl.ch (executor 1) (77/200)
+20/04/07 15:59:12 INFO BlockManagerInfo: Removed taskresult_77 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:12 INFO TaskSetManager: Finished task 151.0 in stage 0.0 (TID 76) in 1936 ms on iccluster056.iccluster.epfl.ch (executor 2) (78/200)
+20/04/07 15:59:12 INFO BlockManagerInfo: Removed taskresult_76 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:12 INFO BlockManagerInfo: Added taskresult_78 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:12 INFO TaskSetManager: Starting task 161.0 in stage 0.0 (TID 80, iccluster057.iccluster.epfl.ch, executor 1, partition 161, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:13 INFO TaskSetManager: Finished task 160.0 in stage 0.0 (TID 78) in 1046 ms on iccluster057.iccluster.epfl.ch (executor 1) (79/200)
+20/04/07 15:59:13 INFO BlockManagerInfo: Removed taskresult_78 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:13 INFO BlockManagerInfo: Added taskresult_79 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:13 INFO TaskSetManager: Starting task 192.0 in stage 0.0 (TID 81, iccluster056.iccluster.epfl.ch, executor 2, partition 192, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:21 INFO BlockManagerInfo: Added taskresult_81 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:59:21 INFO BlockManagerInfo: Added taskresult_80 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:21 INFO TaskSetManager: Starting task 162.0 in stage 0.0 (TID 82, iccluster057.iccluster.epfl.ch, executor 1, partition 162, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:21 INFO TaskSetManager: Starting task 193.0 in stage 0.0 (TID 83, iccluster056.iccluster.epfl.ch, executor 2, partition 193, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:22 INFO TaskSetManager: Finished task 161.0 in stage 0.0 (TID 80) in 9037 ms on iccluster057.iccluster.epfl.ch (executor 1) (80/200)
+20/04/07 15:59:22 INFO BlockManagerInfo: Removed taskresult_80 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:22 INFO BlockManagerInfo: Removed taskresult_81 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:22 INFO TaskSetManager: Finished task 192.0 in stage 0.0 (TID 81) in 8393 ms on iccluster056.iccluster.epfl.ch (executor 2) (81/200)
+20/04/07 15:59:22 INFO TaskSetManager: Finished task 152.0 in stage 0.0 (TID 79) in 9889 ms on iccluster056.iccluster.epfl.ch (executor 2) (82/200)
+20/04/07 15:59:22 INFO BlockManagerInfo: Removed taskresult_79 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:22 INFO BlockManagerInfo: Added taskresult_82 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:22 INFO TaskSetManager: Starting task 163.0 in stage 0.0 (TID 84, iccluster057.iccluster.epfl.ch, executor 1, partition 163, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:22 INFO BlockManagerInfo: Added taskresult_83 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:22 INFO TaskSetManager: Starting task 194.0 in stage 0.0 (TID 85, iccluster056.iccluster.epfl.ch, executor 2, partition 194, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:22 INFO TaskSetManager: Finished task 162.0 in stage 0.0 (TID 82) in 1117 ms on iccluster057.iccluster.epfl.ch (executor 1) (83/200)
+20/04/07 15:59:22 INFO BlockManagerInfo: Removed taskresult_82 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:22 INFO TaskSetManager: Finished task 193.0 in stage 0.0 (TID 83) in 1315 ms on iccluster056.iccluster.epfl.ch (executor 2) (84/200)
+20/04/07 15:59:22 INFO BlockManagerInfo: Removed taskresult_83 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:23 INFO BlockManagerInfo: Added taskresult_84 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:23 INFO TaskSetManager: Starting task 164.0 in stage 0.0 (TID 86, iccluster057.iccluster.epfl.ch, executor 1, partition 164, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:23 INFO TaskSetManager: Finished task 163.0 in stage 0.0 (TID 84) in 1242 ms on iccluster057.iccluster.epfl.ch (executor 1) (85/200)
+20/04/07 15:59:23 INFO BlockManagerInfo: Removed taskresult_84 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:23 INFO BlockManagerInfo: Added taskresult_85 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:23 INFO TaskSetManager: Starting task 195.0 in stage 0.0 (TID 87, iccluster056.iccluster.epfl.ch, executor 2, partition 195, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:24 INFO BlockManagerInfo: Added taskresult_86 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:24 INFO TaskSetManager: Starting task 165.0 in stage 0.0 (TID 88, iccluster057.iccluster.epfl.ch, executor 1, partition 165, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:24 INFO TaskSetManager: Finished task 194.0 in stage 0.0 (TID 85) in 1505 ms on iccluster056.iccluster.epfl.ch (executor 2) (86/200)
+20/04/07 15:59:24 INFO BlockManagerInfo: Removed taskresult_85 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:24 INFO TaskSetManager: Finished task 164.0 in stage 0.0 (TID 86) in 1087 ms on iccluster057.iccluster.epfl.ch (executor 1) (87/200)
+20/04/07 15:59:24 INFO BlockManagerInfo: Removed taskresult_86 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:24 INFO BlockManagerInfo: Added taskresult_88 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:24 INFO TaskSetManager: Starting task 166.0 in stage 0.0 (TID 89, iccluster057.iccluster.epfl.ch, executor 1, partition 166, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:25 INFO BlockManagerInfo: Added taskresult_87 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:25 INFO TaskSetManager: Finished task 165.0 in stage 0.0 (TID 88) in 1148 ms on iccluster057.iccluster.epfl.ch (executor 1) (88/200)
+20/04/07 15:59:25 INFO TaskSetManager: Starting task 196.0 in stage 0.0 (TID 90, iccluster056.iccluster.epfl.ch, executor 2, partition 196, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:25 INFO BlockManagerInfo: Removed taskresult_88 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:25 INFO BlockManagerInfo: Added taskresult_89 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:25 INFO TaskSetManager: Starting task 167.0 in stage 0.0 (TID 91, iccluster057.iccluster.epfl.ch, executor 1, partition 167, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:25 INFO TaskSetManager: Finished task 195.0 in stage 0.0 (TID 87) in 1673 ms on iccluster056.iccluster.epfl.ch (executor 2) (89/200)
+20/04/07 15:59:25 INFO BlockManagerInfo: Removed taskresult_87 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:25 INFO TaskSetManager: Finished task 166.0 in stage 0.0 (TID 89) in 1047 ms on iccluster057.iccluster.epfl.ch (executor 1) (90/200)
+20/04/07 15:59:25 INFO BlockManagerInfo: Removed taskresult_89 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:26 INFO BlockManagerInfo: Added taskresult_91 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:26 INFO TaskSetManager: Starting task 168.0 in stage 0.0 (TID 92, iccluster057.iccluster.epfl.ch, executor 1, partition 168, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:26 INFO BlockManagerInfo: Added taskresult_90 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:26 INFO TaskSetManager: Starting task 197.0 in stage 0.0 (TID 93, iccluster056.iccluster.epfl.ch, executor 2, partition 197, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:27 INFO TaskSetManager: Finished task 167.0 in stage 0.0 (TID 91) in 1544 ms on iccluster057.iccluster.epfl.ch (executor 1) (91/200)
+20/04/07 15:59:27 INFO BlockManagerInfo: Removed taskresult_91 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:27 INFO BlockManagerInfo: Added taskresult_92 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:27 INFO TaskSetManager: Starting task 169.0 in stage 0.0 (TID 94, iccluster057.iccluster.epfl.ch, executor 1, partition 169, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:27 INFO TaskSetManager: Finished task 196.0 in stage 0.0 (TID 90) in 2111 ms on iccluster056.iccluster.epfl.ch (executor 2) (92/200)
+20/04/07 15:59:27 INFO BlockManagerInfo: Removed taskresult_90 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:27 INFO TaskSetManager: Finished task 168.0 in stage 0.0 (TID 92) in 1106 ms on iccluster057.iccluster.epfl.ch (executor 1) (93/200)
+20/04/07 15:59:27 INFO BlockManagerInfo: Removed taskresult_92 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:27 INFO BlockManagerInfo: Added taskresult_93 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:27 INFO TaskSetManager: Starting task 198.0 in stage 0.0 (TID 95, iccluster056.iccluster.epfl.ch, executor 2, partition 198, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:27 INFO BlockManagerInfo: Added taskresult_94 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:27 INFO TaskSetManager: Starting task 170.0 in stage 0.0 (TID 96, iccluster057.iccluster.epfl.ch, executor 1, partition 170, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:28 INFO TaskSetManager: Finished task 197.0 in stage 0.0 (TID 93) in 1691 ms on iccluster056.iccluster.epfl.ch (executor 2) (94/200)
+20/04/07 15:59:28 INFO BlockManagerInfo: Removed taskresult_93 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:28 INFO TaskSetManager: Finished task 169.0 in stage 0.0 (TID 94) in 1066 ms on iccluster057.iccluster.epfl.ch (executor 1) (95/200)
+20/04/07 15:59:28 INFO BlockManagerInfo: Removed taskresult_94 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:28 INFO BlockManagerInfo: Added taskresult_96 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:28 INFO TaskSetManager: Starting task 171.0 in stage 0.0 (TID 97, iccluster057.iccluster.epfl.ch, executor 1, partition 171, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:28 INFO BlockManagerInfo: Added taskresult_95 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:28 INFO TaskSetManager: Starting task 199.0 in stage 0.0 (TID 98, iccluster056.iccluster.epfl.ch, executor 2, partition 199, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:29 INFO TaskSetManager: Finished task 170.0 in stage 0.0 (TID 96) in 1152 ms on iccluster057.iccluster.epfl.ch (executor 1) (96/200)
+20/04/07 15:59:29 INFO BlockManagerInfo: Removed taskresult_96 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:29 INFO BlockManagerInfo: Removed taskresult_95 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:29 INFO TaskSetManager: Finished task 198.0 in stage 0.0 (TID 95) in 1483 ms on iccluster056.iccluster.epfl.ch (executor 2) (97/200)
+20/04/07 15:59:29 INFO BlockManagerInfo: Added taskresult_97 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:29 INFO TaskSetManager: Starting task 173.0 in stage 0.0 (TID 99, iccluster057.iccluster.epfl.ch, executor 1, partition 173, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:30 INFO TaskSetManager: Finished task 171.0 in stage 0.0 (TID 97) in 1174 ms on iccluster057.iccluster.epfl.ch (executor 1) (98/200)
+20/04/07 15:59:30 INFO BlockManagerInfo: Removed taskresult_97 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:30 INFO BlockManagerInfo: Added taskresult_98 in memory on iccluster056.iccluster.epfl.ch:44640 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:30 INFO BlockManagerInfo: Removed taskresult_98 on iccluster056.iccluster.epfl.ch:44640 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:30 INFO TaskSetManager: Finished task 199.0 in stage 0.0 (TID 98) in 1447 ms on iccluster056.iccluster.epfl.ch (executor 2) (99/200)
+20/04/07 15:59:30 INFO BlockManagerInfo: Added taskresult_99 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:30 INFO TaskSetManager: Starting task 174.0 in stage 0.0 (TID 100, iccluster057.iccluster.epfl.ch, executor 1, partition 174, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:30 INFO TaskSetManager: Finished task 173.0 in stage 0.0 (TID 99) in 1206 ms on iccluster057.iccluster.epfl.ch (executor 1) (100/200)
+20/04/07 15:59:30 INFO BlockManagerInfo: Removed taskresult_99 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:31 INFO BlockManagerInfo: Added taskresult_100 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:31 INFO TaskSetManager: Starting task 175.0 in stage 0.0 (TID 101, iccluster057.iccluster.epfl.ch, executor 1, partition 175, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:31 INFO TaskSetManager: Finished task 174.0 in stage 0.0 (TID 100) in 1109 ms on iccluster057.iccluster.epfl.ch (executor 1) (101/200)
+20/04/07 15:59:31 INFO BlockManagerInfo: Removed taskresult_100 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:31 INFO BlockManagerInfo: Added taskresult_101 in memory on iccluster057.iccluster.epfl.ch:44266 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:59:31 INFO TaskSetManager: Starting task 176.0 in stage 0.0 (TID 102, iccluster057.iccluster.epfl.ch, executor 1, partition 176, NODE_LOCAL, 7900 bytes)
+20/04/07 15:59:31 ERROR TaskSetManager: Total size of serialized results of 102 tasks (1026.5 MB) is bigger than spark.driver.maxResultSize (1024.0 MB)
+20/04/07 15:59:31 INFO YarnClusterScheduler: Cancelling stage 0
+20/04/07 15:59:31 INFO YarnClusterScheduler: Stage 0 was cancelled
+20/04/07 15:59:31 INFO DAGScheduler: ResultStage 0 (collect at App4.scala:24) failed in 61.371 s due to Job aborted due to stage failure: Total size of serialized results of 102 tasks (1026.5 MB) is bigger than spark.driver.maxResultSize (1024.0 MB)
+20/04/07 15:59:31 INFO BlockManagerInfo: Removed taskresult_101 on iccluster057.iccluster.epfl.ch:44266 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:59:31 INFO DAGScheduler: Job 0 failed: collect at App4.scala:24, took 61.458597 s
+20/04/07 15:59:31 ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Total size of serialized results of 102 tasks (1026.5 MB) is bigger than spark.driver.maxResultSize (1024.0 MB)
+org.apache.spark.SparkException: Job aborted due to stage failure: Total size of serialized results of 102 tasks (1026.5 MB) is bigger than spark.driver.maxResultSize (1024.0 MB)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App4$.main(App4.scala:24)
+	at App4.main(App4.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+20/04/07 15:59:31 WARN TaskSetManager: Lost task 176.0 in stage 0.0 (TID 102, iccluster057.iccluster.epfl.ch, executor 1): TaskKilled (Stage cancelled)
+20/04/07 15:59:31 INFO ApplicationMaster: Final app status: FAILED, exitCode: 15, (reason: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Total size of serialized results of 102 tasks (1026.5 MB) is bigger than spark.driver.maxResultSize (1024.0 MB)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App4$.main(App4.scala:24)
+	at App4.main(App4.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+)
+20/04/07 15:59:31 INFO YarnClusterScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/04/07 15:59:32 INFO SparkContext: Invoking stop() from shutdown hook
+20/04/07 15:59:32 INFO AbstractConnector: Stopped Spark@5bcef982{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+20/04/07 15:59:32 INFO SparkUI: Stopped Spark web UI at http://iccluster056.iccluster.epfl.ch:44980
+20/04/07 15:59:32 INFO YarnAllocator: Driver requested a total number of 0 executor(s).
+20/04/07 15:59:32 INFO YarnClusterSchedulerBackend: Shutting down all executors
+20/04/07 15:59:32 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+20/04/07 15:59:32 INFO SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+20/04/07 15:59:32 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/04/07 15:59:32 INFO MemoryStore: MemoryStore cleared
+20/04/07 15:59:32 INFO BlockManager: BlockManager stopped
+20/04/07 15:59:32 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/04/07 15:59:32 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/04/07 15:59:32 INFO SparkContext: Successfully stopped SparkContext
+20/04/07 15:59:32 INFO ApplicationMaster: Unregistering ApplicationMaster with FAILED (diag message: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Total size of serialized results of 102 tasks (1026.5 MB) is bigger than spark.driver.maxResultSize (1024.0 MB)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App4$.main(App4.scala:24)
+	at App4.main(App4.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+)
+20/04/07 15:59:32 INFO AMRMClientImpl: Waiting for application to be successfully unregistered.
+20/04/07 15:59:32 INFO ApplicationMaster: Deleting staging directory hdfs://iccluster040.iccluster.epfl.ch:8020/user/basil/.sparkStaging/application_1580812675067_5023
+20/04/07 15:59:32 INFO ShutdownHookManager: Shutdown hook called
+20/04/07 15:59:32 INFO ShutdownHookManager: Deleting directory /hdata/sdd/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/spark-fcbadbae-b46a-482e-ac82-1d8a0b7f6afa
+20/04/07 15:59:32 INFO ShutdownHookManager: Deleting directory /hdata/sdb/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/spark-671c3896-7a45-47a1-a07a-a93849d1244d
+20/04/07 15:59:32 INFO ShutdownHookManager: Deleting directory /hdata/sdc/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/spark-744f6df5-b510-4dfd-bbc8-ed38c5514e66
+20/04/07 15:59:32 INFO ShutdownHookManager: Deleting directory /hdata/sdg/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/spark-d9253ec4-8063-4c44-a59c-164849b92903
+20/04/07 15:59:32 INFO ShutdownHookManager: Deleting directory /hdata/sde/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/spark-90459678-aebb-4ea5-b01c-bbd88f466aed
+20/04/07 15:59:32 INFO ShutdownHookManager: Deleting directory /hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/spark-33582422-8762-432f-90e5-f3c42d4d3c52
+20/04/07 15:59:32 INFO ShutdownHookManager: Deleting directory /hdata/sdf/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/spark-9224dcee-026a-4a03-8468-006408d6228e
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_5023_01_000002 on iccluster057.iccluster.epfl.ch_45454_1586267974214
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Tue Apr 07 15:59:34 +0200 2020
+LogLength:39058
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdf/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/07 15:58:26 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 22116@iccluster057
+20/04/07 15:58:26 INFO SignalUtils: Registered signal handler for TERM
+20/04/07 15:58:26 INFO SignalUtils: Registered signal handler for HUP
+20/04/07 15:58:26 INFO SignalUtils: Registered signal handler for INT
+20/04/07 15:58:27 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:58:27 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:58:27 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:58:27 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:58:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:58:27 INFO TransportClientFactory: Successfully created connection to iccluster056.iccluster.epfl.ch/10.90.39.7:41536 after 79 ms (0 ms spent in bootstraps)
+20/04/07 15:58:27 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:58:27 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:58:27 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:58:27 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:58:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:58:27 INFO TransportClientFactory: Successfully created connection to iccluster056.iccluster.epfl.ch/10.90.39.7:41536 after 1 ms (0 ms spent in bootstraps)
+20/04/07 15:58:28 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-0a95b8fb-d8d2-42c4-84f5-c31c84da28b5
+20/04/07 15:58:28 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-5dd71716-c050-441a-86fe-cc12162f6dc2
+20/04/07 15:58:28 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-7e289ddb-5199-4828-b5fa-22db92e7ded0
+20/04/07 15:58:28 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-63cde2cd-13fc-49f4-920a-a687bddd48b2
+20/04/07 15:58:28 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-98a52df5-83ff-4789-a5d3-96a01d9a8540
+20/04/07 15:58:28 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-8812d4b6-8107-4ca6-9578-acd45e9a7a45
+20/04/07 15:58:28 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5023/blockmgr-51eca4e3-416a-4d36-af3f-353abb916eef
+20/04/07 15:58:28 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/07 15:58:28 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster056.iccluster.epfl.ch:41536
+20/04/07 15:58:28 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/07 15:58:28 INFO Executor: Starting executor ID 1 on host iccluster057.iccluster.epfl.ch
+20/04/07 15:58:28 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44266.
+20/04/07 15:58:28 INFO NettyBlockTransferService: Server created on iccluster057.iccluster.epfl.ch:44266
+20/04/07 15:58:28 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/07 15:58:28 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, iccluster057.iccluster.epfl.ch, 44266, None)
+20/04/07 15:58:28 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, iccluster057.iccluster.epfl.ch, 44266, None)
+20/04/07 15:58:28 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, iccluster057.iccluster.epfl.ch, 44266, None)
+20/04/07 15:58:30 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/04/07 15:58:30 INFO Executor: Running task 0.0 in stage 0.0 (TID 1)
+20/04/07 15:58:31 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/07 15:58:31 INFO TransportClientFactory: Successfully created connection to iccluster056.iccluster.epfl.ch/10.90.39.7:40456 after 1 ms (0 ms spent in bootstraps)
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 408.9 MB)
+20/04/07 15:58:31 INFO TorrentBroadcast: Reading broadcast variable 1 took 145 ms
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 408.9 MB)
+20/04/07 15:58:31 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:0+7009998
+20/04/07 15:58:31 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.9 MB)
+20/04/07 15:58:31 INFO TorrentBroadcast: Reading broadcast variable 0 took 9 ms
+20/04/07 15:58:31 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 673.8 KB, free 408.2 MB)
+20/04/07 15:58:33 INFO MemoryStore: Block taskresult_1 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:33 INFO Executor: Finished task 0.0 in stage 0.0 (TID 1). 10552385 bytes result sent via BlockManager)
+20/04/07 15:58:33 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+20/04/07 15:58:33 INFO Executor: Running task 1.0 in stage 0.0 (TID 2)
+20/04/07 15:58:33 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:7009998+7009998
+20/04/07 15:58:34 INFO MemoryStore: Block taskresult_2 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:34 INFO Executor: Finished task 1.0 in stage 0.0 (TID 2). 10551711 bytes result sent via BlockManager)
+20/04/07 15:58:34 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+20/04/07 15:58:34 INFO Executor: Running task 2.0 in stage 0.0 (TID 3)
+20/04/07 15:58:34 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:14019996+7009998
+20/04/07 15:58:34 INFO MemoryStore: Block taskresult_3 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:34 INFO Executor: Finished task 2.0 in stage 0.0 (TID 3). 10553758 bytes result sent via BlockManager)
+20/04/07 15:58:34 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+20/04/07 15:58:34 INFO Executor: Running task 3.0 in stage 0.0 (TID 5)
+20/04/07 15:58:34 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:21029994+7009998
+20/04/07 15:58:35 INFO MemoryStore: Block taskresult_5 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:35 INFO Executor: Finished task 3.0 in stage 0.0 (TID 5). 10552913 bytes result sent via BlockManager)
+20/04/07 15:58:35 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+20/04/07 15:58:35 INFO Executor: Running task 4.0 in stage 0.0 (TID 6)
+20/04/07 15:58:35 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:28039992+7009998
+20/04/07 15:58:36 INFO MemoryStore: Block taskresult_6 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:36 INFO Executor: Finished task 4.0 in stage 0.0 (TID 6). 10552068 bytes result sent via BlockManager)
+20/04/07 15:58:36 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+20/04/07 15:58:36 INFO Executor: Running task 5.0 in stage 0.0 (TID 8)
+20/04/07 15:58:36 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:35049990+7009998
+20/04/07 15:58:37 INFO MemoryStore: Block taskresult_8 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:37 INFO Executor: Finished task 5.0 in stage 0.0 (TID 8). 10552997 bytes result sent via BlockManager)
+20/04/07 15:58:37 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+20/04/07 15:58:37 INFO Executor: Running task 6.0 in stage 0.0 (TID 10)
+20/04/07 15:58:37 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:42059988+7009998
+20/04/07 15:58:38 INFO MemoryStore: Block taskresult_10 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:38 INFO Executor: Finished task 6.0 in stage 0.0 (TID 10). 10551139 bytes result sent via BlockManager)
+20/04/07 15:58:38 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+20/04/07 15:58:38 INFO Executor: Running task 7.0 in stage 0.0 (TID 12)
+20/04/07 15:58:38 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:49069986+7009998
+20/04/07 15:58:39 INFO MemoryStore: Block taskresult_12 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:39 INFO Executor: Finished task 7.0 in stage 0.0 (TID 12). 10551921 bytes result sent via BlockManager)
+20/04/07 15:58:39 INFO CoarseGrainedExecutorBackend: Got assigned task 13
+20/04/07 15:58:39 INFO Executor: Running task 8.0 in stage 0.0 (TID 13)
+20/04/07 15:58:39 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:56079984+7009998
+20/04/07 15:58:40 INFO MemoryStore: Block taskresult_13 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:40 INFO Executor: Finished task 8.0 in stage 0.0 (TID 13). 10552535 bytes result sent via BlockManager)
+20/04/07 15:58:40 INFO CoarseGrainedExecutorBackend: Got assigned task 15
+20/04/07 15:58:40 INFO Executor: Running task 9.0 in stage 0.0 (TID 15)
+20/04/07 15:58:40 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:63089982+7009998
+20/04/07 15:58:40 INFO MemoryStore: Block taskresult_15 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:40 INFO Executor: Finished task 9.0 in stage 0.0 (TID 15). 10552514 bytes result sent via BlockManager)
+20/04/07 15:58:40 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+20/04/07 15:58:40 INFO Executor: Running task 10.0 in stage 0.0 (TID 16)
+20/04/07 15:58:40 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:70099980+7009998
+20/04/07 15:58:41 INFO MemoryStore: Block taskresult_16 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:41 INFO Executor: Finished task 10.0 in stage 0.0 (TID 16). 10553335 bytes result sent via BlockManager)
+20/04/07 15:58:41 INFO CoarseGrainedExecutorBackend: Got assigned task 18
+20/04/07 15:58:41 INFO Executor: Running task 11.0 in stage 0.0 (TID 18)
+20/04/07 15:58:41 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:77109978+7009998
+20/04/07 15:58:42 INFO MemoryStore: Block taskresult_18 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:42 INFO Executor: Finished task 11.0 in stage 0.0 (TID 18). 10552745 bytes result sent via BlockManager)
+20/04/07 15:58:42 INFO CoarseGrainedExecutorBackend: Got assigned task 20
+20/04/07 15:58:42 INFO Executor: Running task 12.0 in stage 0.0 (TID 20)
+20/04/07 15:58:42 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:84119976+7009998
+20/04/07 15:58:43 INFO MemoryStore: Block taskresult_20 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:43 INFO Executor: Finished task 12.0 in stage 0.0 (TID 20). 10553632 bytes result sent via BlockManager)
+20/04/07 15:58:43 INFO CoarseGrainedExecutorBackend: Got assigned task 21
+20/04/07 15:58:43 INFO Executor: Running task 13.0 in stage 0.0 (TID 21)
+20/04/07 15:58:43 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:91129974+7009998
+20/04/07 15:58:44 INFO MemoryStore: Block taskresult_21 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:44 INFO Executor: Finished task 13.0 in stage 0.0 (TID 21). 10552322 bytes result sent via BlockManager)
+20/04/07 15:58:44 INFO CoarseGrainedExecutorBackend: Got assigned task 23
+20/04/07 15:58:44 INFO Executor: Running task 14.0 in stage 0.0 (TID 23)
+20/04/07 15:58:44 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:98139972+7009998
+20/04/07 15:58:45 INFO MemoryStore: Block taskresult_23 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:45 INFO Executor: Finished task 14.0 in stage 0.0 (TID 23). 10551585 bytes result sent via BlockManager)
+20/04/07 15:58:45 INFO CoarseGrainedExecutorBackend: Got assigned task 25
+20/04/07 15:58:45 INFO Executor: Running task 15.0 in stage 0.0 (TID 25)
+20/04/07 15:58:45 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:105149970+7009998
+20/04/07 15:58:46 INFO MemoryStore: Block taskresult_25 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:46 INFO Executor: Finished task 15.0 in stage 0.0 (TID 25). 10553377 bytes result sent via BlockManager)
+20/04/07 15:58:46 INFO CoarseGrainedExecutorBackend: Got assigned task 26
+20/04/07 15:58:46 INFO Executor: Running task 16.0 in stage 0.0 (TID 26)
+20/04/07 15:58:46 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:112159968+7009998
+20/04/07 15:58:46 INFO MemoryStore: Block taskresult_26 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:46 INFO Executor: Finished task 16.0 in stage 0.0 (TID 26). 10553018 bytes result sent via BlockManager)
+20/04/07 15:58:46 INFO CoarseGrainedExecutorBackend: Got assigned task 28
+20/04/07 15:58:46 INFO Executor: Running task 17.0 in stage 0.0 (TID 28)
+20/04/07 15:58:46 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:119169966+7009998
+20/04/07 15:58:47 INFO MemoryStore: Block taskresult_28 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:47 INFO Executor: Finished task 17.0 in stage 0.0 (TID 28). 10552976 bytes result sent via BlockManager)
+20/04/07 15:58:47 INFO CoarseGrainedExecutorBackend: Got assigned task 30
+20/04/07 15:58:47 INFO Executor: Running task 18.0 in stage 0.0 (TID 30)
+20/04/07 15:58:47 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:126179964+7009998
+20/04/07 15:58:48 INFO MemoryStore: Block taskresult_30 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:48 INFO Executor: Finished task 18.0 in stage 0.0 (TID 30). 10552682 bytes result sent via BlockManager)
+20/04/07 15:58:48 INFO CoarseGrainedExecutorBackend: Got assigned task 31
+20/04/07 15:58:48 INFO Executor: Running task 32.0 in stage 0.0 (TID 31)
+20/04/07 15:58:48 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:224319936+7009998
+20/04/07 15:58:49 INFO MemoryStore: Block taskresult_31 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:49 INFO Executor: Finished task 32.0 in stage 0.0 (TID 31). 10551942 bytes result sent via BlockManager)
+20/04/07 15:58:49 INFO CoarseGrainedExecutorBackend: Got assigned task 33
+20/04/07 15:58:49 INFO Executor: Running task 34.0 in stage 0.0 (TID 33)
+20/04/07 15:58:49 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:238339932+7009998
+20/04/07 15:58:50 INFO MemoryStore: Block taskresult_33 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:50 INFO Executor: Finished task 34.0 in stage 0.0 (TID 33). 10552364 bytes result sent via BlockManager)
+20/04/07 15:58:50 INFO CoarseGrainedExecutorBackend: Got assigned task 35
+20/04/07 15:58:50 INFO Executor: Running task 36.0 in stage 0.0 (TID 35)
+20/04/07 15:58:50 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:252359928+7009998
+20/04/07 15:58:51 INFO MemoryStore: Block taskresult_35 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:58:51 INFO Executor: Finished task 36.0 in stage 0.0 (TID 35). 10552343 bytes result sent via BlockManager)
+20/04/07 15:58:51 INFO CoarseGrainedExecutorBackend: Got assigned task 36
+20/04/07 15:58:51 INFO Executor: Running task 37.0 in stage 0.0 (TID 36)
+20/04/07 15:58:51 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:259369926+7009998
+20/04/07 15:58:51 INFO MemoryStore: Block taskresult_36 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:51 INFO Executor: Finished task 37.0 in stage 0.0 (TID 36). 10552850 bytes result sent via BlockManager)
+20/04/07 15:58:51 INFO CoarseGrainedExecutorBackend: Got assigned task 38
+20/04/07 15:58:51 INFO Executor: Running task 96.0 in stage 0.0 (TID 38)
+20/04/07 15:58:51 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:672959808+7009998
+20/04/07 15:58:52 INFO MemoryStore: Block taskresult_38 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:52 INFO Executor: Finished task 96.0 in stage 0.0 (TID 38). 10551711 bytes result sent via BlockManager)
+20/04/07 15:58:52 INFO CoarseGrainedExecutorBackend: Got assigned task 40
+20/04/07 15:58:52 INFO Executor: Running task 97.0 in stage 0.0 (TID 40)
+20/04/07 15:58:52 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:679969806+7009998
+20/04/07 15:58:53 INFO MemoryStore: Block taskresult_40 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:53 INFO Executor: Finished task 97.0 in stage 0.0 (TID 40). 10552321 bytes result sent via BlockManager)
+20/04/07 15:58:53 INFO CoarseGrainedExecutorBackend: Got assigned task 41
+20/04/07 15:58:53 INFO Executor: Running task 98.0 in stage 0.0 (TID 41)
+20/04/07 15:58:53 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:686979804+7009998
+20/04/07 15:58:54 INFO MemoryStore: Block taskresult_41 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:54 INFO Executor: Finished task 98.0 in stage 0.0 (TID 41). 10550572 bytes result sent via BlockManager)
+20/04/07 15:58:54 INFO CoarseGrainedExecutorBackend: Got assigned task 43
+20/04/07 15:58:54 INFO Executor: Running task 99.0 in stage 0.0 (TID 43)
+20/04/07 15:58:54 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:693989802+7009998
+20/04/07 15:58:55 INFO MemoryStore: Block taskresult_43 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:55 INFO Executor: Finished task 99.0 in stage 0.0 (TID 43). 10552724 bytes result sent via BlockManager)
+20/04/07 15:58:55 INFO CoarseGrainedExecutorBackend: Got assigned task 44
+20/04/07 15:58:55 INFO Executor: Running task 100.0 in stage 0.0 (TID 44)
+20/04/07 15:58:55 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:700999800+7009998
+20/04/07 15:58:55 INFO MemoryStore: Block taskresult_44 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:55 INFO Executor: Finished task 100.0 in stage 0.0 (TID 44). 10551942 bytes result sent via BlockManager)
+20/04/07 15:58:55 INFO CoarseGrainedExecutorBackend: Got assigned task 46
+20/04/07 15:58:55 INFO Executor: Running task 101.0 in stage 0.0 (TID 46)
+20/04/07 15:58:55 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:708009798+7009998
+20/04/07 15:58:56 INFO MemoryStore: Block taskresult_46 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:57 INFO Executor: Finished task 101.0 in stage 0.0 (TID 46). 10552661 bytes result sent via BlockManager)
+20/04/07 15:58:57 INFO CoarseGrainedExecutorBackend: Got assigned task 48
+20/04/07 15:58:57 INFO Executor: Running task 102.0 in stage 0.0 (TID 48)
+20/04/07 15:58:57 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:715019796+7009998
+20/04/07 15:58:57 INFO MemoryStore: Block taskresult_48 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:57 INFO Executor: Finished task 102.0 in stage 0.0 (TID 48). 10552406 bytes result sent via BlockManager)
+20/04/07 15:58:57 INFO CoarseGrainedExecutorBackend: Got assigned task 50
+20/04/07 15:58:57 INFO Executor: Running task 103.0 in stage 0.0 (TID 50)
+20/04/07 15:58:57 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:722029794+7009998
+20/04/07 15:58:58 INFO MemoryStore: Block taskresult_50 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:58 INFO Executor: Finished task 103.0 in stage 0.0 (TID 50). 10552046 bytes result sent via BlockManager)
+20/04/07 15:58:58 INFO CoarseGrainedExecutorBackend: Got assigned task 52
+20/04/07 15:58:58 INFO Executor: Running task 104.0 in stage 0.0 (TID 52)
+20/04/07 15:58:58 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:729039792+7009998
+20/04/07 15:58:59 INFO MemoryStore: Block taskresult_52 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:58:59 INFO Executor: Finished task 104.0 in stage 0.0 (TID 52). 10551753 bytes result sent via BlockManager)
+20/04/07 15:58:59 INFO CoarseGrainedExecutorBackend: Got assigned task 53
+20/04/07 15:58:59 INFO Executor: Running task 105.0 in stage 0.0 (TID 53)
+20/04/07 15:58:59 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:736049790+7009998
+20/04/07 15:59:00 INFO MemoryStore: Block taskresult_53 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:00 INFO Executor: Finished task 105.0 in stage 0.0 (TID 53). 10552829 bytes result sent via BlockManager)
+20/04/07 15:59:00 INFO CoarseGrainedExecutorBackend: Got assigned task 55
+20/04/07 15:59:00 INFO Executor: Running task 106.0 in stage 0.0 (TID 55)
+20/04/07 15:59:00 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:743059788+7009998
+20/04/07 15:59:01 INFO MemoryStore: Block taskresult_55 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:01 INFO Executor: Finished task 106.0 in stage 0.0 (TID 55). 10552955 bytes result sent via BlockManager)
+20/04/07 15:59:01 INFO CoarseGrainedExecutorBackend: Got assigned task 57
+20/04/07 15:59:01 INFO Executor: Running task 107.0 in stage 0.0 (TID 57)
+20/04/07 15:59:01 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:750069786+7009998
+20/04/07 15:59:02 INFO MemoryStore: Block taskresult_57 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:02 INFO Executor: Finished task 107.0 in stage 0.0 (TID 57). 10551878 bytes result sent via BlockManager)
+20/04/07 15:59:02 INFO CoarseGrainedExecutorBackend: Got assigned task 59
+20/04/07 15:59:02 INFO Executor: Running task 108.0 in stage 0.0 (TID 59)
+20/04/07 15:59:02 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:757079784+7009998
+20/04/07 15:59:03 INFO MemoryStore: Block taskresult_59 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:03 INFO Executor: Finished task 108.0 in stage 0.0 (TID 59). 10552744 bytes result sent via BlockManager)
+20/04/07 15:59:03 INFO CoarseGrainedExecutorBackend: Got assigned task 60
+20/04/07 15:59:03 INFO Executor: Running task 109.0 in stage 0.0 (TID 60)
+20/04/07 15:59:03 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:764089782+7009998
+20/04/07 15:59:03 INFO MemoryStore: Block taskresult_60 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:03 INFO Executor: Finished task 109.0 in stage 0.0 (TID 60). 10553904 bytes result sent via BlockManager)
+20/04/07 15:59:03 INFO CoarseGrainedExecutorBackend: Got assigned task 62
+20/04/07 15:59:03 INFO Executor: Running task 110.0 in stage 0.0 (TID 62)
+20/04/07 15:59:03 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:771099780+7009998
+20/04/07 15:59:04 INFO MemoryStore: Block taskresult_62 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:04 INFO Executor: Finished task 110.0 in stage 0.0 (TID 62). 10552849 bytes result sent via BlockManager)
+20/04/07 15:59:04 INFO CoarseGrainedExecutorBackend: Got assigned task 64
+20/04/07 15:59:04 INFO Executor: Running task 111.0 in stage 0.0 (TID 64)
+20/04/07 15:59:04 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:778109778+7009998
+20/04/07 15:59:05 INFO MemoryStore: Block taskresult_64 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:59:05 INFO Executor: Finished task 111.0 in stage 0.0 (TID 64). 10551879 bytes result sent via BlockManager)
+20/04/07 15:59:05 INFO CoarseGrainedExecutorBackend: Got assigned task 65
+20/04/07 15:59:05 INFO Executor: Running task 112.0 in stage 0.0 (TID 65)
+20/04/07 15:59:05 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:785119776+7009998
+20/04/07 15:59:06 INFO MemoryStore: Block taskresult_65 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:06 INFO Executor: Finished task 112.0 in stage 0.0 (TID 65). 10553165 bytes result sent via BlockManager)
+20/04/07 15:59:06 INFO CoarseGrainedExecutorBackend: Got assigned task 67
+20/04/07 15:59:06 INFO Executor: Running task 113.0 in stage 0.0 (TID 67)
+20/04/07 15:59:06 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:792129774+7009998
+20/04/07 15:59:07 INFO MemoryStore: Block taskresult_67 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:07 INFO Executor: Finished task 113.0 in stage 0.0 (TID 67). 10552745 bytes result sent via BlockManager)
+20/04/07 15:59:07 INFO CoarseGrainedExecutorBackend: Got assigned task 69
+20/04/07 15:59:07 INFO Executor: Running task 154.0 in stage 0.0 (TID 69)
+20/04/07 15:59:07 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1079539692+7009998
+20/04/07 15:59:08 INFO MemoryStore: Block taskresult_69 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:08 INFO Executor: Finished task 154.0 in stage 0.0 (TID 69). 10553737 bytes result sent via BlockManager)
+20/04/07 15:59:08 INFO CoarseGrainedExecutorBackend: Got assigned task 70
+20/04/07 15:59:08 INFO Executor: Running task 155.0 in stage 0.0 (TID 70)
+20/04/07 15:59:08 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1086549690+7009998
+20/04/07 15:59:08 INFO MemoryStore: Block taskresult_70 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:08 INFO Executor: Finished task 155.0 in stage 0.0 (TID 70). 10551350 bytes result sent via BlockManager)
+20/04/07 15:59:08 INFO CoarseGrainedExecutorBackend: Got assigned task 72
+20/04/07 15:59:08 INFO Executor: Running task 156.0 in stage 0.0 (TID 72)
+20/04/07 15:59:08 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1093559688+7009998
+20/04/07 15:59:09 INFO MemoryStore: Block taskresult_72 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:09 INFO Executor: Finished task 156.0 in stage 0.0 (TID 72). 10553736 bytes result sent via BlockManager)
+20/04/07 15:59:09 INFO CoarseGrainedExecutorBackend: Got assigned task 74
+20/04/07 15:59:09 INFO Executor: Running task 157.0 in stage 0.0 (TID 74)
+20/04/07 15:59:09 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1100569686+7009998
+20/04/07 15:59:10 INFO MemoryStore: Block taskresult_74 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:10 INFO Executor: Finished task 157.0 in stage 0.0 (TID 74). 10552577 bytes result sent via BlockManager)
+20/04/07 15:59:10 INFO CoarseGrainedExecutorBackend: Got assigned task 75
+20/04/07 15:59:10 INFO Executor: Running task 158.0 in stage 0.0 (TID 75)
+20/04/07 15:59:10 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1107579684+7009998
+20/04/07 15:59:11 INFO MemoryStore: Block taskresult_75 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:11 INFO Executor: Finished task 158.0 in stage 0.0 (TID 75). 10552153 bytes result sent via BlockManager)
+20/04/07 15:59:11 INFO CoarseGrainedExecutorBackend: Got assigned task 77
+20/04/07 15:59:11 INFO Executor: Running task 159.0 in stage 0.0 (TID 77)
+20/04/07 15:59:11 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1114589682+7009998
+20/04/07 15:59:12 INFO MemoryStore: Block taskresult_77 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:12 INFO Executor: Finished task 159.0 in stage 0.0 (TID 77). 10552343 bytes result sent via BlockManager)
+20/04/07 15:59:12 INFO CoarseGrainedExecutorBackend: Got assigned task 78
+20/04/07 15:59:12 INFO Executor: Running task 160.0 in stage 0.0 (TID 78)
+20/04/07 15:59:12 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1121599680+7009998
+20/04/07 15:59:12 INFO MemoryStore: Block taskresult_78 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:12 INFO Executor: Finished task 160.0 in stage 0.0 (TID 78). 10552322 bytes result sent via BlockManager)
+20/04/07 15:59:12 INFO CoarseGrainedExecutorBackend: Got assigned task 80
+20/04/07 15:59:12 INFO Executor: Running task 161.0 in stage 0.0 (TID 80)
+20/04/07 15:59:12 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1128609678+7009998
+20/04/07 15:59:13 INFO MemoryStore: Block taskresult_80 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:21 INFO Executor: Finished task 161.0 in stage 0.0 (TID 80). 10551794 bytes result sent via BlockManager)
+20/04/07 15:59:21 INFO CoarseGrainedExecutorBackend: Got assigned task 82
+20/04/07 15:59:21 INFO Executor: Running task 162.0 in stage 0.0 (TID 82)
+20/04/07 15:59:21 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1135619676+7009998
+20/04/07 15:59:22 INFO MemoryStore: Block taskresult_82 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:22 INFO Executor: Finished task 162.0 in stage 0.0 (TID 82). 10554264 bytes result sent via BlockManager)
+20/04/07 15:59:22 INFO CoarseGrainedExecutorBackend: Got assigned task 84
+20/04/07 15:59:22 INFO Executor: Running task 163.0 in stage 0.0 (TID 84)
+20/04/07 15:59:22 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1142629674+7009998
+20/04/07 15:59:23 INFO MemoryStore: Block taskresult_84 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:23 INFO Executor: Finished task 163.0 in stage 0.0 (TID 84). 10551837 bytes result sent via BlockManager)
+20/04/07 15:59:23 INFO CoarseGrainedExecutorBackend: Got assigned task 86
+20/04/07 15:59:23 INFO Executor: Running task 164.0 in stage 0.0 (TID 86)
+20/04/07 15:59:23 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1149639672+7009998
+20/04/07 15:59:24 INFO MemoryStore: Block taskresult_86 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:24 INFO Executor: Finished task 164.0 in stage 0.0 (TID 86). 10553123 bytes result sent via BlockManager)
+20/04/07 15:59:24 INFO CoarseGrainedExecutorBackend: Got assigned task 88
+20/04/07 15:59:24 INFO Executor: Running task 165.0 in stage 0.0 (TID 88)
+20/04/07 15:59:24 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1156649670+7009998
+20/04/07 15:59:24 INFO MemoryStore: Block taskresult_88 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:24 INFO Executor: Finished task 165.0 in stage 0.0 (TID 88). 10551160 bytes result sent via BlockManager)
+20/04/07 15:59:24 INFO CoarseGrainedExecutorBackend: Got assigned task 89
+20/04/07 15:59:24 INFO Executor: Running task 166.0 in stage 0.0 (TID 89)
+20/04/07 15:59:24 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1163659668+7009998
+20/04/07 15:59:25 INFO MemoryStore: Block taskresult_89 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:25 INFO Executor: Finished task 166.0 in stage 0.0 (TID 89). 10553039 bytes result sent via BlockManager)
+20/04/07 15:59:25 INFO CoarseGrainedExecutorBackend: Got assigned task 91
+20/04/07 15:59:25 INFO Executor: Running task 167.0 in stage 0.0 (TID 91)
+20/04/07 15:59:25 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1170669666+7009998
+20/04/07 15:59:26 INFO MemoryStore: Block taskresult_91 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:26 INFO Executor: Finished task 167.0 in stage 0.0 (TID 91). 10550509 bytes result sent via BlockManager)
+20/04/07 15:59:26 INFO CoarseGrainedExecutorBackend: Got assigned task 92
+20/04/07 15:59:26 INFO Executor: Running task 168.0 in stage 0.0 (TID 92)
+20/04/07 15:59:26 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1177679664+7009998
+20/04/07 15:59:27 INFO MemoryStore: Block taskresult_92 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:27 INFO Executor: Finished task 168.0 in stage 0.0 (TID 92). 10552829 bytes result sent via BlockManager)
+20/04/07 15:59:27 INFO CoarseGrainedExecutorBackend: Got assigned task 94
+20/04/07 15:59:27 INFO Executor: Running task 169.0 in stage 0.0 (TID 94)
+20/04/07 15:59:27 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1184689662+7009998
+20/04/07 15:59:27 INFO MemoryStore: Block taskresult_94 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:27 INFO Executor: Finished task 169.0 in stage 0.0 (TID 94). 10551480 bytes result sent via BlockManager)
+20/04/07 15:59:27 INFO CoarseGrainedExecutorBackend: Got assigned task 96
+20/04/07 15:59:27 INFO Executor: Running task 170.0 in stage 0.0 (TID 96)
+20/04/07 15:59:27 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1191699660+7009998
+20/04/07 15:59:28 INFO MemoryStore: Block taskresult_96 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:28 INFO Executor: Finished task 170.0 in stage 0.0 (TID 96). 10552448 bytes result sent via BlockManager)
+20/04/07 15:59:28 INFO CoarseGrainedExecutorBackend: Got assigned task 97
+20/04/07 15:59:28 INFO Executor: Running task 171.0 in stage 0.0 (TID 97)
+20/04/07 15:59:28 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1198709658+7009998
+20/04/07 15:59:29 INFO MemoryStore: Block taskresult_97 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:29 INFO Executor: Finished task 171.0 in stage 0.0 (TID 97). 10552661 bytes result sent via BlockManager)
+20/04/07 15:59:29 INFO CoarseGrainedExecutorBackend: Got assigned task 99
+20/04/07 15:59:29 INFO Executor: Running task 173.0 in stage 0.0 (TID 99)
+20/04/07 15:59:29 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1212729654+7009998
+20/04/07 15:59:30 INFO MemoryStore: Block taskresult_99 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:30 INFO Executor: Finished task 173.0 in stage 0.0 (TID 99). 10551837 bytes result sent via BlockManager)
+20/04/07 15:59:30 INFO CoarseGrainedExecutorBackend: Got assigned task 100
+20/04/07 15:59:30 INFO Executor: Running task 174.0 in stage 0.0 (TID 100)
+20/04/07 15:59:30 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1219739652+7009998
+20/04/07 15:59:31 INFO MemoryStore: Block taskresult_100 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:31 INFO Executor: Finished task 174.0 in stage 0.0 (TID 100). 10551984 bytes result sent via BlockManager)
+20/04/07 15:59:31 INFO CoarseGrainedExecutorBackend: Got assigned task 101
+20/04/07 15:59:31 INFO Executor: Running task 175.0 in stage 0.0 (TID 101)
+20/04/07 15:59:31 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1226749650+7009998
+20/04/07 15:59:31 INFO MemoryStore: Block taskresult_101 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:59:31 INFO Executor: Finished task 175.0 in stage 0.0 (TID 101). 10551983 bytes result sent via BlockManager)
+20/04/07 15:59:31 INFO CoarseGrainedExecutorBackend: Got assigned task 102
+20/04/07 15:59:31 INFO Executor: Running task 176.0 in stage 0.0 (TID 102)
+20/04/07 15:59:31 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:1233759648+7009998
+20/04/07 15:59:31 INFO Executor: Executor is trying to kill task 176.0 in stage 0.0 (TID 102), reason: Stage cancelled
+20/04/07 15:59:31 INFO Executor: Executor killed task 176.0 in stage 0.0 (TID 102), reason: Stage cancelled
+20/04/07 15:59:32 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/04/07 15:59:32 INFO CoarseGrainedExecutorBackend: Driver from iccluster056.iccluster.epfl.ch:41536 disconnected during shutdown
+20/04/07 15:59:32 INFO CoarseGrainedExecutorBackend: Driver from iccluster056.iccluster.epfl.ch:41536 disconnected during shutdown
+20/04/07 15:59:32 INFO MemoryStore: MemoryStore cleared
+20/04/07 15:59:32 INFO BlockManager: BlockManager stopped
+20/04/07 15:59:32 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************

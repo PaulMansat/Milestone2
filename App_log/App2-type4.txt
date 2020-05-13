@@ -1,0 +1,2039 @@
+Container: container_e02_1580812675067_5021_01_000003 on iccluster060.iccluster.epfl.ch_45454_1586266255168
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Tue Apr 07 15:30:55 +0200 2020
+LogLength:55946
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdc/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/07 15:27:06 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 13039@iccluster060
+20/04/07 15:27:06 INFO SignalUtils: Registered signal handler for TERM
+20/04/07 15:27:06 INFO SignalUtils: Registered signal handler for HUP
+20/04/07 15:27:06 INFO SignalUtils: Registered signal handler for INT
+20/04/07 15:27:07 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:27:07 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:27:07 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:27:07 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:27:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:27:07 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:44353 after 108 ms (0 ms spent in bootstraps)
+20/04/07 15:27:07 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:27:07 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:27:07 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:27:07 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:27:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:27:07 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:44353 after 2 ms (0 ms spent in bootstraps)
+20/04/07 15:27:08 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-ffe0421e-5a4f-45e3-9b37-fad20bcdfbf5
+20/04/07 15:27:08 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-a5e229d0-b161-47b7-9f6e-4c6f1a2710c4
+20/04/07 15:27:08 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-a90b2bf1-e427-4823-809b-3ac82abf2233
+20/04/07 15:27:08 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-81588bc7-9c2b-402e-a974-e3613f63b756
+20/04/07 15:27:08 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-96a31dd2-a8b1-433e-8a2f-3302adbe0023
+20/04/07 15:27:08 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-1441e036-4f84-4256-a621-180406d98151
+20/04/07 15:27:08 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-d68e474b-1f7d-4179-b1ec-b510ff0c02c9
+20/04/07 15:27:08 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/07 15:27:08 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster063.iccluster.epfl.ch:44353
+20/04/07 15:27:08 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/07 15:27:08 INFO Executor: Starting executor ID 2 on host iccluster060.iccluster.epfl.ch
+20/04/07 15:27:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38059.
+20/04/07 15:27:08 INFO NettyBlockTransferService: Server created on iccluster060.iccluster.epfl.ch:38059
+20/04/07 15:27:08 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/07 15:27:08 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(2, iccluster060.iccluster.epfl.ch, 38059, None)
+20/04/07 15:27:08 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(2, iccluster060.iccluster.epfl.ch, 38059, None)
+20/04/07 15:27:08 INFO BlockManager: Initialized BlockManager: BlockManagerId(2, iccluster060.iccluster.epfl.ch, 38059, None)
+20/04/07 15:27:11 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/04/07 15:27:11 INFO Executor: Running task 96.0 in stage 0.0 (TID 1)
+20/04/07 15:27:11 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/07 15:27:11 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:39798 after 2 ms (0 ms spent in bootstraps)
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 408.9 MB)
+20/04/07 15:27:11 INFO TorrentBroadcast: Reading broadcast variable 1 took 145 ms
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 408.9 MB)
+20/04/07 15:27:11 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:672959808+7009998
+20/04/07 15:27:11 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.9 MB)
+20/04/07 15:27:12 INFO TorrentBroadcast: Reading broadcast variable 0 took 15 ms
+20/04/07 15:27:12 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 673.8 KB, free 408.2 MB)
+20/04/07 15:27:13 INFO MemoryStore: Block taskresult_1 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:13 INFO Executor: Finished task 96.0 in stage 0.0 (TID 1). 10551711 bytes result sent via BlockManager)
+20/04/07 15:27:14 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+20/04/07 15:27:14 INFO Executor: Running task 97.0 in stage 0.0 (TID 2)
+20/04/07 15:27:14 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:679969806+7009998
+20/04/07 15:27:14 INFO MemoryStore: Block taskresult_2 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:27:14 INFO Executor: Finished task 97.0 in stage 0.0 (TID 2). 10552364 bytes result sent via BlockManager)
+20/04/07 15:27:14 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+20/04/07 15:27:14 INFO Executor: Running task 98.0 in stage 0.0 (TID 3)
+20/04/07 15:27:14 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:686979804+7009998
+20/04/07 15:27:15 INFO MemoryStore: Block taskresult_3 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:15 INFO Executor: Finished task 98.0 in stage 0.0 (TID 3). 10550572 bytes result sent via BlockManager)
+20/04/07 15:27:15 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+20/04/07 15:27:15 INFO Executor: Running task 99.0 in stage 0.0 (TID 4)
+20/04/07 15:27:15 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:693989802+7009998
+20/04/07 15:27:16 INFO MemoryStore: Block taskresult_4 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:16 INFO Executor: Finished task 99.0 in stage 0.0 (TID 4). 10552724 bytes result sent via BlockManager)
+20/04/07 15:27:16 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+20/04/07 15:27:16 INFO Executor: Running task 100.0 in stage 0.0 (TID 6)
+20/04/07 15:27:16 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:700999800+7009998
+20/04/07 15:27:17 INFO MemoryStore: Block taskresult_6 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:17 INFO Executor: Finished task 100.0 in stage 0.0 (TID 6). 10551942 bytes result sent via BlockManager)
+20/04/07 15:27:17 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+20/04/07 15:27:17 INFO Executor: Running task 101.0 in stage 0.0 (TID 7)
+20/04/07 15:27:17 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:708009798+7009998
+20/04/07 15:27:18 INFO MemoryStore: Block taskresult_7 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:18 INFO Executor: Finished task 101.0 in stage 0.0 (TID 7). 10552661 bytes result sent via BlockManager)
+20/04/07 15:27:18 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+20/04/07 15:27:18 INFO Executor: Running task 102.0 in stage 0.0 (TID 9)
+20/04/07 15:27:18 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:715019796+7009998
+20/04/07 15:27:19 INFO MemoryStore: Block taskresult_9 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:19 INFO Executor: Finished task 102.0 in stage 0.0 (TID 9). 10552406 bytes result sent via BlockManager)
+20/04/07 15:27:19 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+20/04/07 15:27:19 INFO Executor: Running task 103.0 in stage 0.0 (TID 10)
+20/04/07 15:27:19 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:722029794+7009998
+20/04/07 15:27:19 INFO MemoryStore: Block taskresult_10 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:27:20 INFO Executor: Finished task 103.0 in stage 0.0 (TID 10). 10552089 bytes result sent via BlockManager)
+20/04/07 15:27:20 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+20/04/07 15:27:20 INFO Executor: Running task 104.0 in stage 0.0 (TID 12)
+20/04/07 15:27:20 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:729039792+7009998
+20/04/07 15:27:20 INFO MemoryStore: Block taskresult_12 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:20 INFO Executor: Finished task 104.0 in stage 0.0 (TID 12). 10551753 bytes result sent via BlockManager)
+20/04/07 15:27:20 INFO CoarseGrainedExecutorBackend: Got assigned task 13
+20/04/07 15:27:20 INFO Executor: Running task 105.0 in stage 0.0 (TID 13)
+20/04/07 15:27:20 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:736049790+7009998
+20/04/07 15:27:21 INFO MemoryStore: Block taskresult_13 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:21 INFO Executor: Finished task 105.0 in stage 0.0 (TID 13). 10552829 bytes result sent via BlockManager)
+20/04/07 15:27:21 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+20/04/07 15:27:21 INFO Executor: Running task 106.0 in stage 0.0 (TID 14)
+20/04/07 15:27:21 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:743059788+7009998
+20/04/07 15:27:22 INFO MemoryStore: Block taskresult_14 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:27:23 INFO Executor: Finished task 106.0 in stage 0.0 (TID 14). 10552955 bytes result sent via BlockManager)
+20/04/07 15:27:23 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+20/04/07 15:27:23 INFO Executor: Running task 107.0 in stage 0.0 (TID 16)
+20/04/07 15:27:23 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:750069786+7009998
+20/04/07 15:27:24 INFO MemoryStore: Block taskresult_16 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:24 INFO Executor: Finished task 107.0 in stage 0.0 (TID 16). 10551921 bytes result sent via BlockManager)
+20/04/07 15:27:24 INFO CoarseGrainedExecutorBackend: Got assigned task 18
+20/04/07 15:27:24 INFO Executor: Running task 108.0 in stage 0.0 (TID 18)
+20/04/07 15:27:24 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:757079784+7009998
+20/04/07 15:27:24 INFO MemoryStore: Block taskresult_18 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:27:25 INFO Executor: Finished task 108.0 in stage 0.0 (TID 18). 10552787 bytes result sent via BlockManager)
+20/04/07 15:27:25 INFO CoarseGrainedExecutorBackend: Got assigned task 19
+20/04/07 15:27:25 INFO Executor: Running task 109.0 in stage 0.0 (TID 19)
+20/04/07 15:27:25 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:764089782+7009998
+20/04/07 15:27:25 INFO MemoryStore: Block taskresult_19 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:25 INFO Executor: Finished task 109.0 in stage 0.0 (TID 19). 10553947 bytes result sent via BlockManager)
+20/04/07 15:27:25 INFO CoarseGrainedExecutorBackend: Got assigned task 21
+20/04/07 15:27:25 INFO Executor: Running task 110.0 in stage 0.0 (TID 21)
+20/04/07 15:27:25 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:771099780+7009998
+20/04/07 15:27:26 INFO MemoryStore: Block taskresult_21 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:26 INFO Executor: Finished task 110.0 in stage 0.0 (TID 21). 10552892 bytes result sent via BlockManager)
+20/04/07 15:27:26 INFO CoarseGrainedExecutorBackend: Got assigned task 23
+20/04/07 15:27:26 INFO Executor: Running task 111.0 in stage 0.0 (TID 23)
+20/04/07 15:27:27 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:778109778+7009998
+20/04/07 15:27:27 INFO MemoryStore: Block taskresult_23 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:27 INFO Executor: Finished task 111.0 in stage 0.0 (TID 23). 10551879 bytes result sent via BlockManager)
+20/04/07 15:27:27 INFO CoarseGrainedExecutorBackend: Got assigned task 24
+20/04/07 15:27:27 INFO Executor: Running task 112.0 in stage 0.0 (TID 24)
+20/04/07 15:27:27 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:785119776+7009998
+20/04/07 15:27:28 INFO MemoryStore: Block taskresult_24 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:27:30 INFO Executor: Finished task 112.0 in stage 0.0 (TID 24). 10553165 bytes result sent via BlockManager)
+20/04/07 15:27:30 INFO CoarseGrainedExecutorBackend: Got assigned task 27
+20/04/07 15:27:30 INFO Executor: Running task 113.0 in stage 0.0 (TID 27)
+20/04/07 15:27:30 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:792129774+7009998
+20/04/07 15:27:31 INFO MemoryStore: Block taskresult_27 stored as bytes in memory (estimated size 10.1 MB, free 378.0 MB)
+20/04/07 15:27:33 INFO Executor: Finished task 113.0 in stage 0.0 (TID 27). 10552745 bytes result sent via BlockManager)
+20/04/07 15:27:33 INFO CoarseGrainedExecutorBackend: Got assigned task 29
+20/04/07 15:27:33 INFO Executor: Running task 115.0 in stage 0.0 (TID 29)
+20/04/07 15:27:33 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:806149770+7009998
+20/04/07 15:27:34 INFO MemoryStore: Block taskresult_29 stored as bytes in memory (estimated size 10.1 MB, free 378.0 MB)
+20/04/07 15:27:35 INFO Executor: Finished task 115.0 in stage 0.0 (TID 29). 10551351 bytes result sent via BlockManager)
+20/04/07 15:27:35 INFO CoarseGrainedExecutorBackend: Got assigned task 30
+20/04/07 15:27:35 INFO Executor: Running task 116.0 in stage 0.0 (TID 30)
+20/04/07 15:27:35 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:813159768+7009998
+20/04/07 15:27:36 INFO MemoryStore: Block taskresult_30 stored as bytes in memory (estimated size 10.1 MB, free 367.9 MB)
+20/04/07 15:27:38 INFO Executor: Finished task 116.0 in stage 0.0 (TID 30). 10552280 bytes result sent via BlockManager)
+20/04/07 15:27:38 INFO CoarseGrainedExecutorBackend: Got assigned task 32
+20/04/07 15:27:38 INFO Executor: Running task 117.0 in stage 0.0 (TID 32)
+20/04/07 15:27:38 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:820169766+7009998
+20/04/07 15:27:39 INFO MemoryStore: Block taskresult_32 stored as bytes in memory (estimated size 10.1 MB, free 357.9 MB)
+20/04/07 15:27:40 INFO Executor: Finished task 117.0 in stage 0.0 (TID 32). 10552238 bytes result sent via BlockManager)
+20/04/07 15:27:40 INFO CoarseGrainedExecutorBackend: Got assigned task 35
+20/04/07 15:27:40 INFO Executor: Running task 118.0 in stage 0.0 (TID 35)
+20/04/07 15:27:40 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:827179764+7009998
+20/04/07 15:27:40 INFO MemoryStore: Block taskresult_35 stored as bytes in memory (estimated size 10.1 MB, free 347.8 MB)
+20/04/07 15:27:41 INFO Executor: Finished task 118.0 in stage 0.0 (TID 35). 10552955 bytes result sent via BlockManager)
+20/04/07 15:27:41 INFO CoarseGrainedExecutorBackend: Got assigned task 36
+20/04/07 15:27:41 INFO Executor: Running task 119.0 in stage 0.0 (TID 36)
+20/04/07 15:27:41 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:834189762+7009998
+20/04/07 15:27:42 INFO MemoryStore: Block taskresult_36 stored as bytes in memory (estimated size 10.1 MB, free 337.7 MB)
+20/04/07 15:27:43 INFO Executor: Finished task 119.0 in stage 0.0 (TID 36). 10552068 bytes result sent via BlockManager)
+20/04/07 15:27:45 INFO CoarseGrainedExecutorBackend: Got assigned task 37
+20/04/07 15:27:45 INFO Executor: Running task 120.0 in stage 0.0 (TID 37)
+20/04/07 15:27:45 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:841199760+7009998
+20/04/07 15:27:46 INFO MemoryStore: Block taskresult_37 stored as bytes in memory (estimated size 10.1 MB, free 327.7 MB)
+20/04/07 15:27:47 INFO Executor: Finished task 120.0 in stage 0.0 (TID 37). 10552514 bytes result sent via BlockManager)
+20/04/07 15:27:49 INFO CoarseGrainedExecutorBackend: Got assigned task 40
+20/04/07 15:27:49 INFO Executor: Running task 121.0 in stage 0.0 (TID 40)
+20/04/07 15:27:49 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:848209758+7009998
+20/04/07 15:27:50 INFO MemoryStore: Block taskresult_40 stored as bytes in memory (estimated size 10.1 MB, free 317.6 MB)
+20/04/07 15:28:00 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:28:10 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:28:20 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:28:30 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:28:40 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:28:50 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:29:00 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:29:10 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:29:20 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:29:30 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:29:40 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:29:50 WARN BlockManager: Putting block taskresult_40 failed due to exception org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout.
+20/04/07 15:29:50 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:00 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:10 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:20 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:24 INFO Executor: Executor is trying to kill task 121.0 in stage 0.0 (TID 40), reason: Stage cancelled
+20/04/07 15:30:25 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/04/07 15:30:30 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:30 INFO MemoryStore: MemoryStore cleared
+20/04/07 15:30:30 INFO BlockManager: BlockManager stopped
+20/04/07 15:30:30 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from iccluster063.iccluster.epfl.ch/10.90.39.14:44353 is closed
+20/04/07 15:30:30 INFO Executor: Executor interrupted and killed task 121.0 in stage 0.0 (TID 40), reason: Stage cancelled
+20/04/07 15:30:30 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_5021_01_000002 on iccluster061.iccluster.epfl.ch_45454_1586266254875
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Tue Apr 07 15:30:55 +0200 2020
+LogLength:67352
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdc/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/07 15:27:07 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 40661@iccluster061
+20/04/07 15:27:07 INFO SignalUtils: Registered signal handler for TERM
+20/04/07 15:27:07 INFO SignalUtils: Registered signal handler for HUP
+20/04/07 15:27:07 INFO SignalUtils: Registered signal handler for INT
+20/04/07 15:27:08 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:27:08 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:27:08 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:27:08 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:27:08 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:27:09 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:44353 after 167 ms (0 ms spent in bootstraps)
+20/04/07 15:27:09 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:27:09 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:27:09 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:27:09 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:27:09 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:27:09 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:44353 after 1 ms (0 ms spent in bootstraps)
+20/04/07 15:27:10 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-116b1336-115d-4113-aff1-630f1bc52828
+20/04/07 15:27:10 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-447211ef-3fd4-482f-9299-e08355f4668a
+20/04/07 15:27:10 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-b902c0d6-aed5-4918-8585-64f642924295
+20/04/07 15:27:10 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-4fa65bc8-3f62-41f6-97eb-934b50c774f6
+20/04/07 15:27:10 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-ad8f0d49-97ba-4d4d-a44e-d33b6aac6c72
+20/04/07 15:27:10 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-3dad580e-3f9b-414c-b094-1ccc631fb8ba
+20/04/07 15:27:10 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-33cb69a1-58e1-4458-aef0-e46ec303de11
+20/04/07 15:27:10 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/07 15:27:10 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster063.iccluster.epfl.ch:44353
+20/04/07 15:27:10 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/07 15:27:10 INFO Executor: Starting executor ID 1 on host iccluster061.iccluster.epfl.ch
+20/04/07 15:27:10 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41092.
+20/04/07 15:27:10 INFO NettyBlockTransferService: Server created on iccluster061.iccluster.epfl.ch:41092
+20/04/07 15:27:10 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/07 15:27:10 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, iccluster061.iccluster.epfl.ch, 41092, None)
+20/04/07 15:27:10 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, iccluster061.iccluster.epfl.ch, 41092, None)
+20/04/07 15:27:10 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, iccluster061.iccluster.epfl.ch, 41092, None)
+20/04/07 15:27:11 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/04/07 15:27:11 INFO Executor: Running task 20.0 in stage 0.0 (TID 0)
+20/04/07 15:27:11 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/07 15:27:11 INFO TransportClientFactory: Successfully created connection to iccluster063.iccluster.epfl.ch/10.90.39.14:39798 after 9 ms (0 ms spent in bootstraps)
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 408.9 MB)
+20/04/07 15:27:11 INFO TorrentBroadcast: Reading broadcast variable 1 took 201 ms
+20/04/07 15:27:12 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 408.9 MB)
+20/04/07 15:27:12 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:140199960+7009998
+20/04/07 15:27:12 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/04/07 15:27:12 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 408.9 MB)
+20/04/07 15:27:12 INFO TorrentBroadcast: Reading broadcast variable 0 took 14 ms
+20/04/07 15:27:12 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 673.8 KB, free 408.2 MB)
+20/04/07 15:27:16 INFO MemoryStore: Block taskresult_0 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:16 INFO Executor: Finished task 20.0 in stage 0.0 (TID 0). 10551732 bytes result sent via BlockManager)
+20/04/07 15:27:16 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+20/04/07 15:27:16 INFO Executor: Running task 21.0 in stage 0.0 (TID 5)
+20/04/07 15:27:16 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:147209958+7009998
+20/04/07 15:27:17 INFO MemoryStore: Block taskresult_5 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:17 INFO Executor: Finished task 21.0 in stage 0.0 (TID 5). 10551732 bytes result sent via BlockManager)
+20/04/07 15:27:17 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+20/04/07 15:27:17 INFO Executor: Running task 22.0 in stage 0.0 (TID 8)
+20/04/07 15:27:17 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:154219956+7009998
+20/04/07 15:27:19 INFO MemoryStore: Block taskresult_8 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:19 INFO Executor: Finished task 22.0 in stage 0.0 (TID 8). 10552131 bytes result sent via BlockManager)
+20/04/07 15:27:19 INFO CoarseGrainedExecutorBackend: Got assigned task 11
+20/04/07 15:27:19 INFO Executor: Running task 23.0 in stage 0.0 (TID 11)
+20/04/07 15:27:19 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:161229954+7009998
+20/04/07 15:27:21 INFO MemoryStore: Block taskresult_11 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:21 INFO Executor: Finished task 23.0 in stage 0.0 (TID 11). 10551393 bytes result sent via BlockManager)
+20/04/07 15:27:21 INFO CoarseGrainedExecutorBackend: Got assigned task 15
+20/04/07 15:27:21 INFO Executor: Running task 24.0 in stage 0.0 (TID 15)
+20/04/07 15:27:21 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:168239952+7009998
+20/04/07 15:27:23 INFO MemoryStore: Block taskresult_15 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:27:23 INFO Executor: Finished task 24.0 in stage 0.0 (TID 15). 10551627 bytes result sent via BlockManager)
+20/04/07 15:27:23 INFO CoarseGrainedExecutorBackend: Got assigned task 17
+20/04/07 15:27:23 INFO Executor: Running task 25.0 in stage 0.0 (TID 17)
+20/04/07 15:27:23 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:175249950+7009998
+20/04/07 15:27:24 INFO MemoryStore: Block taskresult_17 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:25 INFO Executor: Finished task 25.0 in stage 0.0 (TID 17). 10552173 bytes result sent via BlockManager)
+20/04/07 15:27:25 INFO CoarseGrainedExecutorBackend: Got assigned task 20
+20/04/07 15:27:25 INFO Executor: Running task 26.0 in stage 0.0 (TID 20)
+20/04/07 15:27:25 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:182259948+7009998
+20/04/07 15:27:26 INFO MemoryStore: Block taskresult_20 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:26 INFO Executor: Finished task 26.0 in stage 0.0 (TID 20). 10551648 bytes result sent via BlockManager)
+20/04/07 15:27:26 INFO CoarseGrainedExecutorBackend: Got assigned task 22
+20/04/07 15:27:26 INFO Executor: Running task 27.0 in stage 0.0 (TID 22)
+20/04/07 15:27:26 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:189269946+7009998
+20/04/07 15:27:28 INFO MemoryStore: Block taskresult_22 stored as bytes in memory (estimated size 10.1 MB, free 398.1 MB)
+20/04/07 15:27:28 INFO Executor: Finished task 27.0 in stage 0.0 (TID 22). 10552829 bytes result sent via BlockManager)
+20/04/07 15:27:28 INFO CoarseGrainedExecutorBackend: Got assigned task 25
+20/04/07 15:27:28 INFO Executor: Running task 28.0 in stage 0.0 (TID 25)
+20/04/07 15:27:28 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:196279944+7009998
+20/04/07 15:27:30 INFO MemoryStore: Block taskresult_25 stored as bytes in memory (estimated size 10.1 MB, free 388.1 MB)
+20/04/07 15:27:30 INFO Executor: Finished task 28.0 in stage 0.0 (TID 25). 10551795 bytes result sent via BlockManager)
+20/04/07 15:27:30 INFO CoarseGrainedExecutorBackend: Got assigned task 26
+20/04/07 15:27:30 INFO Executor: Running task 29.0 in stage 0.0 (TID 26)
+20/04/07 15:27:30 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:203289942+7009998
+20/04/07 15:27:32 INFO MemoryStore: Block taskresult_26 stored as bytes in memory (estimated size 10.1 MB, free 378.0 MB)
+20/04/07 15:27:33 INFO Executor: Finished task 29.0 in stage 0.0 (TID 26). 10551522 bytes result sent via BlockManager)
+20/04/07 15:27:33 INFO CoarseGrainedExecutorBackend: Got assigned task 28
+20/04/07 15:27:33 INFO Executor: Running task 30.0 in stage 0.0 (TID 28)
+20/04/07 15:27:33 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:210299940+7009998
+20/04/07 15:27:34 INFO MemoryStore: Block taskresult_28 stored as bytes in memory (estimated size 10.1 MB, free 378.0 MB)
+20/04/07 15:27:35 INFO Executor: Finished task 30.0 in stage 0.0 (TID 28). 10553419 bytes result sent via BlockManager)
+20/04/07 15:27:35 INFO CoarseGrainedExecutorBackend: Got assigned task 31
+20/04/07 15:27:35 INFO Executor: Running task 31.0 in stage 0.0 (TID 31)
+20/04/07 15:27:35 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:217309938+7009998
+20/04/07 15:27:37 INFO MemoryStore: Block taskresult_31 stored as bytes in memory (estimated size 10.1 MB, free 367.9 MB)
+20/04/07 15:27:38 INFO Executor: Finished task 31.0 in stage 0.0 (TID 31). 10551246 bytes result sent via BlockManager)
+20/04/07 15:27:38 INFO CoarseGrainedExecutorBackend: Got assigned task 33
+20/04/07 15:27:38 INFO Executor: Running task 32.0 in stage 0.0 (TID 33)
+20/04/07 15:27:38 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:224319936+7009998
+20/04/07 15:27:39 INFO MemoryStore: Block taskresult_33 stored as bytes in memory (estimated size 10.1 MB, free 357.9 MB)
+20/04/07 15:27:40 INFO Executor: Finished task 32.0 in stage 0.0 (TID 33). 10551942 bytes result sent via BlockManager)
+20/04/07 15:27:40 INFO CoarseGrainedExecutorBackend: Got assigned task 34
+20/04/07 15:27:40 INFO Executor: Running task 33.0 in stage 0.0 (TID 34)
+20/04/07 15:27:40 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:231329934+7009998
+20/04/07 15:27:42 INFO MemoryStore: Block taskresult_34 stored as bytes in memory (estimated size 10.1 MB, free 347.8 MB)
+20/04/07 15:27:43 INFO Executor: Finished task 33.0 in stage 0.0 (TID 34). 10551309 bytes result sent via BlockManager)
+20/04/07 15:27:45 INFO CoarseGrainedExecutorBackend: Got assigned task 38
+20/04/07 15:27:45 INFO Executor: Running task 34.0 in stage 0.0 (TID 38)
+20/04/07 15:27:45 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:238339932+7009998
+20/04/07 15:27:47 INFO MemoryStore: Block taskresult_38 stored as bytes in memory (estimated size 10.1 MB, free 337.8 MB)
+20/04/07 15:27:47 INFO Executor: Finished task 34.0 in stage 0.0 (TID 38). 10552364 bytes result sent via BlockManager)
+20/04/07 15:27:48 INFO CoarseGrainedExecutorBackend: Got assigned task 39
+20/04/07 15:27:48 INFO Executor: Running task 35.0 in stage 0.0 (TID 39)
+20/04/07 15:27:48 INFO HadoopRDD: Input split: hdfs://iccluster040.iccluster.epfl.ch:8020/cs449/data3_large.csv:245349930+7009998
+20/04/07 15:27:50 INFO MemoryStore: Block taskresult_39 stored as bytes in memory (estimated size 10.1 MB, free 327.7 MB)
+20/04/07 15:28:01 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:28:11 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:28:21 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:28:31 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:28:41 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:28:51 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:29:01 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:29:11 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:29:21 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:29:31 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:29:41 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:29:50 WARN BlockManager: Putting block taskresult_39 failed due to exception org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout.
+20/04/07 15:29:51 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from iccluster063.iccluster.epfl.ch:44353 in 10 seconds
+	... 8 more
+20/04/07 15:30:01 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:11 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:21 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:24 INFO Executor: Executor is trying to kill task 35.0 in stage 0.0 (TID 39), reason: Stage cancelled
+20/04/07 15:30:25 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/04/07 15:30:31 WARN Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:785)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:814)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:814)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+20/04/07 15:30:32 INFO MemoryStore: MemoryStore cleared
+20/04/07 15:30:32 INFO BlockManager: BlockManager stopped
+20/04/07 15:30:32 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from iccluster063.iccluster.epfl.ch/10.90.39.14:44353 is closed
+20/04/07 15:30:32 INFO Executor: Executor interrupted and killed task 35.0 in stage 0.0 (TID 39), reason: Stage cancelled
+20/04/07 15:30:32 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_5021_01_000001 on iccluster063.iccluster.epfl.ch_45454_1586266255728
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Tue Apr 07 15:30:55 +0200 2020
+LogLength:65734
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdd/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/07 15:27:01 INFO SignalUtils: Registered signal handler for TERM
+20/04/07 15:27:01 INFO SignalUtils: Registered signal handler for HUP
+20/04/07 15:27:01 INFO SignalUtils: Registered signal handler for INT
+20/04/07 15:27:01 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:27:01 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:27:01 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:27:01 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:27:01 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:27:01 INFO ApplicationMaster: Preparing Local resources
+20/04/07 15:27:03 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1580812675067_5021_000001
+20/04/07 15:27:03 INFO ApplicationMaster: Starting the user application in a separate Thread
+20/04/07 15:27:03 INFO ApplicationMaster: Waiting for spark context initialization...
+20/04/07 15:27:03 INFO SparkContext: Running Spark version 2.3.1.3.0.1.0-187
+20/04/07 15:27:03 INFO SparkContext: Submitted application: M2 App2
+20/04/07 15:27:03 INFO SecurityManager: Changing view acls to: yarn,basil
+20/04/07 15:27:03 INFO SecurityManager: Changing modify acls to: yarn,basil
+20/04/07 15:27:03 INFO SecurityManager: Changing view acls groups to: 
+20/04/07 15:27:03 INFO SecurityManager: Changing modify acls groups to: 
+20/04/07 15:27:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, basil); groups with view permissions: Set(); users  with modify permissions: Set(yarn, basil); groups with modify permissions: Set()
+20/04/07 15:27:03 INFO Utils: Successfully started service 'sparkDriver' on port 44353.
+20/04/07 15:27:03 INFO SparkEnv: Registering MapOutputTracker
+20/04/07 15:27:03 INFO SparkEnv: Registering BlockManagerMaster
+20/04/07 15:27:03 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/04/07 15:27:03 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/04/07 15:27:03 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-4ef491b4-2b22-4de2-ba26-50add8b0daf0
+20/04/07 15:27:03 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-26720a63-f1f8-454b-9af0-cbf185d389de
+20/04/07 15:27:03 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-466addb8-e582-4266-93ec-58dc63c6030f
+20/04/07 15:27:03 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-bb460583-fb13-4e9a-8a34-6f58e0d9491a
+20/04/07 15:27:03 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-f4ab3be9-31ca-4aca-955b-f0a93a97c273
+20/04/07 15:27:03 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-92e03f9b-e32f-4419-bb5e-260e36b8cd2b
+20/04/07 15:27:03 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/basil/appcache/application_1580812675067_5021/blockmgr-31ecccaa-4e79-44ef-8e85-cef8ba6ef9ce
+20/04/07 15:27:03 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/04/07 15:27:04 INFO SparkEnv: Registering OutputCommitCoordinator
+20/04/07 15:27:04 INFO log: Logging initialized @3481ms
+20/04/07 15:27:04 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /jobs, /jobs/json, /jobs/job, /jobs/job/json, /stages, /stages/json, /stages/stage, /stages/stage/json, /stages/pool, /stages/pool/json, /storage, /storage/json, /storage/rdd, /storage/rdd/json, /environment, /environment/json, /executors, /executors/json, /executors/threadDump, /executors/threadDump/json, /static, /, /api, /jobs/job/kill, /stages/stage/kill.
+20/04/07 15:27:04 INFO Server: jetty-9.3.z-SNAPSHOT, build timestamp: 2018-06-05T19:11:56+02:00, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+20/04/07 15:27:04 INFO Server: Started @3573ms
+20/04/07 15:27:04 INFO AbstractConnector: Started ServerConnector@7a09aeff{HTTP/1.1,[http/1.1]}{0.0.0.0:42057}
+20/04/07 15:27:04 INFO Utils: Successfully started service 'SparkUI' on port 42057.
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@22ccea4c{/jobs,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6f2d3535{/jobs/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3fd2300{/jobs/job,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7204e993{/jobs/job/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@188b21f0{/stages,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@673234a5{/stages/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@24826dce{/stages/stage,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@46bbf66c{/stages/stage/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@71600f68{/stages/pool,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7af1ab48{/stages/pool/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1996bb43{/storage,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7268b{/storage/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@716d62ac{/storage/rdd,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6b13c22{/storage/rdd/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2a51c314{/environment,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@13db8bab{/environment/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@939e37e{/executors,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6669e57{/executors/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@228bb4ec{/executors/threadDump,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6d42f5c5{/executors/threadDump/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2ba6d900{/static,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1038324c{/,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2e0206c0{/api,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@41f21067{/jobs/job/kill,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@12f758dc{/stages/stage/kill,null,AVAILABLE,@Spark}
+20/04/07 15:27:04 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://iccluster063.iccluster.epfl.ch:42057
+20/04/07 15:27:04 INFO YarnClusterScheduler: Created YarnClusterScheduler
+20/04/07 15:27:04 INFO SchedulerExtensionServices: Starting Yarn extension services with app application_1580812675067_5021 and attemptId Some(appattempt_1580812675067_5021_000001)
+20/04/07 15:27:04 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39798.
+20/04/07 15:27:04 INFO NettyBlockTransferService: Server created on iccluster063.iccluster.epfl.ch:39798
+20/04/07 15:27:04 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/07 15:27:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 39798, None)
+20/04/07 15:27:04 INFO BlockManagerMasterEndpoint: Registering block manager iccluster063.iccluster.epfl.ch:39798 with 366.3 MB RAM, BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 39798, None)
+20/04/07 15:27:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 39798, None)
+20/04/07 15:27:04 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, iccluster063.iccluster.epfl.ch, 39798, None)
+20/04/07 15:27:04 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+20/04/07 15:27:04 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@51dbe8f9{/metrics/json,null,AVAILABLE,@Spark}
+20/04/07 15:27:05 INFO EventLoggingListener: Logging events to hdfs:/spark2-history/application_1580812675067_5021_1
+20/04/07 15:27:05 INFO ApplicationMaster: 
+===============================================================================
+YARN executor launch context:
+  env:
+    CLASSPATH -> {{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>$HADOOP_CONF_DIR<CPS>/usr/hdp/3.0.1.0-187/hadoop/*<CPS>/usr/hdp/3.0.1.0-187/hadoop/lib/*<CPS>/usr/hdp/current/hadoop-hdfs-client/*<CPS>/usr/hdp/current/hadoop-hdfs-client/lib/*<CPS>/usr/hdp/current/hadoop-yarn-client/*<CPS>/usr/hdp/current/hadoop-yarn-client/lib/*<CPS>$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/3.0.1.0-187/hadoop/lib/hadoop-lzo-0.6.0.3.0.1.0-187.jar:/etc/hadoop/conf/secure<CPS>{{PWD}}/__spark_conf__/__hadoop_conf__
+    SPARK_YARN_STAGING_DIR -> hdfs://iccluster040.iccluster.epfl.ch:8020/user/basil/.sparkStaging/application_1580812675067_5021
+    SPARK_USER -> basil
+
+  command:
+    LD_LIBRARY_PATH="/usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:$LD_LIBRARY_PATH" \ 
+      {{JAVA_HOME}}/bin/java \ 
+      -server \ 
+      -Xmx1024m \ 
+      '-XX:+UseNUMA' \ 
+      -Djava.io.tmpdir={{PWD}}/tmp \ 
+      '-Dspark.history.ui.port=18081' \ 
+      -Dspark.yarn.app.container.log.dir=<LOG_DIR> \ 
+      -XX:OnOutOfMemoryError='kill %p' \ 
+      org.apache.spark.executor.CoarseGrainedExecutorBackend \ 
+      --driver-url \ 
+      spark://CoarseGrainedScheduler@iccluster063.iccluster.epfl.ch:44353 \ 
+      --executor-id \ 
+      <executorId> \ 
+      --hostname \ 
+      <hostname> \ 
+      --cores \ 
+      1 \ 
+      --app-id \ 
+      application_1580812675067_5021 \ 
+      --user-class-path \ 
+      file:$PWD/__app__.jar \ 
+      1><LOG_DIR>/stdout \ 
+      2><LOG_DIR>/stderr
+
+  resources:
+    __app__.jar -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/basil/.sparkStaging/application_1580812675067_5021/Milestone2_faulty.jar" } size: 71190 timestamp: 1586266019455 type: FILE visibility: PRIVATE
+    __spark_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-yarn-archive.tar.gz" } size: 279537157 timestamp: 1580802651556 type: ARCHIVE visibility: PUBLIC
+    __spark_conf__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/basil/.sparkStaging/application_1580812675067_5021/__spark_conf__.zip" } size: 277627 timestamp: 1586266019898 type: ARCHIVE visibility: PRIVATE
+    __hive_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-hive-archive.tar.gz" } size: 43606863 timestamp: 1580802654613 type: ARCHIVE visibility: PUBLIC
+
+===============================================================================
+20/04/07 15:27:05 INFO RMProxy: Connecting to ResourceManager at iccluster040.iccluster.epfl.ch/10.90.38.16:8030
+20/04/07 15:27:05 INFO YarnRMClient: Registering the ApplicationMaster
+20/04/07 15:27:05 INFO Configuration: found resource resource-types.xml at file:/etc/hadoop/3.0.1.0-187/0/resource-types.xml
+20/04/07 15:27:05 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark://YarnAM@iccluster063.iccluster.epfl.ch:44353)
+20/04/07 15:27:05 INFO YarnAllocator: Will request 2 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+20/04/07 15:27:05 INFO YarnAllocator: Submitted 2 unlocalized container requests.
+20/04/07 15:27:05 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+20/04/07 15:27:05 INFO YarnAllocator: Launching container container_e02_1580812675067_5021_01_000002 on host iccluster061.iccluster.epfl.ch for executor with ID 1
+20/04/07 15:27:05 INFO YarnAllocator: Launching container container_e02_1580812675067_5021_01_000003 on host iccluster060.iccluster.epfl.ch for executor with ID 2
+20/04/07 15:27:05 INFO YarnAllocator: Received 2 containers from YARN, launching executors on 2 of them.
+20/04/07 15:27:08 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.11:50792) with ID 2
+20/04/07 15:27:08 INFO BlockManagerMasterEndpoint: Registering block manager iccluster060.iccluster.epfl.ch:38059 with 408.9 MB RAM, BlockManagerId(2, iccluster060.iccluster.epfl.ch, 38059, None)
+20/04/07 15:27:10 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.12:43496) with ID 1
+20/04/07 15:27:10 INFO YarnClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+20/04/07 15:27:10 INFO YarnClusterScheduler: YarnClusterScheduler.postStartHook done
+20/04/07 15:27:10 INFO BlockManagerMasterEndpoint: Registering block manager iccluster061.iccluster.epfl.ch:41092 with 408.9 MB RAM, BlockManagerId(1, iccluster061.iccluster.epfl.ch, 41092, None)
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 427.7 KB, free 365.9 MB)
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 365.8 MB)
+20/04/07 15:27:11 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster063.iccluster.epfl.ch:39798 (size: 43.7 KB, free: 366.3 MB)
+20/04/07 15:27:11 INFO SparkContext: Created broadcast 0 from textFile at App2.scala:16
+20/04/07 15:27:11 INFO FileInputFormat: Total input files to process : 1
+20/04/07 15:27:11 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.8:50010
+20/04/07 15:27:11 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.13:50010
+20/04/07 15:27:11 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.6:50010
+20/04/07 15:27:11 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.7:50010
+20/04/07 15:27:11 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.12:50010
+20/04/07 15:27:11 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.14:50010
+20/04/07 15:27:11 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.11:50010
+20/04/07 15:27:11 INFO SparkContext: Starting job: collect at App2.scala:23
+20/04/07 15:27:11 INFO DAGScheduler: Got job 0 (collect at App2.scala:23) with 200 output partitions
+20/04/07 15:27:11 INFO DAGScheduler: Final stage: ResultStage 0 (collect at App2.scala:23)
+20/04/07 15:27:11 INFO DAGScheduler: Parents of final stage: List()
+20/04/07 15:27:11 INFO DAGScheduler: Missing parents: List()
+20/04/07 15:27:11 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at map at App2.scala:22), which has no missing parents
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 365.8 MB)
+20/04/07 15:27:11 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 365.8 MB)
+20/04/07 15:27:11 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster063.iccluster.epfl.ch:39798 (size: 2.0 KB, free: 366.3 MB)
+20/04/07 15:27:11 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1039
+20/04/07 15:27:11 INFO DAGScheduler: Submitting 200 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at map at App2.scala:22) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/04/07 15:27:11 INFO YarnClusterScheduler: Adding task set 0.0 with 200 tasks
+20/04/07 15:27:11 INFO TaskSetManager: Starting task 20.0 in stage 0.0 (TID 0, iccluster061.iccluster.epfl.ch, executor 1, partition 20, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:11 INFO TaskSetManager: Starting task 96.0 in stage 0.0 (TID 1, iccluster060.iccluster.epfl.ch, executor 2, partition 96, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:11 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 2.0 KB, free: 408.9 MB)
+20/04/07 15:27:11 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 2.0 KB, free: 408.9 MB)
+20/04/07 15:27:11 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 43.7 KB, free: 408.9 MB)
+20/04/07 15:27:12 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 43.7 KB, free: 408.9 MB)
+20/04/07 15:27:13 INFO BlockManagerInfo: Added taskresult_1 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:14 INFO TaskSetManager: Starting task 97.0 in stage 0.0 (TID 2, iccluster060.iccluster.epfl.ch, executor 2, partition 97, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:14 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:38059 after 31 ms (0 ms spent in bootstraps)
+20/04/07 15:27:14 INFO BlockManagerInfo: Added taskresult_2 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:14 INFO TaskSetManager: Starting task 98.0 in stage 0.0 (TID 3, iccluster060.iccluster.epfl.ch, executor 2, partition 98, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:14 INFO TaskSetManager: Finished task 96.0 in stage 0.0 (TID 1) in 3415 ms on iccluster060.iccluster.epfl.ch (executor 2) (1/200)
+20/04/07 15:27:14 INFO BlockManagerInfo: Removed taskresult_1 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:15 INFO TaskSetManager: Finished task 97.0 in stage 0.0 (TID 2) in 1341 ms on iccluster060.iccluster.epfl.ch (executor 2) (2/200)
+20/04/07 15:27:15 INFO BlockManagerInfo: Removed taskresult_2 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:15 INFO BlockManagerInfo: Added taskresult_3 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:15 INFO TaskSetManager: Starting task 99.0 in stage 0.0 (TID 4, iccluster060.iccluster.epfl.ch, executor 2, partition 99, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:16 INFO BlockManagerInfo: Added taskresult_0 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:16 INFO TaskSetManager: Starting task 21.0 in stage 0.0 (TID 5, iccluster061.iccluster.epfl.ch, executor 1, partition 21, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:16 INFO TransportClientFactory: Successfully created connection to iccluster061.iccluster.epfl.ch/10.90.39.12:41092 after 3 ms (0 ms spent in bootstraps)
+20/04/07 15:27:16 INFO TaskSetManager: Finished task 98.0 in stage 0.0 (TID 3) in 1212 ms on iccluster060.iccluster.epfl.ch (executor 2) (3/200)
+20/04/07 15:27:16 INFO BlockManagerInfo: Removed taskresult_3 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:16 INFO BlockManagerInfo: Added taskresult_4 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:16 INFO TaskSetManager: Starting task 100.0 in stage 0.0 (TID 6, iccluster060.iccluster.epfl.ch, executor 2, partition 100, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:16 INFO TaskSetManager: Finished task 20.0 in stage 0.0 (TID 0) in 4900 ms on iccluster061.iccluster.epfl.ch (executor 1) (4/200)
+20/04/07 15:27:16 INFO BlockManagerInfo: Removed taskresult_0 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:16 INFO TaskSetManager: Finished task 99.0 in stage 0.0 (TID 4) in 1024 ms on iccluster060.iccluster.epfl.ch (executor 2) (5/200)
+20/04/07 15:27:16 INFO BlockManagerInfo: Removed taskresult_4 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:17 INFO BlockManagerInfo: Added taskresult_6 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:17 INFO TaskSetManager: Starting task 101.0 in stage 0.0 (TID 7, iccluster060.iccluster.epfl.ch, executor 2, partition 101, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:17 INFO BlockManagerInfo: Added taskresult_5 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:17 INFO TaskSetManager: Starting task 22.0 in stage 0.0 (TID 8, iccluster061.iccluster.epfl.ch, executor 1, partition 22, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:17 INFO TaskSetManager: Finished task 100.0 in stage 0.0 (TID 6) in 1546 ms on iccluster060.iccluster.epfl.ch (executor 2) (6/200)
+20/04/07 15:27:17 INFO BlockManagerInfo: Removed taskresult_6 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:18 INFO TaskSetManager: Finished task 21.0 in stage 0.0 (TID 5) in 2052 ms on iccluster061.iccluster.epfl.ch (executor 1) (7/200)
+20/04/07 15:27:18 INFO BlockManagerInfo: Removed taskresult_5 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:18 INFO BlockManagerInfo: Added taskresult_7 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:18 INFO TaskSetManager: Starting task 102.0 in stage 0.0 (TID 9, iccluster060.iccluster.epfl.ch, executor 2, partition 102, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:18 INFO TaskSetManager: Finished task 101.0 in stage 0.0 (TID 7) in 978 ms on iccluster060.iccluster.epfl.ch (executor 2) (8/200)
+20/04/07 15:27:18 INFO BlockManagerInfo: Removed taskresult_7 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:19 INFO BlockManagerInfo: Added taskresult_9 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:19 INFO TaskSetManager: Starting task 103.0 in stage 0.0 (TID 10, iccluster060.iccluster.epfl.ch, executor 2, partition 103, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:19 INFO BlockManagerInfo: Added taskresult_8 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:19 INFO TaskSetManager: Starting task 23.0 in stage 0.0 (TID 11, iccluster061.iccluster.epfl.ch, executor 1, partition 23, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:20 INFO BlockManagerInfo: Added taskresult_10 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:20 INFO TaskSetManager: Starting task 104.0 in stage 0.0 (TID 12, iccluster060.iccluster.epfl.ch, executor 2, partition 104, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:20 INFO TaskSetManager: Finished task 102.0 in stage 0.0 (TID 9) in 2091 ms on iccluster060.iccluster.epfl.ch (executor 2) (9/200)
+20/04/07 15:27:20 INFO BlockManagerInfo: Removed taskresult_9 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:20 INFO TaskSetManager: Finished task 22.0 in stage 0.0 (TID 8) in 2731 ms on iccluster061.iccluster.epfl.ch (executor 1) (10/200)
+20/04/07 15:27:20 INFO BlockManagerInfo: Removed taskresult_8 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:20 INFO TaskSetManager: Finished task 103.0 in stage 0.0 (TID 10) in 1427 ms on iccluster060.iccluster.epfl.ch (executor 2) (11/200)
+20/04/07 15:27:20 INFO BlockManagerInfo: Removed taskresult_10 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:20 INFO BlockManagerInfo: Added taskresult_12 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:20 INFO TaskSetManager: Starting task 105.0 in stage 0.0 (TID 13, iccluster060.iccluster.epfl.ch, executor 2, partition 105, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:21 INFO TaskSetManager: Finished task 104.0 in stage 0.0 (TID 12) in 1246 ms on iccluster060.iccluster.epfl.ch (executor 2) (12/200)
+20/04/07 15:27:21 INFO BlockManagerInfo: Removed taskresult_12 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:21 INFO BlockManagerInfo: Added taskresult_13 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:21 INFO TaskSetManager: Starting task 106.0 in stage 0.0 (TID 14, iccluster060.iccluster.epfl.ch, executor 2, partition 106, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:21 INFO BlockManagerInfo: Added taskresult_11 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:21 INFO TaskSetManager: Starting task 24.0 in stage 0.0 (TID 15, iccluster061.iccluster.epfl.ch, executor 1, partition 24, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:23 INFO BlockManagerInfo: Added taskresult_14 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:23 INFO TaskSetManager: Starting task 107.0 in stage 0.0 (TID 16, iccluster060.iccluster.epfl.ch, executor 2, partition 107, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:23 INFO BlockManagerInfo: Added taskresult_15 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:23 INFO TaskSetManager: Starting task 25.0 in stage 0.0 (TID 17, iccluster061.iccluster.epfl.ch, executor 1, partition 25, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:23 INFO TaskSetManager: Finished task 105.0 in stage 0.0 (TID 13) in 2755 ms on iccluster060.iccluster.epfl.ch (executor 2) (13/200)
+20/04/07 15:27:23 INFO BlockManagerInfo: Removed taskresult_13 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:23 INFO TaskSetManager: Finished task 23.0 in stage 0.0 (TID 11) in 4476 ms on iccluster061.iccluster.epfl.ch (executor 1) (14/200)
+20/04/07 15:27:23 INFO BlockManagerInfo: Removed taskresult_11 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:23 INFO TaskSetManager: Finished task 106.0 in stage 0.0 (TID 14) in 2429 ms on iccluster060.iccluster.epfl.ch (executor 2) (15/200)
+20/04/07 15:27:24 INFO BlockManagerInfo: Removed taskresult_14 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:24 INFO TaskSetManager: Finished task 24.0 in stage 0.0 (TID 15) in 2361 ms on iccluster061.iccluster.epfl.ch (executor 1) (16/200)
+20/04/07 15:27:24 INFO BlockManagerInfo: Removed taskresult_15 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:24 INFO BlockManagerInfo: Added taskresult_16 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:24 INFO TaskSetManager: Starting task 108.0 in stage 0.0 (TID 18, iccluster060.iccluster.epfl.ch, executor 2, partition 108, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:25 INFO BlockManagerInfo: Added taskresult_18 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:25 INFO BlockManagerInfo: Added taskresult_17 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:25 INFO TaskSetManager: Starting task 109.0 in stage 0.0 (TID 19, iccluster060.iccluster.epfl.ch, executor 2, partition 109, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:25 INFO TaskSetManager: Starting task 26.0 in stage 0.0 (TID 20, iccluster061.iccluster.epfl.ch, executor 1, partition 26, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:25 INFO TaskSetManager: Finished task 107.0 in stage 0.0 (TID 16) in 2200 ms on iccluster060.iccluster.epfl.ch (executor 2) (17/200)
+20/04/07 15:27:25 INFO TaskSetManager: Finished task 25.0 in stage 0.0 (TID 17) in 1969 ms on iccluster061.iccluster.epfl.ch (executor 1) (18/200)
+20/04/07 15:27:25 INFO BlockManagerInfo: Removed taskresult_17 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:25 INFO BlockManagerInfo: Removed taskresult_16 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:25 INFO TaskSetManager: Finished task 108.0 in stage 0.0 (TID 18) in 1386 ms on iccluster060.iccluster.epfl.ch (executor 2) (19/200)
+20/04/07 15:27:25 INFO BlockManagerInfo: Removed taskresult_18 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:25 INFO BlockManagerInfo: Added taskresult_19 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:25 INFO TaskSetManager: Starting task 110.0 in stage 0.0 (TID 21, iccluster060.iccluster.epfl.ch, executor 2, partition 110, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:26 INFO TaskSetManager: Finished task 109.0 in stage 0.0 (TID 19) in 1693 ms on iccluster060.iccluster.epfl.ch (executor 2) (20/200)
+20/04/07 15:27:26 INFO BlockManagerInfo: Added taskresult_20 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:26 INFO TaskSetManager: Starting task 27.0 in stage 0.0 (TID 22, iccluster061.iccluster.epfl.ch, executor 1, partition 27, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:26 INFO BlockManagerInfo: Removed taskresult_19 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:26 INFO BlockManagerInfo: Added taskresult_21 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:26 INFO TaskSetManager: Starting task 111.0 in stage 0.0 (TID 23, iccluster060.iccluster.epfl.ch, executor 2, partition 111, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:27 INFO TaskSetManager: Finished task 26.0 in stage 0.0 (TID 20) in 2065 ms on iccluster061.iccluster.epfl.ch (executor 1) (21/200)
+20/04/07 15:27:27 INFO BlockManagerInfo: Removed taskresult_20 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:27 INFO TaskSetManager: Finished task 110.0 in stage 0.0 (TID 21) in 1520 ms on iccluster060.iccluster.epfl.ch (executor 2) (22/200)
+20/04/07 15:27:27 INFO BlockManagerInfo: Removed taskresult_21 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 408.9 MB)
+20/04/07 15:27:27 INFO BlockManagerInfo: Added taskresult_23 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:27 INFO TaskSetManager: Starting task 112.0 in stage 0.0 (TID 24, iccluster060.iccluster.epfl.ch, executor 2, partition 112, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:28 INFO BlockManagerInfo: Added taskresult_22 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 398.8 MB)
+20/04/07 15:27:28 INFO TaskSetManager: Starting task 28.0 in stage 0.0 (TID 25, iccluster061.iccluster.epfl.ch, executor 1, partition 28, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:30 INFO BlockManagerInfo: Added taskresult_25 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:30 INFO BlockManagerInfo: Added taskresult_24 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:30 INFO TaskSetManager: Starting task 29.0 in stage 0.0 (TID 26, iccluster061.iccluster.epfl.ch, executor 1, partition 29, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:30 INFO TaskSetManager: Starting task 113.0 in stage 0.0 (TID 27, iccluster060.iccluster.epfl.ch, executor 2, partition 113, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:33 INFO BlockManagerInfo: Added taskresult_27 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 378.7 MB)
+20/04/07 15:27:33 INFO BlockManagerInfo: Added taskresult_26 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 378.7 MB)
+20/04/07 15:27:33 INFO TaskSetManager: Starting task 30.0 in stage 0.0 (TID 28, iccluster061.iccluster.epfl.ch, executor 1, partition 30, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:33 INFO TaskSetManager: Starting task 115.0 in stage 0.0 (TID 29, iccluster060.iccluster.epfl.ch, executor 2, partition 115, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:33 INFO TaskSetManager: Finished task 111.0 in stage 0.0 (TID 23) in 6294 ms on iccluster060.iccluster.epfl.ch (executor 2) (23/200)
+20/04/07 15:27:33 INFO BlockManagerInfo: Removed taskresult_23 on iccluster060.iccluster.epfl.ch:38059 in memory (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:33 INFO TaskSetManager: Finished task 27.0 in stage 0.0 (TID 22) in 6503 ms on iccluster061.iccluster.epfl.ch (executor 1) (24/200)
+20/04/07 15:27:33 INFO BlockManagerInfo: Removed taskresult_22 on iccluster061.iccluster.epfl.ch:41092 in memory (size: 10.1 MB, free: 388.7 MB)
+20/04/07 15:27:35 INFO BlockManagerInfo: Added taskresult_29 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 378.7 MB)
+20/04/07 15:27:35 INFO BlockManagerInfo: Added taskresult_28 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 378.7 MB)
+20/04/07 15:27:35 INFO TaskSetManager: Starting task 116.0 in stage 0.0 (TID 30, iccluster060.iccluster.epfl.ch, executor 2, partition 116, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:35 INFO TaskSetManager: Starting task 31.0 in stage 0.0 (TID 31, iccluster061.iccluster.epfl.ch, executor 1, partition 31, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:38 INFO BlockManagerInfo: Added taskresult_31 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 368.6 MB)
+20/04/07 15:27:38 INFO BlockManagerInfo: Added taskresult_30 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 368.6 MB)
+20/04/07 15:27:38 INFO TaskSetManager: Starting task 117.0 in stage 0.0 (TID 32, iccluster060.iccluster.epfl.ch, executor 2, partition 117, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:38 INFO TaskSetManager: Starting task 32.0 in stage 0.0 (TID 33, iccluster061.iccluster.epfl.ch, executor 1, partition 32, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:40 INFO BlockManagerInfo: Added taskresult_33 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 358.5 MB)
+20/04/07 15:27:40 INFO BlockManagerInfo: Added taskresult_32 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 358.5 MB)
+20/04/07 15:27:40 INFO TaskSetManager: Starting task 33.0 in stage 0.0 (TID 34, iccluster061.iccluster.epfl.ch, executor 1, partition 33, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:40 INFO TaskSetManager: Starting task 118.0 in stage 0.0 (TID 35, iccluster060.iccluster.epfl.ch, executor 2, partition 118, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:41 INFO BlockManagerInfo: Added taskresult_35 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 348.5 MB)
+20/04/07 15:27:41 INFO TaskSetManager: Starting task 119.0 in stage 0.0 (TID 36, iccluster060.iccluster.epfl.ch, executor 2, partition 119, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:43 INFO BlockManagerInfo: Added taskresult_36 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 338.4 MB)
+20/04/07 15:27:43 INFO BlockManagerInfo: Added taskresult_34 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 348.5 MB)
+20/04/07 15:27:44 INFO TaskSetManager: Starting task 120.0 in stage 0.0 (TID 37, iccluster060.iccluster.epfl.ch, executor 2, partition 120, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:45 INFO TaskSetManager: Starting task 34.0 in stage 0.0 (TID 38, iccluster061.iccluster.epfl.ch, executor 1, partition 34, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:47 INFO BlockManagerInfo: Added taskresult_38 in memory on iccluster061.iccluster.epfl.ch:41092 (size: 10.1 MB, free: 338.4 MB)
+20/04/07 15:27:47 INFO BlockManagerInfo: Added taskresult_37 in memory on iccluster060.iccluster.epfl.ch:38059 (size: 10.1 MB, free: 328.3 MB)
+20/04/07 15:27:47 INFO TaskSetManager: Starting task 35.0 in stage 0.0 (TID 39, iccluster061.iccluster.epfl.ch, executor 1, partition 35, NODE_LOCAL, 7900 bytes)
+20/04/07 15:27:48 INFO TaskSetManager: Starting task 121.0 in stage 0.0 (TID 40, iccluster060.iccluster.epfl.ch, executor 2, partition 121, NODE_LOCAL, 7900 bytes)
+Exception in thread "dispatcher-event-loop-13" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:109)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:221)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20/04/07 15:28:24 ERROR Utils: Uncaught exception in thread task-result-getter-2
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+Exception in thread "task-result-getter-2" java.lang.OutOfMemoryError: GC overhead limit exceeded
+20/04/07 15:28:24 INFO RetryInvocationHandler: java.io.IOException: com.google.protobuf.ServiceException: java.lang.OutOfMemoryError: GC overhead limit exceeded, while invoking ApplicationMasterProtocolPBClientImpl.allocate over null. Trying to failover immediately.
+20/04/07 15:28:30 ERROR Utils: Uncaught exception in thread task-result-getter-0
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "task-result-getter-0" java.lang.OutOfMemoryError: Java heap space
+20/04/07 15:30:24 ERROR TaskResultGetter: Exception while getting task result
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.getLocationsAndStatus(BlockManagerMaster.scala:89)
+	at org.apache.spark.storage.BlockManager.getRemoteBytes(BlockManager.scala:669)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:82)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [120 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 12 more
+20/04/07 15:30:24 INFO YarnClusterScheduler: Cancelling stage 0
+20/04/07 15:30:24 INFO YarnClusterScheduler: Stage 0 was cancelled
+20/04/07 15:30:24 INFO DAGScheduler: ResultStage 0 (collect at App2.scala:23) failed in 192.838 s due to Job aborted due to stage failure: Exception while getting task result: org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout
+20/04/07 15:30:24 INFO DAGScheduler: Job 0 failed: collect at App2.scala:23, took 192.917630 s
+20/04/07 15:30:24 ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Exception while getting task result: org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout
+org.apache.spark.SparkException: Job aborted due to stage failure: Exception while getting task result: org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App2$.main(App2.scala:23)
+	at App2.main(App2.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+20/04/07 15:30:24 INFO ApplicationMaster: Final app status: FAILED, exitCode: 15, (reason: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Exception while getting task result: org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App2$.main(App2.scala:23)
+	at App2.main(App2.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+)
+20/04/07 15:30:24 INFO SparkContext: Invoking stop() from shutdown hook
+20/04/07 15:30:24 INFO AbstractConnector: Stopped Spark@7a09aeff{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+20/04/07 15:30:24 INFO SparkUI: Stopped Spark web UI at http://iccluster063.iccluster.epfl.ch:42057
+20/04/07 15:30:25 INFO YarnAllocator: Driver requested a total number of 0 executor(s).
+20/04/07 15:30:25 INFO YarnClusterSchedulerBackend: Shutting down all executors
+20/04/07 15:30:25 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+20/04/07 15:30:25 INFO SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+20/04/07 15:30:25 ERROR Utils: Uncaught exception in thread task-result-getter-4
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.getLocationsAndStatus(BlockManagerMaster.scala:89)
+	at org.apache.spark.storage.BlockManager.getRemoteBytes(BlockManager.scala:669)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:82)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Exception in thread "task-result-getter-4" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.getLocationsAndStatus(BlockManagerMaster.scala:89)
+	at org.apache.spark.storage.BlockManager.getRemoteBytes(BlockManager.scala:669)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:82)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	... 2 more
+20/04/07 15:30:25 ERROR Utils: Uncaught exception in thread task-result-getter-5
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.getLocationsAndStatus(BlockManagerMaster.scala:89)
+	at org.apache.spark.storage.BlockManager.getRemoteBytes(BlockManager.scala:669)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:82)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Exception in thread "task-result-getter-5" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.getLocationsAndStatus(BlockManagerMaster.scala:89)
+	at org.apache.spark.storage.BlockManager.getRemoteBytes(BlockManager.scala:669)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:82)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	... 2 more
+20/04/07 15:30:25 ERROR Utils: Uncaught exception in thread task-result-getter-3
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.removeBlock(BlockManagerMaster.scala:121)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:95)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Exception in thread "task-result-getter-3" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.removeBlock(BlockManagerMaster.scala:121)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:95)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	... 2 more
+20/04/07 15:30:25 ERROR Utils: Uncaught exception in thread task-result-getter-1
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.removeBlock(BlockManagerMaster.scala:121)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:95)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Exception in thread "task-result-getter-1" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.removeBlock(BlockManagerMaster.scala:121)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:95)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	... 2 more
+20/04/07 15:30:25 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/04/07 15:30:25 INFO MemoryStore: MemoryStore cleared
+20/04/07 15:30:25 INFO BlockManager: BlockManager stopped
+20/04/07 15:30:54 ERROR Utils: Uncaught exception in thread shutdown-hook-0
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1039)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:208)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:218)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.tell(BlockManagerMaster.scala:244)
+	at org.apache.spark.storage.BlockManagerMaster.stop(BlockManagerMaster.scala:236)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:91)
+	at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1947)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1361)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1946)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:573)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1992)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20/04/07 15:30:54 WARN ShutdownHookManager: ShutdownHook '$anon$2' timeout, java.util.concurrent.TimeoutException
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at org.apache.hadoop.util.ShutdownHookManager.executeShutdown(ShutdownHookManager.java:124)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:95)
+
+End of LogType:stderr
+***********************************************************************
+
