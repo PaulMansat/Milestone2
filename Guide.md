@@ -16,10 +16,13 @@ Logs contain many errors, however, they are not all relevant to categorize each 
 In fact, as in stacktraces, the first error raised in one of the container is the most relevant one. So we will consider the first errors raised in any containers as the most relevant. This is indeed quiet logical: the first error raised in a container most certainly triggers all subsqeuent error messages. 
 
 Also, we will start by looking at errors raised in the driver's container, and then if these errors are not sufficient we will look at the executor container's errors. 
+If the error message contains a stacktrace, look at the last caused by (if any). 
+
 
 In summury, we have the two rules: 
 1. Look first for errors in the driver's container  
 2. Look at the first error raised in the container (appart if its an **ERROR Utils**)
+3. In the stack trace look at the last **caused by** 
 
 Exhaustive list of possible errors:
 More frequent:
@@ -46,12 +49,12 @@ ERROR RetryingBlockFetcher: => usually not first error and before a leak detecto
 ERROR TransportChannelHandler: => 
 ERROR DFSClient: => with prelaunch.err. 
 
-
-NB: Error Utils are messages sent that can be viewed as "further information" => chech if they have the exception type in them. 
+NB: Error Utils are messages sent that can be viewed as "further information" => chech if they have the exception type in them.
 
 ## Error Category 
 ### Error type 1: Error starting the Spark job
-TO DO
+This error relates to error due a spark job that could not start due because for instance a class is missing. A missing class can be stated. 
+The error is raised by the `TastSetManager` that reports an error in one of the executor. Then look in the executor's container for the **ERROR Executor: (...)** message. If error due to a a java error due to some class or method not defined (eg java.lang.NoClassDefFoundError) then its a type 1 error. 
 
 ### Error type 2: File error reading input (data) files at the driver and/or executors
 This type of error is raised when the driver (or executor) failes to read a file. Its quiet a simple error to detect, as it can be  found if in a single message: **[Error file: prelaunch.err.**. 
@@ -102,10 +105,9 @@ Type 4 error is related to errors that happen when the driver and the executor c
 We will now try to list an exhaustive lists of errors that can happen: 
 1. The first error message in the driver contains the word **driver**
 2. The driver goes quiet, doest return any error message, but executor does and has an **ERROR Executor** message that contains the word **driver**
-3. Error related to **Error Task(...)**
-4. **Error ResourceLeakDetector: (...)**: due to a Netty error (i.e a protocol for communication between clusters) => the driver crashes and cannot communicate with the driver ) (exception is in **ERROR Utils:** (if any and need to be before the ERROR message) then stack trace  of **ERROR RetryingBlockFetcher: (...)** and line have to check the last TaskSetManager line)
+3. **Error ResourceLeakDetector: (...)**: due to a Netty error (i.e a protocol for communication between clusters) => the driver crashes and cannot communicate with the driver ) (exception is in **ERROR Utils:** (if any and need to be before the ERROR message) then stack trace  of **ERROR RetryingBlockFetcher: (...)** and line have to check the last TaskSetManager line)
 
-TO BE VERIFIED: ERROR TaskSetManager related => type 4 error
+No : TO BE VERIFIED: ERROR TaskSetManager related => type 4 error
 
 Exception can be found in **ERROR Utills:** messages (if any), then in **ERROR ApplicationMaster:** error message (if any), else look in the executors for **ERROR Executor:** stacktrace. 
 
@@ -132,10 +134,6 @@ Exception + line info in the stack trace following the **ERROR Executor: (...)**
 Some exception put in type 4 will go there. TO BE DONE 
 
 ### Error type 8: 
-**ERROR ShortCircuitCache: (...)**: due to an HDFS error => allways in the executor's container
+**ERROR ShortCircuitCache: (...)**: due to an HDFS error => allways in the executor's container => not sure ... 
 
 ### Error type 9: 
-
-
-
-
