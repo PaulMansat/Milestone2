@@ -1,0 +1,1409 @@
+
+Tested because: caused by intrication in the stack trace
+
+Container: container_e02_1580812675067_4320_01_000002 on iccluster055.iccluster.epfl.ch_45454_1586026194622
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Sat Apr 04 20:49:54 +0200 2020
+LogLength:6363
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdc/hadoop/yarn/local/filecache/10/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/04 20:49:46 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 28593@iccluster055
+20/04/04 20:49:46 INFO SignalUtils: Registered signal handler for TERM
+20/04/04 20:49:46 INFO SignalUtils: Registered signal handler for HUP
+20/04/04 20:49:46 INFO SignalUtils: Registered signal handler for INT
+20/04/04 20:49:47 INFO SecurityManager: Changing view acls to: yarn,auguston
+20/04/04 20:49:47 INFO SecurityManager: Changing modify acls to: yarn,auguston
+20/04/04 20:49:47 INFO SecurityManager: Changing view acls groups to: 
+20/04/04 20:49:47 INFO SecurityManager: Changing modify acls groups to: 
+20/04/04 20:49:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, auguston); groups with view permissions: Set(); users  with modify permissions: Set(yarn, auguston); groups with modify permissions: Set()
+20/04/04 20:49:48 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:46373 after 132 ms (0 ms spent in bootstraps)
+20/04/04 20:49:48 INFO SecurityManager: Changing view acls to: yarn,auguston
+20/04/04 20:49:48 INFO SecurityManager: Changing modify acls to: yarn,auguston
+20/04/04 20:49:48 INFO SecurityManager: Changing view acls groups to: 
+20/04/04 20:49:48 INFO SecurityManager: Changing modify acls groups to: 
+20/04/04 20:49:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, auguston); groups with view permissions: Set(); users  with modify permissions: Set(yarn, auguston); groups with modify permissions: Set()
+20/04/04 20:49:48 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:46373 after 13 ms (0 ms spent in bootstraps)
+20/04/04 20:49:48 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-3d7e3a10-2fd3-43fe-a40b-f73afa9ae8b8
+20/04/04 20:49:48 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-9301e120-64e3-4deb-81b3-c7220a298c52
+20/04/04 20:49:48 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-1da5d7c0-157a-4f0e-8738-255023d1b5cc
+20/04/04 20:49:48 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-ea429aeb-1a06-416f-a1f5-9a8f110d57f0
+20/04/04 20:49:48 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-97283033-fc16-409d-af1a-6a020011519d
+20/04/04 20:49:48 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-1f86b667-f79d-44ad-829a-be9c4c79b1e0
+20/04/04 20:49:48 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-3fe6f4a7-a5a6-446e-95d0-ab3bf898db94
+20/04/04 20:49:48 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/04 20:49:49 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster060.iccluster.epfl.ch:46373
+20/04/04 20:49:49 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/04 20:49:49 INFO Executor: Starting executor ID 1 on host iccluster055.iccluster.epfl.ch
+20/04/04 20:49:49 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46761.
+20/04/04 20:49:49 INFO NettyBlockTransferService: Server created on iccluster055.iccluster.epfl.ch:46761
+20/04/04 20:49:49 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/04 20:49:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, iccluster055.iccluster.epfl.ch, 46761, None)
+20/04/04 20:49:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, iccluster055.iccluster.epfl.ch, 46761, None)
+20/04/04 20:49:49 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, iccluster055.iccluster.epfl.ch, 46761, None)
+20/04/04 20:49:50 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/04/04 20:49:50 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/04/04 20:49:50 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/04 20:49:50 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:34596 after 17 ms (0 ms spent in bootstraps)
+20/04/04 20:49:50 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.5 KB, free 408.9 MB)
+20/04/04 20:49:50 INFO TorrentBroadcast: Reading broadcast variable 1 took 137 ms
+20/04/04 20:49:50 INFO Executor: Executor is trying to kill task 1.0 in stage 0.0 (TID 1), reason: Stage cancelled
+20/04/04 20:49:50 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.4 KB, free 408.9 MB)
+20/04/04 20:49:50 INFO Executor: Executor interrupted and killed task 1.0 in stage 0.0 (TID 1), reason: Stage cancelled
+20/04/04 20:49:51 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/04/04 20:49:51 INFO CoarseGrainedExecutorBackend: Driver from iccluster060.iccluster.epfl.ch:46373 disconnected during shutdown
+20/04/04 20:49:51 INFO CoarseGrainedExecutorBackend: Driver from iccluster060.iccluster.epfl.ch:46373 disconnected during shutdown
+20/04/04 20:49:52 INFO MemoryStore: MemoryStore cleared
+20/04/04 20:49:52 INFO BlockManager: BlockManager stopped
+20/04/04 20:49:52 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_4320_01_000003 on iccluster057.iccluster.epfl.ch_45454_1586026192742
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Sat Apr 04 20:49:52 +0200 2020
+LogLength:23588
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdf/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/04 20:49:45 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 3663@iccluster057
+20/04/04 20:49:45 INFO SignalUtils: Registered signal handler for TERM
+20/04/04 20:49:45 INFO SignalUtils: Registered signal handler for HUP
+20/04/04 20:49:45 INFO SignalUtils: Registered signal handler for INT
+20/04/04 20:49:46 INFO SecurityManager: Changing view acls to: yarn,auguston
+20/04/04 20:49:46 INFO SecurityManager: Changing modify acls to: yarn,auguston
+20/04/04 20:49:46 INFO SecurityManager: Changing view acls groups to: 
+20/04/04 20:49:46 INFO SecurityManager: Changing modify acls groups to: 
+20/04/04 20:49:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, auguston); groups with view permissions: Set(); users  with modify permissions: Set(yarn, auguston); groups with modify permissions: Set()
+20/04/04 20:49:46 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:46373 after 98 ms (0 ms spent in bootstraps)
+20/04/04 20:49:46 INFO SecurityManager: Changing view acls to: yarn,auguston
+20/04/04 20:49:46 INFO SecurityManager: Changing modify acls to: yarn,auguston
+20/04/04 20:49:46 INFO SecurityManager: Changing view acls groups to: 
+20/04/04 20:49:46 INFO SecurityManager: Changing modify acls groups to: 
+20/04/04 20:49:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, auguston); groups with view permissions: Set(); users  with modify permissions: Set(yarn, auguston); groups with modify permissions: Set()
+20/04/04 20:49:47 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:46373 after 2 ms (0 ms spent in bootstraps)
+20/04/04 20:49:47 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-fca0bad5-cfb7-4d79-b0c0-c381c8c18297
+20/04/04 20:49:47 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-f5f9322e-141e-4f30-bf0a-92bf3c814b21
+20/04/04 20:49:47 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-981c59c0-825a-4e15-bbed-62ba279e10b4
+20/04/04 20:49:47 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-03e433c5-e3ed-4d9f-ba2b-f1d2e0af9aeb
+20/04/04 20:49:47 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-161a0e73-0d5a-4459-bf89-46540dcd1576
+20/04/04 20:49:47 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-36357c55-5e9b-473f-abbc-e8edd8d34042
+20/04/04 20:49:47 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-cd286c60-83cb-4636-b8db-ca5a02b775bd
+20/04/04 20:49:47 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/04/04 20:49:47 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster060.iccluster.epfl.ch:46373
+20/04/04 20:49:47 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/04/04 20:49:47 INFO Executor: Starting executor ID 2 on host iccluster057.iccluster.epfl.ch
+20/04/04 20:49:47 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39232.
+20/04/04 20:49:47 INFO NettyBlockTransferService: Server created on iccluster057.iccluster.epfl.ch:39232
+20/04/04 20:49:47 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/04 20:49:47 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39232, None)
+20/04/04 20:49:47 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39232, None)
+20/04/04 20:49:47 INFO BlockManager: Initialized BlockManager: BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39232, None)
+20/04/04 20:49:50 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/04/04 20:49:50 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/04/04 20:49:50 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/04/04 20:49:50 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:34596 after 1 ms (0 ms spent in bootstraps)
+20/04/04 20:49:50 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.5 KB, free 408.9 MB)
+20/04/04 20:49:50 INFO TorrentBroadcast: Reading broadcast variable 1 took 141 ms
+20/04/04 20:49:50 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.4 KB, free 408.9 MB)
+20/04/04 20:49:50 ERROR Executor: Exception in task 0.0 in stage 0.0 (TID 0)
+java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+Caused by: java.lang.ClassNotFoundException: scala.runtime.LambdaDeserialize
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 70 more
+20/04/04 20:49:50 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+20/04/04 20:49:50 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/04/04 20:49:50 ERROR Executor: Exception in task 2.0 in stage 0.0 (TID 2)
+java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+20/04/04 20:49:50 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+20/04/04 20:49:50 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/04/04 20:49:50 ERROR Executor: Exception in task 3.0 in stage 0.0 (TID 3)
+java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+20/04/04 20:49:51 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/04/04 20:49:51 INFO MemoryStore: MemoryStore cleared
+20/04/04 20:49:51 INFO BlockManager: BlockManager stopped
+20/04/04 20:49:51 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_4320_01_000001 on iccluster060.iccluster.epfl.ch_45454_1586026192938
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Sat Apr 04 20:49:53 +0200 2020
+LogLength:82549
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdc/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/04/04 20:49:41 INFO SignalUtils: Registered signal handler for TERM
+20/04/04 20:49:41 INFO SignalUtils: Registered signal handler for HUP
+20/04/04 20:49:41 INFO SignalUtils: Registered signal handler for INT
+20/04/04 20:49:41 INFO SecurityManager: Changing view acls to: yarn,auguston
+20/04/04 20:49:41 INFO SecurityManager: Changing modify acls to: yarn,auguston
+20/04/04 20:49:41 INFO SecurityManager: Changing view acls groups to: 
+20/04/04 20:49:41 INFO SecurityManager: Changing modify acls groups to: 
+20/04/04 20:49:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, auguston); groups with view permissions: Set(); users  with modify permissions: Set(yarn, auguston); groups with modify permissions: Set()
+20/04/04 20:49:41 INFO ApplicationMaster: Preparing Local resources
+20/04/04 20:49:42 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1580812675067_4320_000001
+20/04/04 20:49:42 INFO ApplicationMaster: Starting the user application in a separate Thread
+20/04/04 20:49:42 INFO ApplicationMaster: Waiting for spark context initialization...
+20/04/04 20:49:42 INFO SparkContext: Running Spark version 2.3.1.3.0.1.0-187
+20/04/04 20:49:42 INFO SparkContext: Submitted application: M2 App4
+20/04/04 20:49:42 INFO SecurityManager: Changing view acls to: yarn,auguston
+20/04/04 20:49:42 INFO SecurityManager: Changing modify acls to: yarn,auguston
+20/04/04 20:49:42 INFO SecurityManager: Changing view acls groups to: 
+20/04/04 20:49:42 INFO SecurityManager: Changing modify acls groups to: 
+20/04/04 20:49:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, auguston); groups with view permissions: Set(); users  with modify permissions: Set(yarn, auguston); groups with modify permissions: Set()
+20/04/04 20:49:43 INFO Utils: Successfully started service 'sparkDriver' on port 46373.
+20/04/04 20:49:43 INFO SparkEnv: Registering MapOutputTracker
+20/04/04 20:49:43 INFO SparkEnv: Registering BlockManagerMaster
+20/04/04 20:49:43 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/04/04 20:49:43 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/04/04 20:49:43 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-dc100552-7cbc-4408-b704-80a6a54afc83
+20/04/04 20:49:43 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-45e1e806-5909-4dab-ba85-6a56acded708
+20/04/04 20:49:43 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-f3216b86-a819-4a15-9239-60f368c9e80e
+20/04/04 20:49:43 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-66b95284-c850-4404-bebc-276c88a68b89
+20/04/04 20:49:43 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-40667fbb-4182-43dd-8eda-2fb0f19a7239
+20/04/04 20:49:43 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-c21b4491-c70b-460a-9a0d-e5b3ec90d992
+20/04/04 20:49:43 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/blockmgr-c72e3a16-2081-4a56-bc73-d8d55e278f09
+20/04/04 20:49:43 INFO MemoryStore: MemoryStore started with capacity 5.2 GB
+20/04/04 20:49:43 INFO SparkEnv: Registering OutputCommitCoordinator
+20/04/04 20:49:43 INFO log: Logging initialized @2793ms
+20/04/04 20:49:43 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /jobs, /jobs/json, /jobs/job, /jobs/job/json, /stages, /stages/json, /stages/stage, /stages/stage/json, /stages/pool, /stages/pool/json, /storage, /storage/json, /storage/rdd, /storage/rdd/json, /environment, /environment/json, /executors, /executors/json, /executors/threadDump, /executors/threadDump/json, /static, /, /api, /jobs/job/kill, /stages/stage/kill.
+20/04/04 20:49:43 INFO Server: jetty-9.3.z-SNAPSHOT, build timestamp: 2018-06-05T19:11:56+02:00, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+20/04/04 20:49:43 INFO Server: Started @2872ms
+20/04/04 20:49:43 INFO AbstractConnector: Started ServerConnector@45cca0a0{HTTP/1.1,[http/1.1]}{0.0.0.0:39958}
+20/04/04 20:49:43 INFO Utils: Successfully started service 'SparkUI' on port 39958.
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3c6e7436{/jobs,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@70dbe570{/jobs/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@78e43acb{/jobs/job,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@50218663{/jobs/job/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@9cadcce{/stages,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@b94303{/stages/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@f2c1dc9{/stages/stage,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@467af115{/stages/stage/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@29d77e46{/stages/pool,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6e7497b5{/stages/pool/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6a372f46{/storage,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7bd4994c{/storage/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@69e3ed3e{/storage/rdd,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@23600688{/storage/rdd/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@707e40bd{/environment,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2f3fb907{/environment/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@59433bc3{/executors,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7ab42225{/executors/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@78cdee66{/executors/threadDump,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2a6887f9{/executors/threadDump/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6ab52c54{/static,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@598c3636{/,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@712071df{/api,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@60869530{/jobs/job/kill,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6d32cfc8{/stages/stage/kill,null,AVAILABLE,@Spark}
+20/04/04 20:49:43 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://iccluster060.iccluster.epfl.ch:39958
+20/04/04 20:49:43 INFO YarnClusterScheduler: Created YarnClusterScheduler
+20/04/04 20:49:43 INFO SchedulerExtensionServices: Starting Yarn extension services with app application_1580812675067_4320 and attemptId Some(appattempt_1580812675067_4320_000001)
+20/04/04 20:49:43 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34596.
+20/04/04 20:49:43 INFO NettyBlockTransferService: Server created on iccluster060.iccluster.epfl.ch:34596
+20/04/04 20:49:43 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/04 20:49:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 34596, None)
+20/04/04 20:49:43 INFO BlockManagerMasterEndpoint: Registering block manager iccluster060.iccluster.epfl.ch:34596 with 5.2 GB RAM, BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 34596, None)
+20/04/04 20:49:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 34596, None)
+20/04/04 20:49:43 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 34596, None)
+20/04/04 20:49:43 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+20/04/04 20:49:43 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@c0610a3{/metrics/json,null,AVAILABLE,@Spark}
+20/04/04 20:49:44 INFO EventLoggingListener: Logging events to hdfs:/spark2-history/application_1580812675067_4320_1
+20/04/04 20:49:44 INFO ApplicationMaster: 
+===============================================================================
+YARN executor launch context:
+  env:
+    CLASSPATH -> {{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>$HADOOP_CONF_DIR<CPS>/usr/hdp/3.0.1.0-187/hadoop/*<CPS>/usr/hdp/3.0.1.0-187/hadoop/lib/*<CPS>/usr/hdp/current/hadoop-hdfs-client/*<CPS>/usr/hdp/current/hadoop-hdfs-client/lib/*<CPS>/usr/hdp/current/hadoop-yarn-client/*<CPS>/usr/hdp/current/hadoop-yarn-client/lib/*<CPS>$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/3.0.1.0-187/hadoop/lib/hadoop-lzo-0.6.0.3.0.1.0-187.jar:/etc/hadoop/conf/secure<CPS>{{PWD}}/__spark_conf__/__hadoop_conf__
+    SPARK_YARN_STAGING_DIR -> hdfs://iccluster040.iccluster.epfl.ch:8020/user/auguston/.sparkStaging/application_1580812675067_4320
+    SPARK_USER -> auguston
+
+  command:
+    LD_LIBRARY_PATH="/usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:$LD_LIBRARY_PATH" \ 
+      {{JAVA_HOME}}/bin/java \ 
+      -server \ 
+      -Xmx1024m \ 
+      '-XX:+UseNUMA' \ 
+      -Djava.io.tmpdir={{PWD}}/tmp \ 
+      '-Dspark.history.ui.port=18081' \ 
+      -Dspark.yarn.app.container.log.dir=<LOG_DIR> \ 
+      -XX:OnOutOfMemoryError='kill %p' \ 
+      org.apache.spark.executor.CoarseGrainedExecutorBackend \ 
+      --driver-url \ 
+      spark://CoarseGrainedScheduler@iccluster060.iccluster.epfl.ch:46373 \ 
+      --executor-id \ 
+      <executorId> \ 
+      --hostname \ 
+      <hostname> \ 
+      --cores \ 
+      1 \ 
+      --app-id \ 
+      application_1580812675067_4320 \ 
+      --user-class-path \ 
+      file:$PWD/__app__.jar \ 
+      1><LOG_DIR>/stdout \ 
+      2><LOG_DIR>/stderr
+
+  resources:
+    __app__.jar -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/auguston/.sparkStaging/application_1580812675067_4320/Milestone2.jar" } size: 31106 timestamp: 1586026179437 type: FILE visibility: PRIVATE
+    __spark_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-yarn-archive.tar.gz" } size: 279537157 timestamp: 1580802651556 type: ARCHIVE visibility: PUBLIC
+    __spark_conf__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/auguston/.sparkStaging/application_1580812675067_4320/__spark_conf__.zip" } size: 277650 timestamp: 1586026179810 type: ARCHIVE visibility: PRIVATE
+    __hive_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-hive-archive.tar.gz" } size: 43606863 timestamp: 1580802654613 type: ARCHIVE visibility: PUBLIC
+
+===============================================================================
+20/04/04 20:49:44 INFO RMProxy: Connecting to ResourceManager at iccluster040.iccluster.epfl.ch/10.90.38.16:8030
+20/04/04 20:49:44 INFO YarnRMClient: Registering the ApplicationMaster
+20/04/04 20:49:44 INFO Configuration: found resource resource-types.xml at file:/etc/hadoop/3.0.1.0-187/0/resource-types.xml
+20/04/04 20:49:44 INFO YarnAllocator: Will request 2 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+20/04/04 20:49:44 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark://YarnAM@iccluster060.iccluster.epfl.ch:46373)
+20/04/04 20:49:44 INFO YarnAllocator: Submitted 2 unlocalized container requests.
+20/04/04 20:49:44 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+20/04/04 20:49:44 INFO YarnAllocator: Launching container container_e02_1580812675067_4320_01_000002 on host iccluster055.iccluster.epfl.ch for executor with ID 1
+20/04/04 20:49:44 INFO YarnAllocator: Launching container container_e02_1580812675067_4320_01_000003 on host iccluster057.iccluster.epfl.ch for executor with ID 2
+20/04/04 20:49:44 INFO YarnAllocator: Received 2 containers from YARN, launching executors on 2 of them.
+20/04/04 20:49:47 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.8:38896) with ID 2
+20/04/04 20:49:47 INFO BlockManagerMasterEndpoint: Registering block manager iccluster057.iccluster.epfl.ch:39232 with 408.9 MB RAM, BlockManagerId(2, iccluster057.iccluster.epfl.ch, 39232, None)
+20/04/04 20:49:49 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.6:34162) with ID 1
+20/04/04 20:49:49 INFO YarnClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+20/04/04 20:49:49 INFO YarnClusterScheduler: YarnClusterScheduler.postStartHook done
+20/04/04 20:49:49 INFO BlockManagerMasterEndpoint: Registering block manager iccluster055.iccluster.epfl.ch:46761 with 408.9 MB RAM, BlockManagerId(1, iccluster055.iccluster.epfl.ch, 46761, None)
+20/04/04 20:49:49 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 427.7 KB, free 5.2 GB)
+20/04/04 20:49:49 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 5.2 GB)
+20/04/04 20:49:49 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster060.iccluster.epfl.ch:34596 (size: 43.7 KB, free: 5.2 GB)
+20/04/04 20:49:49 INFO SparkContext: Created broadcast 0 from textFile at App4.scala:17
+20/04/04 20:49:49 WARN ClosureCleaner: Expected a closure; got App4$$$Lambda$19/802921264
+20/04/04 20:49:49 WARN ClosureCleaner: Expected a closure; got App4$$$Lambda$20/1827696659
+20/04/04 20:49:49 WARN ClosureCleaner: Expected a closure; got App4$$$Lambda$21/256326803
+20/04/04 20:49:49 INFO FileInputFormat: Total input files to process : 1
+20/04/04 20:49:49 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.13:50010
+20/04/04 20:49:49 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.6:50010
+20/04/04 20:49:49 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.8:50010
+20/04/04 20:49:49 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.7:50010
+20/04/04 20:49:49 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.12:50010
+20/04/04 20:49:49 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.14:50010
+20/04/04 20:49:49 INFO NetworkTopology: Adding a new node: /default-rack/10.90.39.11:50010
+20/04/04 20:49:49 INFO SparkContext: Starting job: collect at App4.scala:27
+20/04/04 20:49:49 INFO DAGScheduler: Got job 0 (collect at App4.scala:27) with 200 output partitions
+20/04/04 20:49:49 INFO DAGScheduler: Final stage: ResultStage 0 (collect at App4.scala:27)
+20/04/04 20:49:49 INFO DAGScheduler: Parents of final stage: List()
+20/04/04 20:49:49 INFO DAGScheduler: Missing parents: List()
+20/04/04 20:49:49 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at mapPartitions at App4.scala:24), which has no missing parents
+20/04/04 20:49:50 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.4 KB, free 5.2 GB)
+20/04/04 20:49:50 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.5 KB, free 5.2 GB)
+20/04/04 20:49:50 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster060.iccluster.epfl.ch:34596 (size: 2.5 KB, free: 5.2 GB)
+20/04/04 20:49:50 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1039
+20/04/04 20:49:50 INFO DAGScheduler: Submitting 200 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at mapPartitions at App4.scala:24) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/04/04 20:49:50 INFO YarnClusterScheduler: Adding task set 0.0 with 200 tasks
+20/04/04 20:49:50 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, iccluster057.iccluster.epfl.ch, executor 2, partition 0, NODE_LOCAL, 7900 bytes)
+20/04/04 20:49:50 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, iccluster055.iccluster.epfl.ch, executor 1, partition 1, NODE_LOCAL, 7900 bytes)
+20/04/04 20:49:50 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster057.iccluster.epfl.ch:39232 (size: 2.5 KB, free: 408.9 MB)
+20/04/04 20:49:50 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on iccluster055.iccluster.epfl.ch:46761 (size: 2.5 KB, free: 408.9 MB)
+20/04/04 20:49:50 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2, partition 2, NODE_LOCAL, 7900 bytes)
+20/04/04 20:49:50 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, iccluster057.iccluster.epfl.ch, executor 2, partition 3, NODE_LOCAL, 7900 bytes)
+20/04/04 20:49:50 WARN TaskSetManager: Lost task 2.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2): java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+
+20/04/04 20:49:50 ERROR TaskSetManager: Task 2 in stage 0.0 failed 1 times; aborting job
+20/04/04 20:49:50 INFO TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0) on iccluster057.iccluster.epfl.ch, executor 2: java.io.IOException (unexpected exception type) [duplicate 1]
+20/04/04 20:49:50 INFO TaskSetManager: Lost task 3.0 in stage 0.0 (TID 3) on iccluster057.iccluster.epfl.ch, executor 2: java.io.IOException (unexpected exception type) [duplicate 2]
+20/04/04 20:49:50 INFO YarnClusterScheduler: Cancelling stage 0
+20/04/04 20:49:50 INFO YarnClusterScheduler: Stage 0 was cancelled
+20/04/04 20:49:50 INFO DAGScheduler: ResultStage 0 (collect at App4.scala:27) failed in 0.744 s due to Job aborted due to stage failure: Task 2 in stage 0.0 failed 1 times, most recent failure: Lost task 2.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2): java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+
+Driver stacktrace:
+20/04/04 20:49:50 INFO DAGScheduler: Job 0 failed: collect at App4.scala:27, took 0.847302 s
+20/04/04 20:49:50 ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Task 2 in stage 0.0 failed 1 times, most recent failure: Lost task 2.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2): java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+
+Driver stacktrace:
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 2 in stage 0.0 failed 1 times, most recent failure: Lost task 2.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2): java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App4$.main(App4.scala:27)
+	at App4.main(App4.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+Caused by: java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+20/04/04 20:49:50 INFO ApplicationMaster: Final app status: FAILED, exitCode: 15, (reason: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Task 2 in stage 0.0 failed 1 times, most recent failure: Lost task 2.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2): java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App4$.main(App4.scala:27)
+	at App4.main(App4.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+Caused by: java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+)
+20/04/04 20:49:50 INFO SparkContext: Invoking stop() from shutdown hook
+20/04/04 20:49:50 INFO AbstractConnector: Stopped Spark@45cca0a0{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+20/04/04 20:49:50 INFO SparkUI: Stopped Spark web UI at http://iccluster060.iccluster.epfl.ch:39958
+20/04/04 20:49:50 WARN TaskSetManager: Lost task 1.0 in stage 0.0 (TID 1, iccluster055.iccluster.epfl.ch, executor 1): TaskKilled (Stage cancelled)
+20/04/04 20:49:50 INFO YarnClusterScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/04/04 20:49:51 INFO YarnAllocator: Driver requested a total number of 0 executor(s).
+20/04/04 20:49:51 INFO YarnClusterSchedulerBackend: Shutting down all executors
+20/04/04 20:49:51 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+20/04/04 20:49:51 INFO SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+20/04/04 20:49:51 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/04/04 20:49:51 INFO MemoryStore: MemoryStore cleared
+20/04/04 20:49:51 INFO BlockManager: BlockManager stopped
+20/04/04 20:49:51 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/04/04 20:49:51 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/04/04 20:49:51 INFO SparkContext: Successfully stopped SparkContext
+20/04/04 20:49:51 INFO ApplicationMaster: Unregistering ApplicationMaster with FAILED (diag message: User class threw exception: org.apache.spark.SparkException: Job aborted due to stage failure: Task 2 in stage 0.0 failed 1 times, most recent failure: Lost task 2.0 in stage 0.0 (TID 2, iccluster057.iccluster.epfl.ch, executor 2): java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1609)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1597)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1596)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1596)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1830)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1779)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1768)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:939)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:938)
+	at App4$.main(App4.scala:27)
+	at App4.main(App4.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+Caused by: java.io.IOException: unexpected exception type
+	at java.io.ObjectStreamClass.throwMiscException(ObjectStreamClass.java:1582)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1154)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1817)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at scala.collection.immutable.List$SerializationProxy.readObject(List.scala:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:114)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:80)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.lang.invoke.SerializedLambda.readResolve(SerializedLambda.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadResolve(ObjectStreamClass.java:1148)
+	... 59 more
+Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	at App4$.$deserializeLambda$(App4.scala)
+	... 69 more
+Caused by: java.lang.NoClassDefFoundError: scala/runtime/LambdaDeserialize
+	... 70 more
+)
+20/04/04 20:49:51 INFO AMRMClientImpl: Waiting for application to be successfully unregistered.
+20/04/04 20:49:51 INFO ApplicationMaster: Deleting staging directory hdfs://iccluster040.iccluster.epfl.ch:8020/user/auguston/.sparkStaging/application_1580812675067_4320
+20/04/04 20:49:51 INFO ShutdownHookManager: Shutdown hook called
+20/04/04 20:49:51 INFO ShutdownHookManager: Deleting directory /hdata/sdf/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/spark-0f6e2601-0ec9-49e1-982f-8801c4a442fb
+20/04/04 20:49:51 INFO ShutdownHookManager: Deleting directory /hdata/sdb/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/spark-5620ce33-5835-4960-af68-61b9ef3071da
+20/04/04 20:49:51 INFO ShutdownHookManager: Deleting directory /hdata/sdg/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/spark-747ec9ef-fbe5-4ae0-b300-339b8567614e
+20/04/04 20:49:51 INFO ShutdownHookManager: Deleting directory /hdata/sdd/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/spark-78e2049e-74cc-475e-a9fc-c4ad878af5c0
+20/04/04 20:49:51 INFO ShutdownHookManager: Deleting directory /hdata/sde/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/spark-6d878337-fb82-44d7-bf0e-26f9eb2fabbc
+20/04/04 20:49:51 INFO ShutdownHookManager: Deleting directory /hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/spark-217c0631-1f15-436c-a6de-c1ffd60fb001
+20/04/04 20:49:51 INFO ShutdownHookManager: Deleting directory /hdata/sdc/hadoop/yarn/local/usercache/auguston/appcache/application_1580812675067_4320/spark-e9ec9782-a596-48ad-af80-a2b69bb96011
+
+End of LogType:stderr
+***********************************************************************
