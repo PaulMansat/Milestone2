@@ -1,0 +1,48 @@
+Container: container_e02_1580812675067_9471_01_000001 on iccluster055.iccluster.epfl.ch_45454_1589561045949
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Fri May 15 18:44:06 +0200 2020
+LogLength:3505
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdc/hadoop/yarn/local/filecache/10/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/05/15 18:44:02 INFO SignalUtils: Registered signal handler for TERM
+20/05/15 18:44:02 INFO SignalUtils: Registered signal handler for HUP
+20/05/15 18:44:02 INFO SignalUtils: Registered signal handler for INT
+20/05/15 18:44:02 INFO SecurityManager: Changing view acls to: yarn,faahmed
+20/05/15 18:44:02 INFO SecurityManager: Changing modify acls to: yarn,faahmed
+20/05/15 18:44:02 INFO SecurityManager: Changing view acls groups to: 
+20/05/15 18:44:02 INFO SecurityManager: Changing modify acls groups to: 
+20/05/15 18:44:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, faahmed); groups with view permissions: Set(); users  with modify permissions: Set(yarn, faahmed); groups with modify permissions: Set()
+20/05/15 18:44:03 INFO ApplicationMaster: Preparing Local resources
+20/05/15 18:44:04 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1580812675067_9471_000001
+20/05/15 18:44:04 INFO ApplicationMaster: Starting the user application in a separate Thread
+20/05/15 18:44:04 ERROR ApplicationMaster: Uncaught exception: 
+java.lang.ClassNotFoundException: App200
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.startUserApplication(ApplicationMaster.scala:715)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:491)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.org$apache$spark$deploy$yarn$ApplicationMaster$$runImpl(ApplicationMaster.scala:345)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anonfun$run$2.apply$mcV$sp(ApplicationMaster.scala:260)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anonfun$run$2.apply(ApplicationMaster.scala:260)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anonfun$run$2.apply(ApplicationMaster.scala:260)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$5.run(ApplicationMaster.scala:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1730)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.doAsUser(ApplicationMaster.scala:814)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:259)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:839)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala)
+20/05/15 18:44:04 INFO ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: Uncaught exception: java.lang.ClassNotFoundException: App200)
+20/05/15 18:44:04 INFO ApplicationMaster: Deleting staging directory hdfs://iccluster040.iccluster.epfl.ch:8020/user/faahmed/.sparkStaging/application_1580812675067_9471
+20/05/15 18:44:04 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************

@@ -104,7 +104,7 @@ object Milestone1 {
     sc.hadoopConfiguration.set("textinputformat.record.delimiter", delimiter)
 
     // Patterns declaration for parsing the data we're interested by or filtering it
-    val datePattern = "(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3})".r
+    val datePattern = "(\d{2}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2})".r
     val userPattern = ".*user: ([a-z]*).*".r
     val launchPattern = "^.*from [A-Z]* to LAUNCHED.*$"
     val finishPattern = ".*State change from [A-Z_]* to (FINISHING|FAILED|KILLED).*".r
@@ -124,7 +124,8 @@ object Milestone1 {
     // Format and extract useful LineData out of the entire log file
     // /!\ Necessary work-around, as delimiter can't be set on a per-file basis, so manual split
     // of the full log file needed
-    val logsFormatted = sc.textFile(fullLogFile).map(_.split("\n")).flatMap(x => x)
+    val logsFormattedPlain = sc.textFile(fullLogFile)
+    val logsFormatted = logsFormattedPlain.map(_.split("\n")).flatMap(x => x)
       // Filter for lines with date information
       .filter(_.matches("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3} INFO  .*$"))
       // Filter or lines with application information
@@ -194,7 +195,7 @@ object Milestone1 {
 
       (appId, attemptNumber, x)
     }).filter(_._1.isDefined)
-      .map(x => ((x._1.get.group(1).toInt, x._2.get.group(1).toInt), x._3))
+      .map(x => ((x._1.get.group(1).toInt, x._2.get.group(2).toInt), x._3))
 
 
       // Only retain the applications with ids between the provided interval endpoints
@@ -204,6 +205,18 @@ object Milestone1 {
       .persist()
 
     aggregatedFailedApps.map(x => (x._1, f1(x._2)))
+
+    // Special case of error type 1 : A missing jar does not create
+    // containers (and thus containers logs)
+    // Of the form (appId, ErrorAttempt)
+    // /!\ awful
+    val missingJarCategory1 = logsFormattedPlain.map(x => {
+      val error = ".* INFO Client: Deleted staging directory .*iccluster\\d*\\.iccluster\\.epfl\\.ch" +
+        ".*application_1580812675067_(\\d*)\nException in thread \"main\" java.io.FileNotFoundException: File .* does not exist"
+      val errorPattern = error.r
+
+      errorPattern.findAllMatchIn(x)
+    }).flatMap(x => x).map(x => x.group(1).toInt).filter(x => (x >= startId) && (x <= endId)).map(x => (x, ErrorAttempt(1, "java.io.FileNotFoundException", -1, -1)))
 
     //val file = "answers.txt"
     //val writer = new BufferedWriter(new FileWriter(file))
@@ -220,7 +233,22 @@ object Milestone1 {
   }
 
   def f1(lines: Iterable[String]): ErrorAttempt = {
-    val res = ???
+    // From the forum, only case where this creates logs is for incorrect class name
+    // The other have to be found in the regular hadoop logs
+    val errorPattern = "(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) ERROR ApplicationMaster: Uncaught exception: \njava.lang.ClassNotFoundException: ".r
+    val driverPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+
+    val missingClass = lines.filter(x => containerPattern.findFirstMatchIn(x).isDefined).map(x => {
+      val errorMatch = errorPattern.findFirstMatchIn(x)
+
+      if (errorMatch.isDefined)
+        ErrorAttempt(1, "java.lang.ClassNotFoundException", -1, -1)
+      else
+        null
+    }).headOption
+
+    val res = missingClass.orNull
+
     if (res == null) {
       f2(lines)
     } else {
@@ -229,7 +257,34 @@ object Milestone1 {
   }
 
   def f2(lines: Iterable[String]): ErrorAttempt = {
-    val res = ???
+    // Only case specified in forum for this is for missing data file
+
+    val error = "(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) ERROR ApplicationMaster: User class threw exception: org\\.apache\\.hadoop\\.mapred\\.InvalidInputException:" +
+      "([\\s\\S]*)?(?=\\n.*?=|\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2})"
+    val errorPattern = error.r
+    val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+
+    val missingClass = lines.filter(x => containerPattern.findFirstMatchIn(x).isDefined).map(x => {
+      val errorMatch = errorPattern.findFirstMatchIn(x)
+
+      if (errorMatch.isDefined) {
+        val errorLinePattern = "at .*\\.main\\(.*:(.*)\\)".r
+
+        val stackTrace = errorMatch.get.group(2)
+
+        val errorLineMatch = errorLinePattern.findFirstMatchIn(stackTrace)
+
+        var errorLine = -1
+
+        if (errorLineMatch.isDefined)
+          errorLine = errorLineMatch.get.group(1).toInt
+
+        ErrorAttempt(2, "org.apache.hadoop.mapred.InvalidInputException", -1, errorLine)
+      } else
+        null
+    }).headOption
+
+    val res = missingClass.orNull
     if (res == null) {
       f3(lines)
     } else {

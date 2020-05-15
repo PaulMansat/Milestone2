@@ -1,0 +1,41 @@
+rning: Local jar /hdata/sde/CS449/Milestone2_fault.jar does not exist, skipping.
+20/05/15 18:45:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/05/15 18:45:14 WARN DomainSocketFactory: The short-circuit local reads feature cannot be used because libhadoop cannot be loaded.
+20/05/15 18:45:14 INFO RMProxy: Connecting to ResourceManager at iccluster040.iccluster.epfl.ch/10.90.38.16:8050
+20/05/15 18:45:14 INFO Client: Requesting a new application from cluster with 7 NodeManagers
+20/05/15 18:45:14 INFO Configuration: found resource resource-types.xml at file:/etc/hadoop/3.0.1.0-187/0/resource-types.xml
+20/05/15 18:45:14 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (186368 MB per container)
+20/05/15 18:45:14 INFO Client: Will allocate AM container, with 1408 MB memory including 384 MB overhead
+20/05/15 18:45:14 INFO Client: Setting up container launch context for our AM
+20/05/15 18:45:14 INFO Client: Setting up the launch environment for our AM container
+20/05/15 18:45:14 INFO Client: Preparing resources for our AM container
+20/05/15 18:45:16 INFO Client: Use hdfs cache file as spark.yarn.archive for HDP, hdfsCacheFile:hdfs://iccluster040.iccluster.epfl.ch:8020/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-yarn-archive.tar.gz
+20/05/15 18:45:16 INFO Client: Source and destination file systems are the same. Not copying hdfs://iccluster040.iccluster.epfl.ch:8020/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-yarn-archive.tar.gz
+20/05/15 18:45:16 INFO Client: Distribute hdfs cache file as spark.sql.hive.metastore.jars for HDP, hdfsCacheFile:hdfs://iccluster040.iccluster.epfl.ch:8020/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-hive-archive.tar.gz
+20/05/15 18:45:16 INFO Client: Source and destination file systems are the same. Not copying hdfs://iccluster040.iccluster.epfl.ch:8020/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-hive-archive.tar.gz
+20/05/15 18:45:16 INFO Client: Uploading resource file:/hdata/sde/CS449/Milestone2_fault.jar -> hdfs://iccluster040.iccluster.epfl.ch:8020/user/faahmed/.sparkStaging/application_1580812675067_9473/Milestone2_fault.jar
+20/05/15 18:45:16 INFO Client: Deleted staging directory hdfs://iccluster040.iccluster.epfl.ch:8020/user/faahmed/.sparkStaging/application_1580812675067_9473
+Exception in thread "main" java.io.FileNotFoundException: File file:/hdata/sde/CS449/Milestone2_fault.jar does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:641)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:930)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:631)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:454)
+	at org.apache.hadoop.fs.FileUtil.copy(FileUtil.java:386)
+	at org.apache.hadoop.fs.FileUtil.copy(FileUtil.java:337)
+	at org.apache.spark.deploy.yarn.Client.copyFileToRemote(Client.scala:356)
+	at org.apache.spark.deploy.yarn.Client.org$apache$spark$deploy$yarn$Client$$distribute$1(Client.scala:478)
+	at org.apache.spark.deploy.yarn.Client$$anonfun$prepareLocalResources$16.apply(Client.scala:629)
+	at org.apache.spark.deploy.yarn.Client$$anonfun$prepareLocalResources$16.apply(Client.scala:628)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.deploy.yarn.Client.prepareLocalResources(Client.scala:628)
+	at org.apache.spark.deploy.yarn.Client.createContainerLaunchContext(Client.scala:921)
+	at org.apache.spark.deploy.yarn.Client.submitApplication(Client.scala:169)
+	at org.apache.spark.deploy.yarn.Client.run(Client.scala:1256)
+	at org.apache.spark.deploy.yarn.YarnClusterApplication.start(Client.scala:1627)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:904)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:198)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:228)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:137)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+20/05/15 18:45:16 INFO ShutdownHookManager: Shutdown hook called
+20/05/15 18:45:16 INFO ShutdownHookManager: Deleting directory /tmp/spark-690bba0a-5feb-493c-8412-c30518735b77

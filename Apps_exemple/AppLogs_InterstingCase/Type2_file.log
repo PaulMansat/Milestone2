@@ -1,0 +1,408 @@
+Container: container_e02_1580812675067_9465_01_000002 on iccluster057.iccluster.epfl.ch_45454_1589560890842
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Fri May 15 18:41:30 +0200 2020
+LogLength:5129
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdf/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/05/15 18:41:26 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 5773@iccluster057
+20/05/15 18:41:26 INFO SignalUtils: Registered signal handler for TERM
+20/05/15 18:41:26 INFO SignalUtils: Registered signal handler for HUP
+20/05/15 18:41:26 INFO SignalUtils: Registered signal handler for INT
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls groups to:
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls groups to:
+20/05/15 18:41:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, faahmed); groups with view permissions: Set(); users  with modify permissions: Set(yarn, faahmed); groups with modify permissions: Set()
+20/05/15 18:41:27 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:40977 after 106 ms (0 ms spent in bootstraps)
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls groups to:
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls groups to:
+20/05/15 18:41:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, faahmed); groups with view permissions: Set(); users  with modify permissions: Set(yarn, faahmed); groups with modify permissions: Set()
+20/05/15 18:41:27 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:40977 after 1 ms (0 ms spent in bootstraps)
+20/05/15 18:41:27 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-9e84009e-2a95-43d1-9846-03ed0d7d4770
+20/05/15 18:41:27 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-c7bdb7ed-5954-4d9a-ba68-be066203aa66
+20/05/15 18:41:27 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-f06cadbd-1069-480f-93cf-0186fd297edb
+20/05/15 18:41:27 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-ed4d0835-9b42-4023-88ef-03270a9b580c
+20/05/15 18:41:27 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-bd90bbe4-e7b9-48f3-99bc-c061d526d2cd
+20/05/15 18:41:27 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-346a6bc2-cc3c-4142-a233-327a4d5cb4c7
+20/05/15 18:41:27 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-5fbd387c-f56b-4856-993d-99165b78b317
+20/05/15 18:41:28 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/05/15 18:41:28 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster060.iccluster.epfl.ch:40977
+20/05/15 18:41:28 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/05/15 18:41:28 INFO Executor: Starting executor ID 1 on host iccluster057.iccluster.epfl.ch
+20/05/15 18:41:28 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45899.
+20/05/15 18:41:28 INFO NettyBlockTransferService: Server created on iccluster057.iccluster.epfl.ch:45899
+20/05/15 18:41:28 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/05/15 18:41:28 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, iccluster057.iccluster.epfl.ch, 45899, None)
+20/05/15 18:41:28 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, iccluster057.iccluster.epfl.ch, 45899, None)
+20/05/15 18:41:28 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, iccluster057.iccluster.epfl.ch, 45899, None)
+20/05/15 18:41:29 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/05/15 18:41:29 INFO MemoryStore: MemoryStore cleared
+20/05/15 18:41:29 INFO BlockManager: BlockManager stopped
+20/05/15 18:41:29 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_9465_01_000001 on iccluster060.iccluster.epfl.ch_45454_1589560891028
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Fri May 15 18:41:31 +0200 2020
+LogLength:27414
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sdc/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/05/15 18:41:22 INFO SignalUtils: Registered signal handler for TERM
+20/05/15 18:41:22 INFO SignalUtils: Registered signal handler for HUP
+20/05/15 18:41:22 INFO SignalUtils: Registered signal handler for INT
+20/05/15 18:41:22 INFO SecurityManager: Changing view acls to: yarn,faahmed
+20/05/15 18:41:22 INFO SecurityManager: Changing modify acls to: yarn,faahmed
+20/05/15 18:41:22 INFO SecurityManager: Changing view acls groups to: 
+20/05/15 18:41:22 INFO SecurityManager: Changing modify acls groups to: 
+20/05/15 18:41:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, faahmed); groups with view permissions: Set(); users  with modify permissions: Set(yarn, faahmed); groups with modify permissions: Set()
+20/05/15 18:41:22 INFO ApplicationMaster: Preparing Local resources
+20/05/15 18:41:23 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1580812675067_9465_000001
+20/05/15 18:41:23 INFO ApplicationMaster: Starting the user application in a separate Thread
+20/05/15 18:41:23 INFO ApplicationMaster: Waiting for spark context initialization...
+20/05/15 18:41:23 INFO SparkContext: Running Spark version 2.3.1.3.0.1.0-187
+20/05/15 18:41:23 INFO SparkContext: Submitted application: M2 App8
+20/05/15 18:41:23 INFO SecurityManager: Changing view acls to: yarn,faahmed
+20/05/15 18:41:23 INFO SecurityManager: Changing modify acls to: yarn,faahmed
+20/05/15 18:41:23 INFO SecurityManager: Changing view acls groups to: 
+20/05/15 18:41:23 INFO SecurityManager: Changing modify acls groups to: 
+20/05/15 18:41:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, faahmed); groups with view permissions: Set(); users  with modify permissions: Set(yarn, faahmed); groups with modify permissions: Set()
+20/05/15 18:41:24 INFO Utils: Successfully started service 'sparkDriver' on port 40977.
+20/05/15 18:41:24 INFO SparkEnv: Registering MapOutputTracker
+20/05/15 18:41:24 INFO SparkEnv: Registering BlockManagerMaster
+20/05/15 18:41:24 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/05/15 18:41:24 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/05/15 18:41:24 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-9a8a8d54-7ae7-4e60-9a69-78da5ff20da9
+20/05/15 18:41:24 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-7541623f-8321-40d3-9e81-c2a87b81abb3
+20/05/15 18:41:24 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-80b4f85b-1dad-4aec-b4c9-80568864af56
+20/05/15 18:41:24 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-2b2b3564-e354-4772-8e90-7feb76815dd4
+20/05/15 18:41:24 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-1079bf94-ff10-4824-b029-a39800350e3a
+20/05/15 18:41:24 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-3045ea15-9d2a-45c4-911f-9577c6208bb5
+20/05/15 18:41:24 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-7904cfbc-b7b9-4775-afd1-2447d7b7b348
+20/05/15 18:41:24 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/05/15 18:41:24 INFO SparkEnv: Registering OutputCommitCoordinator
+20/05/15 18:41:24 INFO log: Logging initialized @2729ms
+20/05/15 18:41:24 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /jobs, /jobs/json, /jobs/job, /jobs/job/json, /stages, /stages/json, /stages/stage, /stages/stage/json, /stages/pool, /stages/pool/json, /storage, /storage/json, /storage/rdd, /storage/rdd/json, /environment, /environment/json, /executors, /executors/json, /executors/threadDump, /executors/threadDump/json, /static, /, /api, /jobs/job/kill, /stages/stage/kill.
+20/05/15 18:41:24 INFO Server: jetty-9.3.z-SNAPSHOT, build timestamp: 2018-06-05T19:11:56+02:00, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+20/05/15 18:41:24 INFO Server: Started @2810ms
+20/05/15 18:41:24 INFO AbstractConnector: Started ServerConnector@204342ba{HTTP/1.1,[http/1.1]}{0.0.0.0:45219}
+20/05/15 18:41:24 INFO Utils: Successfully started service 'SparkUI' on port 45219.
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2ce4af06{/jobs,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@ffa845b{/jobs/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@50a3a800{/jobs/job,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@55b12d73{/jobs/job/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@189f6c6d{/stages,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@42f382e1{/stages/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@591fc535{/stages/stage,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@38bc2ba1{/stages/stage/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1fad67ee{/stages/pool,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@57f2d2fa{/stages/pool/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3688f87{/storage,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5ad04d68{/storage/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2eb6c3cb{/storage/rdd,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6f12b1e5{/storage/rdd/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@28411f37{/environment,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7022ac5a{/environment/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6892810e{/executors,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@12f59860{/executors/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@326d85ae{/executors/threadDump,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@57c8bfc5{/executors/threadDump/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2b2ecec3{/static,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@45973f7a{/,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@ae17b9e{/api,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5089f37c{/jobs/job/kill,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3779dbfd{/stages/stage/kill,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://iccluster060.iccluster.epfl.ch:45219
+20/05/15 18:41:24 INFO YarnClusterScheduler: Created YarnClusterScheduler
+20/05/15 18:41:24 INFO SchedulerExtensionServices: Starting Yarn extension services with app application_1580812675067_9465 and attemptId Some(appattempt_1580812675067_9465_000001)
+20/05/15 18:41:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33187.
+20/05/15 18:41:24 INFO NettyBlockTransferService: Server created on iccluster060.iccluster.epfl.ch:33187
+20/05/15 18:41:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/05/15 18:41:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 33187, None)
+20/05/15 18:41:24 INFO BlockManagerMasterEndpoint: Registering block manager iccluster060.iccluster.epfl.ch:33187 with 366.3 MB RAM, BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 33187, None)
+20/05/15 18:41:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 33187, None)
+20/05/15 18:41:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, iccluster060.iccluster.epfl.ch, 33187, None)
+20/05/15 18:41:24 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+20/05/15 18:41:24 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4a96749d{/metrics/json,null,AVAILABLE,@Spark}
+20/05/15 18:41:24 INFO EventLoggingListener: Logging events to hdfs:/spark2-history/application_1580812675067_9465_1
+20/05/15 18:41:25 INFO ApplicationMaster: 
+===============================================================================
+YARN executor launch context:
+  env:
+    CLASSPATH -> {{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>$HADOOP_CONF_DIR<CPS>/usr/hdp/3.0.1.0-187/hadoop/*<CPS>/usr/hdp/3.0.1.0-187/hadoop/lib/*<CPS>/usr/hdp/current/hadoop-hdfs-client/*<CPS>/usr/hdp/current/hadoop-hdfs-client/lib/*<CPS>/usr/hdp/current/hadoop-yarn-client/*<CPS>/usr/hdp/current/hadoop-yarn-client/lib/*<CPS>$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/3.0.1.0-187/hadoop/lib/hadoop-lzo-0.6.0.3.0.1.0-187.jar:/etc/hadoop/conf/secure<CPS>{{PWD}}/__spark_conf__/__hadoop_conf__
+    SPARK_YARN_STAGING_DIR -> hdfs://iccluster040.iccluster.epfl.ch:8020/user/faahmed/.sparkStaging/application_1580812675067_9465
+    SPARK_USER -> faahmed
+
+  command:
+    LD_LIBRARY_PATH="/usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:$LD_LIBRARY_PATH" \ 
+      {{JAVA_HOME}}/bin/java \ 
+      -server \ 
+      -Xmx1024m \ 
+      '-XX:+UseNUMA' \ 
+      -Djava.io.tmpdir={{PWD}}/tmp \ 
+      '-Dspark.history.ui.port=18081' \ 
+      -Dspark.yarn.app.container.log.dir=<LOG_DIR> \ 
+      -XX:OnOutOfMemoryError='kill %p' \ 
+      org.apache.spark.executor.CoarseGrainedExecutorBackend \ 
+      --driver-url \ 
+      spark://CoarseGrainedScheduler@iccluster060.iccluster.epfl.ch:40977 \ 
+      --executor-id \ 
+      <executorId> \ 
+      --hostname \ 
+      <hostname> \ 
+      --cores \ 
+      1 \ 
+      --app-id \ 
+      application_1580812675067_9465 \ 
+      --user-class-path \ 
+      file:$PWD/__app__.jar \ 
+      1><LOG_DIR>/stdout \ 
+      2><LOG_DIR>/stderr
+
+  resources:
+    __app__.jar -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/faahmed/.sparkStaging/application_1580812675067_9465/Milestone2_faulty.jar" } size: 71190 timestamp: 1589560880241 type: FILE visibility: PRIVATE
+    __spark_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-yarn-archive.tar.gz" } size: 279537157 timestamp: 1580802651556 type: ARCHIVE visibility: PUBLIC
+    __spark_conf__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/user/faahmed/.sparkStaging/application_1580812675067_9465/__spark_conf__.zip" } size: 277631 timestamp: 1589560880657 type: ARCHIVE visibility: PRIVATE
+    __hive_libs__ -> resource { scheme: "hdfs" host: "iccluster040.iccluster.epfl.ch" port: 8020 file: "/hdp/apps/3.0.1.0-187/spark2/spark2-hdp-hive-archive.tar.gz" } size: 43606863 timestamp: 1580802654613 type: ARCHIVE visibility: PUBLIC
+
+===============================================================================
+20/05/15 18:41:25 INFO RMProxy: Connecting to ResourceManager at iccluster040.iccluster.epfl.ch/10.90.38.16:8030
+20/05/15 18:41:25 INFO YarnRMClient: Registering the ApplicationMaster
+20/05/15 18:41:25 INFO Configuration: found resource resource-types.xml at file:/etc/hadoop/3.0.1.0-187/0/resource-types.xml
+20/05/15 18:41:25 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark://YarnAM@iccluster060.iccluster.epfl.ch:40977)
+20/05/15 18:41:25 INFO YarnAllocator: Will request 2 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+20/05/15 18:41:25 INFO YarnAllocator: Submitted 2 unlocalized container requests.
+20/05/15 18:41:25 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+20/05/15 18:41:25 INFO YarnAllocator: Launching container container_e02_1580812675067_9465_01_000002 on host iccluster057.iccluster.epfl.ch for executor with ID 1
+20/05/15 18:41:25 INFO YarnAllocator: Launching container container_e02_1580812675067_9465_01_000003 on host iccluster062.iccluster.epfl.ch for executor with ID 2
+20/05/15 18:41:25 INFO YarnAllocator: Received 2 containers from YARN, launching executors on 2 of them.
+20/05/15 18:41:28 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.8:48668) with ID 1
+20/05/15 18:41:28 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.90.39.13:57964) with ID 2
+20/05/15 18:41:28 INFO BlockManagerMasterEndpoint: Registering block manager iccluster057.iccluster.epfl.ch:45899 with 408.9 MB RAM, BlockManagerId(1, iccluster057.iccluster.epfl.ch, 45899, None)
+20/05/15 18:41:28 INFO YarnClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+20/05/15 18:41:28 INFO YarnClusterScheduler: YarnClusterScheduler.postStartHook done
+20/05/15 18:41:28 INFO BlockManagerMasterEndpoint: Registering block manager iccluster062.iccluster.epfl.ch:40187 with 408.9 MB RAM, BlockManagerId(2, iccluster062.iccluster.epfl.ch, 40187, None)
+20/05/15 18:41:28 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 427.7 KB, free 365.9 MB)
+20/05/15 18:41:28 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 43.7 KB, free 365.8 MB)
+20/05/15 18:41:28 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on iccluster060.iccluster.epfl.ch:33187 (size: 43.7 KB, free: 366.3 MB)
+20/05/15 18:41:28 INFO SparkContext: Created broadcast 0 from textFile at App8.scala:14
+20/05/15 18:41:28 ERROR ApplicationMaster: User class threw exception: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs:/cs449/data2_a.csv
+org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs:/cs449/data2_a.csv
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:297)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:239)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:325)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:200)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.Partitioner$$anonfun$4.apply(Partitioner.scala:75)
+	at org.apache.spark.Partitioner$$anonfun$4.apply(Partitioner.scala:75)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:285)
+	at org.apache.spark.Partitioner$.defaultPartitioner(Partitioner.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$groupBy$1.apply(RDD.scala:691)
+	at org.apache.spark.rdd.RDD$$anonfun$groupBy$1.apply(RDD.scala:691)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.groupBy(RDD.scala:690)
+	at App8$.main(App8.scala:21)
+	at App8.main(App8.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+20/05/15 18:41:28 INFO ApplicationMaster: Final app status: FAILED, exitCode: 15, (reason: User class threw exception: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs:/cs449/data2_a.csv
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:297)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:239)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:325)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:200)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.Partitioner$$anonfun$4.apply(Partitioner.scala:75)
+	at org.apache.spark.Partitioner$$anonfun$4.apply(Partitioner.scala:75)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:285)
+	at org.apache.spark.Partitioner$.defaultPartitioner(Partitioner.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$groupBy$1.apply(RDD.scala:691)
+	at org.apache.spark.rdd.RDD$$anonfun$groupBy$1.apply(RDD.scala:691)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.groupBy(RDD.scala:690)
+	at App8$.main(App8.scala:21)
+	at App8.main(App8.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+)
+20/05/15 18:41:28 INFO SparkContext: Invoking stop() from shutdown hook
+20/05/15 18:41:29 INFO AbstractConnector: Stopped Spark@204342ba{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+20/05/15 18:41:29 INFO SparkUI: Stopped Spark web UI at http://iccluster060.iccluster.epfl.ch:45219
+20/05/15 18:41:29 INFO YarnAllocator: Driver requested a total number of 0 executor(s).
+20/05/15 18:41:29 INFO YarnClusterSchedulerBackend: Shutting down all executors
+20/05/15 18:41:29 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+20/05/15 18:41:29 INFO SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+20/05/15 18:41:29 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/05/15 18:41:29 INFO MemoryStore: MemoryStore cleared
+20/05/15 18:41:29 INFO BlockManager: BlockManager stopped
+20/05/15 18:41:29 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/05/15 18:41:29 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/05/15 18:41:29 INFO SparkContext: Successfully stopped SparkContext
+20/05/15 18:41:29 INFO ApplicationMaster: Unregistering ApplicationMaster with FAILED (diag message: User class threw exception: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs:/cs449/data2_a.csv
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:297)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:239)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:325)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:200)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:251)
+	at org.apache.spark.Partitioner$$anonfun$4.apply(Partitioner.scala:75)
+	at org.apache.spark.Partitioner$$anonfun$4.apply(Partitioner.scala:75)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:285)
+	at org.apache.spark.Partitioner$.defaultPartitioner(Partitioner.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$groupBy$1.apply(RDD.scala:691)
+	at org.apache.spark.rdd.RDD$$anonfun$groupBy$1.apply(RDD.scala:691)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.groupBy(RDD.scala:690)
+	at App8$.main(App8.scala:21)
+	at App8.main(App8.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$4.run(ApplicationMaster.scala:721)
+)
+20/05/15 18:41:29 INFO AMRMClientImpl: Waiting for application to be successfully unregistered.
+20/05/15 18:41:29 INFO ApplicationMaster: Deleting staging directory hdfs://iccluster040.iccluster.epfl.ch:8020/user/faahmed/.sparkStaging/application_1580812675067_9465
+20/05/15 18:41:29 INFO ShutdownHookManager: Shutdown hook called
+20/05/15 18:41:29 INFO ShutdownHookManager: Deleting directory /hdata/sdf/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/spark-fc01d483-d706-4eb5-ad73-c908278dbe00
+20/05/15 18:41:29 INFO ShutdownHookManager: Deleting directory /hdata/sdc/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/spark-fb281c69-ae99-4e75-9f55-94facefdf9f0
+20/05/15 18:41:29 INFO ShutdownHookManager: Deleting directory /hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/spark-113d12b0-58c2-4b8a-b565-55f5eceab0f6
+20/05/15 18:41:29 INFO ShutdownHookManager: Deleting directory /hdata/sde/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/spark-dedf6d20-ee46-4cfe-b864-256887aeec1f
+20/05/15 18:41:29 INFO ShutdownHookManager: Deleting directory /hdata/sdd/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/spark-58fa43f6-060a-45ca-99a0-d3959d5a8fe6
+20/05/15 18:41:29 INFO ShutdownHookManager: Deleting directory /hdata/sdb/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/spark-d90b6635-9474-4e93-807c-55f1a2629e18
+20/05/15 18:41:29 INFO ShutdownHookManager: Deleting directory /hdata/sdg/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/spark-97f720a9-1f6b-4953-98b2-3947a52375ed
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_e02_1580812675067_9465_01_000003 on iccluster062.iccluster.epfl.ch_45454_1589560890797
+LogAggregationType: AGGREGATED
+===========================================================================================================
+LogType:stderr
+LogLastModifiedTime:Fri May 15 18:41:30 +0200 2020
+LogLength:5129
+LogContents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hdata/sde/hadoop/yarn/local/filecache/11/spark2-hdp-yarn-archive.tar.gz/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/3.0.1.0-187/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/05/15 18:41:26 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 1883@iccluster062
+20/05/15 18:41:26 INFO SignalUtils: Registered signal handler for TERM
+20/05/15 18:41:26 INFO SignalUtils: Registered signal handler for HUP
+20/05/15 18:41:26 INFO SignalUtils: Registered signal handler for INT
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls groups to: 
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls groups to: 
+20/05/15 18:41:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, faahmed); groups with view permissions: Set(); users  with modify permissions: Set(yarn, faahmed); groups with modify permissions: Set()
+20/05/15 18:41:27 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:40977 after 106 ms (0 ms spent in bootstraps)
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls to: yarn,faahmed
+20/05/15 18:41:27 INFO SecurityManager: Changing view acls groups to: 
+20/05/15 18:41:27 INFO SecurityManager: Changing modify acls groups to: 
+20/05/15 18:41:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, faahmed); groups with view permissions: Set(); users  with modify permissions: Set(yarn, faahmed); groups with modify permissions: Set()
+20/05/15 18:41:27 INFO TransportClientFactory: Successfully created connection to iccluster060.iccluster.epfl.ch/10.90.39.11:40977 after 2 ms (0 ms spent in bootstraps)
+20/05/15 18:41:28 INFO DiskBlockManager: Created local directory at /hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-1c3fe751-563c-462d-80e4-831c0718496a
+20/05/15 18:41:28 INFO DiskBlockManager: Created local directory at /hdata/sdb/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-8c6e436a-7e3f-4d65-a713-cb4fe2a94709
+20/05/15 18:41:28 INFO DiskBlockManager: Created local directory at /hdata/sdc/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-a1387cdc-a3ad-4c44-9227-39e5e934053e
+20/05/15 18:41:28 INFO DiskBlockManager: Created local directory at /hdata/sdd/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-880f5926-fe76-462f-a984-6dd7f698bc40
+20/05/15 18:41:28 INFO DiskBlockManager: Created local directory at /hdata/sde/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-8ca525af-32b6-4cf9-a7c4-65bc14c8c346
+20/05/15 18:41:28 INFO DiskBlockManager: Created local directory at /hdata/sdf/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-3842a91a-7954-4af8-aa1e-f43851bdfdc5
+20/05/15 18:41:28 INFO DiskBlockManager: Created local directory at /hdata/sdg/hadoop/yarn/local/usercache/faahmed/appcache/application_1580812675067_9465/blockmgr-802a14c1-bc80-4642-a27d-aacbd3ea7253
+20/05/15 18:41:28 INFO MemoryStore: MemoryStore started with capacity 408.9 MB
+20/05/15 18:41:28 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@iccluster060.iccluster.epfl.ch:40977
+20/05/15 18:41:28 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/05/15 18:41:28 INFO Executor: Starting executor ID 2 on host iccluster062.iccluster.epfl.ch
+20/05/15 18:41:28 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40187.
+20/05/15 18:41:28 INFO NettyBlockTransferService: Server created on iccluster062.iccluster.epfl.ch:40187
+20/05/15 18:41:28 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/05/15 18:41:28 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(2, iccluster062.iccluster.epfl.ch, 40187, None)
+20/05/15 18:41:28 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(2, iccluster062.iccluster.epfl.ch, 40187, None)
+20/05/15 18:41:28 INFO BlockManager: Initialized BlockManager: BlockManagerId(2, iccluster062.iccluster.epfl.ch, 40187, None)
+20/05/15 18:41:29 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/05/15 18:41:29 INFO MemoryStore: MemoryStore cleared
+20/05/15 18:41:29 INFO BlockManager: BlockManager stopped
+20/05/15 18:41:29 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
