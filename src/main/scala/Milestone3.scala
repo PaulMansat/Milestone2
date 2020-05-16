@@ -302,12 +302,123 @@ object Milestone1 {
   }
 
   def f4(lines: Iterable[String]): ErrorAttempt = {
-    val res = ???
+    // find driver's container, if not, return null
+    //val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+    //val driver_container = lines.filter(_.matches("^Container: container_.*0001 .*$")).isEmpty
+    //if (driver_container){
+    //  return null
+    //}
+    val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+
+    val type4res= lines.filter(line => containerPattern.findFirstMatchIn(line).isDefined).map(line => {
+
+      // determine the stage and the source line
+      // INFO DAGScheduler: Final stage: ResultStage 0 (collect at App2.scala:22)
+      val stageLinePattern = ".*INFO DAGScheduler: Final stage: ResultStage (\\d*) .* at App\\d+.scala:(\\d+) *".r
+      val stageLine = line match {
+        case stageLinePattern(st, l) => (st.toInt, l.toInt)
+        case _ => (-1, -1)
+      }
+
+      // search exceptions in applicationMaster and utils
+      // otherwise return exception in the line of WARN Executor
+      val appli_utilExcep = f4_findErrorInAppMasterAndErrorUtil(lines)
+
+      // 1
+      if (line.contains("WARN Executor: Issue communicating with driver in heartbeater") && line.contains("org.apache.spark.rpc.RpcTimeoutException")) {
+        val e1 = chooseExcep(lines, "org.apache.spark.rpc.RpcTimeoutException", appli_utilExcep, stageLine)
+        e1
+      }
+      //2
+      else if (line.contains("WARN BlockManager: Failed to fetch")) {
+        //WARN BlockManager: Failed to fetch ... (*Exception): Exception thrown in awaitResult:
+        val warnBlockManagerPattern = ".*WARN BlockManager: Failed to fetch .* (.*Exception|.*Error): .*".r
+        val excep2 = line.replace('\n', ' ') match {
+          case warnBlockManagerPattern(e) => e
+          case _ => ""
+        }
+
+        chooseExcep(lines, excep2, appli_utilExcep, stageLine)
+
+      }
+      //3 WARN TaskSetManager: Lost task
+      // no, not unique
+
+      //4
+      else if (line.contains("WARN TransportChannelHandler:")) {
+        val TransportChannelHandlerPattern = ".*WARN TransportChannelHandler: .* (.*Exception|.*Error): .*".r
+        val excep4 = line.replace('\n', ' ') match {
+          case TransportChannelHandlerPattern(e) => e
+          case _ => ""
+        }
+        chooseExcep(lines, excep4, appli_utilExcep, stageLine)
+      }
+      //5
+      else if (line.contains("ERROR OneForOneBlockFetcher: Failed while starting block fetches")) {
+        val blockFetcherPattern = ".*ERROR OneForOneBlockFetcher: Failed while starting block fetches (.*Exception|.*Error): .*".r
+        val excep5 = line.replace('\n', ' ') match {
+          case blockFetcherPattern(e) => e
+          case _ => ""
+        }
+        chooseExcep(lines, excep5, appli_utilExcep, stageLine)
+      }
+      //6
+      else if (line.contains("ERROR Executor:")) {
+        val excutorErrorWithDriverPattern = ".*ERROR Executor: .* driver .*"
+        val excep5 = line.replace('\n', ' ').matches(excutorErrorWithDriverPattern)
+        ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
+      }
+      //7
+      else if(line.contains("ERROR ResourceLeakDetector") || line.contains("ERROR TaskResultGetter") || line.contains("ERROR TransportResponseHandler")){
+        chooseExcep(lines, "", appli_utilExcep, stageLine)
+      }
+      else{
+        null
+      }
+
+    // end map
+    }).headOption
+
+    // if all is not the case
+    // call next function
+    val res = type4res.orNull
     if (res == null) {
       f5(lines)
     } else {
       res
     }
+  }
+
+  // check and choose the exception to return
+  def chooseExcep(lines: Iterable[String],excep:String,appli_utilExcep:(String,String),stageLine:(Int, Int)): ErrorAttempt  ={
+    if ( !appli_utilExcep._1.isEmpty ){
+      ErrorAttempt(4,appli_utilExcep._1,stageLine._1, stageLine._2)
+    } else if(!appli_utilExcep._2.isEmpty){
+      ErrorAttempt(4,appli_utilExcep._2,stageLine._1, stageLine._2)
+    } else if (!excep.isEmpty){
+      ErrorAttempt(4,excep,stageLine._1, stageLine._2)
+    } else{
+      null
+    }
+  }
+
+  def f4_findErrorInAppMasterAndErrorUtil(lines: Iterable[String]):(String,String) = {
+    val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception:) .*".r
+    val appliExcep = lines.filter(l=> l.contains("ApplicationMaster:")).map(_.replace('\n',' ')).map {
+      _ match {
+        case appliMasterPattern (_, e) => e.split (":").take(1)(0)
+        case _ => ""
+      }
+    }
+
+    val errUtilsPattern = ".*ERROR Utils: .* task-result-getter-\\d+(.*) .*".r
+    val utilExcep = lines.filter(l=> l.contains("ERROR Utils:")).map(_.replace('\n',' ')).map {
+      _ match {
+        case errUtilsPattern(e) => e.split (":").take(1)(0)
+        case _ => ""
+      }
+    }
+    (appliExcep.toString(),utilExcep.toString())
   }
 
   def f5(lines: Iterable[String]): ErrorAttempt = {
@@ -352,8 +463,6 @@ object Milestone1 {
 
   def listJoiner[U](l1: List[U], l2: List[U]): List[U] = l1 ++ l2
 
-  //////////////M3/////////////
-  // NEED FURTHER CHANGES FOR 4 NEW ATTRIBUTES
   def seqOpAttempts(list: List[Attempt], attempt: ((String, Int), Iterable[LineData])): List[Attempt] = {
     def folder(agg: Attempt, line: LineData): Attempt = (agg, line) match {
       case (Attempt(a1, a2, _d, endTime, finalStatus, containers), LineData(_, _, _, startTime, true, _, _)) => Attempt(a1, a2, startTime, endTime, finalStatus, containers)
@@ -368,8 +477,6 @@ object Milestone1 {
     newAttempt :: list
   }
 
-  //////////////M3/////////////
-  // NEED FURTHER CHANGES FOR 4 NEW ATTRIBUTES
   def seqOpApps(list: List[SimpleApplication], app: (String, Iterable[LineData])): List[SimpleApplication] = {
     val newApp = app._2.foldLeft[(SimpleApplication, Set[Int])]((SimpleApplication(app._1, 0, ""), Set(0))) {
       case ((SimpleApplication(applicationId, attemptCount, user1), attemptsVals), LineData(_, attemptNb, user2, _, _, _, _)) =>
