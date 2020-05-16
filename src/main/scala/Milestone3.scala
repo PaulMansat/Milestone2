@@ -304,7 +304,8 @@ object Milestone1 {
     val drvierError = lines.filter(x => containerPattern.findFirstMatchIn(x).isDefined).map(x => {
       val errorMatch = errorPattern.findFirstMatchIn(x)
 
-      if (errorMatch.isDefined) {
+      // Stage failure => something happened on the executors
+      if (errorMatch.isDefined && !errorMatch.get.group(2).contains("due to stage failure")) {
         val errorLinePattern = "at .*\\(App.*:(.*)\\)".r
 
         val stackTrace = errorMatch.get.group(3)
