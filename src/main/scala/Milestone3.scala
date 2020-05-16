@@ -236,7 +236,7 @@ object Milestone1 {
     // From the forum, only case where this creates logs is for incorrect class name
     // The other have to be found in the regular hadoop logs
     val errorPattern = "(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) ERROR ApplicationMaster: Uncaught exception: \njava.lang.ClassNotFoundException: ".r
-    val driverPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+    val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
 
     val missingClass = lines.filter(x => containerPattern.findFirstMatchIn(x).isDefined).map(x => {
       val errorMatch = errorPattern.findFirstMatchIn(x)
@@ -264,11 +264,11 @@ object Milestone1 {
     val errorPattern = error.r
     val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
 
-    val missingClass = lines.filter(x => containerPattern.findFirstMatchIn(x).isDefined).map(x => {
+    val missingFile = lines.map(x => {
       val errorMatch = errorPattern.findFirstMatchIn(x)
 
       if (errorMatch.isDefined) {
-        val errorLinePattern = "at .*\\.main\\(.*:(.*)\\)".r
+        val errorLinePattern = "at .*\\(App.*:(.*)\\)".r
 
         val stackTrace = errorMatch.get.group(2)
 
@@ -282,9 +282,9 @@ object Milestone1 {
         ErrorAttempt(2, "org.apache.hadoop.mapred.InvalidInputException", -1, errorLine)
       } else
         null
-    }).headOption
+    }).find(_ != null)
 
-    val res = missingClass.orNull
+    val res = missingFile.orNull
     if (res == null) {
       f3(lines)
     } else {
@@ -293,7 +293,48 @@ object Milestone1 {
   }
 
   def f3(lines: Iterable[String]): ErrorAttempt = {
-    val res = ???
+    val error = "(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) INFO ApplicationMaster: Final app status: .*, exitCode: \\d*, " +
+      "\\(reason: User class threw exception: (.*): .*" +
+      "([\\s\\S]*)?(?=\\n.*?=|\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2})"
+
+    val errorPattern = error.r
+    val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+    val stagePattern = "(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) INFO YarnClusterScheduler: Cancelling stage (\\d*)".r
+
+    val drvierError = lines.filter(x => containerPattern.findFirstMatchIn(x).isDefined).map(x => {
+      val errorMatch = errorPattern.findFirstMatchIn(x)
+
+      if (errorMatch.isDefined) {
+        val errorLinePattern = "at .*\\(App.*:(.*)\\)".r
+
+        val stackTrace = errorMatch.get.group(3)
+
+        val errorLineMatch = errorLinePattern.findFirstMatchIn(stackTrace)
+
+        var errorLine = -1
+
+        if (errorLineMatch.isDefined)
+          errorLine = errorLineMatch.get.group(1).toInt
+
+        val stageMatch = stagePattern.findAllMatchIn(x).toList
+
+        var stage = -1
+
+        if (stageMatch.nonEmpty)
+          stage = stageMatch.last.group(2).toInt
+
+
+        if (errorMatch.isDefined)
+          ErrorAttempt(3, errorMatch.get.group(2), stage, errorLine)
+
+        else
+          null
+      } else
+        null
+    }).headOption
+
+    val res = drvierError.orNull
+
     if (res == null) {
       f4(lines)
     } else {
