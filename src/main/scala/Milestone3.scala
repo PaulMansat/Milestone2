@@ -382,9 +382,15 @@ object Milestone1 {
         chooseExcep(lines, excep2, appli_utilExcep, stageLine)
 
       }
-      //3 WARN TaskSetManager: Lost task
-      // no, not unique
-
+      //3 
+      else if (line.matches("^.*ApplicationMaster: .* (.*Exception|.*Error): Job aborted due to stage failure: Total size of serialized results of .* than spark.driver.maxResultSize .*$")) {
+        /*val maxResultPattern = ".*ApplicationMaster: .* (.*Exception|.*Error): Job aborted due to stage failure: Total size of serialized results of .* than spark.driver.maxResultSize .*".r
+        val excep2 = line.replace('\n', ' ') match {
+          case maxResultPattern(e) => e
+          case _ => ""
+        }*/
+        chooseExcep(lines, "org.apache.spark.SparkException", appli_utilExcep, stageLine)
+      }
       //4
       else if (line.contains("WARN TransportChannelHandler:")) {
         val TransportChannelHandlerPattern = ".*WARN TransportChannelHandler: .* (.*Exception|.*Error): .*".r
