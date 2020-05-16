@@ -424,7 +424,7 @@ object Milestone1 {
     // call next function
     val res = type4res.orNull
     if (res == null) {
-      f5(lines)
+      f5and6(lines)
     } else {
       res
     }
@@ -462,12 +462,93 @@ object Milestone1 {
     (appliExcep.toString(),utilExcep.toString())
   }
 
-  def f5(lines: Iterable[String]): ErrorAttempt = {
-    val res = ???
-    if (res == null) {
-      f6(lines)
+  def f5and6(lines: Iterable[String]): ErrorAttempt = {
+    val ContainerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_(\\d*) on (iccluster\\d*\\.iccluster\\.epfl\\.ch).*".r
+
+    val containers = lines.map(x => {
+      val containerLine = ContainerPattern.findFirstMatchIn(x)
+      (containerLine.get.group(1).toInt, (containerLine.get.group(2), x))
+    }).toMap
+
+    val driverContainer = containers.get(1).get._2
+
+    val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR (\\w*):*".r
+    val errorDriverPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR YarnClusterScheduler: Lost executor \\d* on iccluster\\d*\\.iccluster\\.epfl\\.ch: Container marked as failed: container_e02_1580812675067_\\d{4}_\\d{2}_(\\d{6})*".r
+
+    val errorActors = firstErrorPattern.findAllMatchIn(driverContainer).map(x => x.group(1))
+
+    // A tuple (Nb of Utils message before actual error, String)
+    val firstErrorActor = errorActors.foldLeft((0, 0,""))(op = (z, x) => {
+      if (z._1 == 0) {
+        if (x == "Utils") (0, z._2 +1 ,"")
+        else (1, z._2, x)
+      } else {
+        z
+      }
+    })
+    var exceptionAndType = ("",-1)
+    var stage = -1
+    var line = -1
+
+    // analyse the executor's container
+    if (firstErrorActor._3 == "YarnClusterScheduler") {
+      val executorLineNb = errorDriverPattern.findFirstMatchIn(driverContainer)
+      if (executorLineNb.isDefined) {
+        val executorNb = executorLineNb.get.group(1).toInt
+
+        val executorErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR Executor: .*\n([^:]*):.*\n.*at (.*)\n".r
+        val executorContainer = containers.get(executorNb)
+        exceptionAndType = executorContainer.map(x => {
+          val executorMatcher = executorErrorPattern.findFirstMatchIn(x._2)
+          if (executorMatcher.isDefined) (executorMatcher.get.group(1), if(executorMatcher.get.group(2).contains("App")) 5 else 6)
+          else ("", -1) // will never be reached
+        }).toList.head
+
+
+        val lineExecutorPattern = "App\\d*.scala:(\\d*)".r
+        line = executorContainer.map(x => {
+          val lineMatch = lineExecutorPattern.findFirstMatchIn(x._2)
+          if (lineMatch.isDefined) lineMatch.get.group(1).toInt
+          else -1
+        }).toList.head
+      }
+
+      if(exceptionAndType._1 == ""){
+        if (firstErrorActor._2 != 0) {
+          val firstUsefulUtilsMessage = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} INFO Utils: .*\n([^:]*):*".r
+          val UtilsExceptionLine = firstUsefulUtilsMessage.findFirstMatchIn(driverContainer)
+          if (UtilsExceptionLine.isDefined)
+            exceptionAndType = (UtilsExceptionLine.get.group(1), exceptionAndType._2)
+        }
+      }
+
+      if(exceptionAndType._1 == ""){
+        val ApplicationMasterPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: User class threw exception: ([^:]*):*".r
+        val ApplicationMasterLine = ApplicationMasterPattern.findFirstMatchIn(driverContainer)
+        if (ApplicationMasterLine.isDefined)
+          exceptionAndType = (ApplicationMasterLine.get.group(1), exceptionAndType._2)
+      }
+
+
+      val lineDriverPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} INFO DAGScheduler: .* \\(.* at App\\d*.scala:(\\d*)\\) failed *".r
+
+      if (line == -1) {
+        val lineEx= lineDriverPattern.findFirstMatchIn(driverContainer)
+        if (lineEx.isDefined)
+          line = lineEx.get.group(1).toInt
+      }
+      //get the stage
+      val stagePattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} INFO YarnClusterScheduler: Cancelling stage (\\d*)".r
+      val stageLine = stagePattern.findFirstMatchIn(driverContainer)
+      if (stageLine.isDefined)
+        stage = stageLine.get.group(1).toInt
+    }
+
+    if (exceptionAndType._1 != "" && exceptionAndType._2 != -1 && stage != -1) {
+      //println(exceptionAndType._2 + ", "+ exceptionAndType._1 + ", " + stage + ", " + line)
+      ErrorAttempt(exceptionAndType._2, exceptionAndType._1, stage, line)
     } else {
-      res
+      f7(lines)
     }
   }
 
