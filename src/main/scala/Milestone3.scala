@@ -344,24 +344,17 @@ object Milestone1 {
   }
 
   def f4(lines: Iterable[String]): ErrorAttempt = {
-    // find driver's container, if not, return null
-    //val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
-    //val driver_container = lines.filter(_.matches("^Container: container_.*0001 .*$")).isEmpty
-    //if (driver_container){
-    //  return null
-    //}
     val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+    // determine the stage and the source line
+    // INFO DAGScheduler: Final stage: ResultStage 0 (collect at App2.scala:22)
+    val stageLinePattern = ".*INFO DAGScheduler: Final stage: ResultStage (\\d*) .* at App\\d+.scala:(\\d+) *".r
+    val stageLine = lines.map(
+    _ match {
+      case stageLinePattern(st, l) => (st.toInt, l.toInt)
+      case _ => (-1, -1)
+    }).head
 
     val type4res= lines.filter(line => containerPattern.findFirstMatchIn(line).isDefined).map(line => {
-
-      // determine the stage and the source line
-      // INFO DAGScheduler: Final stage: ResultStage 0 (collect at App2.scala:22)
-      val stageLinePattern = ".*INFO DAGScheduler: Final stage: ResultStage (\\d*) .* at App\\d+.scala:(\\d+) *".r
-      val stageLine = line match {
-        case stageLinePattern(st, l) => (st.toInt, l.toInt)
-        case _ => (-1, -1)
-      }
-
       // search exceptions in applicationMaster and utils
       // otherwise return exception in the line of WARN Executor
       val appli_utilExcep = f4_findErrorInAppMasterAndErrorUtil(lines)
