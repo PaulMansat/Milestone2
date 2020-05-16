@@ -383,13 +383,13 @@ object Milestone1 {
 
       }
       //3 
-      else if (line.matches("^.*ApplicationMaster: .* (.*Exception|.*Error): Job aborted due to stage failure: Total size of serialized results of .* than spark.driver.maxResultSize .*$")) {
-        /*val maxResultPattern = ".*ApplicationMaster: .* (.*Exception|.*Error): Job aborted due to stage failure: Total size of serialized results of .* than spark.driver.maxResultSize .*".r
-        val excep2 = line.replace('\n', ' ') match {
+      else if (line.contains("spark.driver.maxResultSize")) {
+        val maxResultPattern = ".*ApplicationMaster: .* (.*Exception|.*Error): Job aborted due to stage failure: Total size of serialized results of .* than spark.driver.maxResultSize .*".r
+        val excep3 = line.replace('\n', ' ') match {
           case maxResultPattern(e) => e
           case _ => ""
-        }*/
-        chooseExcep(lines, "org.apache.spark.SparkException", appli_utilExcep, stageLine)
+        }
+        chooseExcep(lines, excep3, appli_utilExcep, stageLine)
       }
       //4
       else if (line.contains("WARN TransportChannelHandler:")) {
