@@ -270,6 +270,11 @@ object Milestone3 {
     //writer.close()
   }
 
+  /** Check if the log corresponds to a type 1 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt if it's a type 1 error, otherwise call error function 2 (i.e f2)
+    */
   def f1(lines: Iterable[String]): ErrorAttempt = {
     // From the forum, only case where this creates logs is for incorrect class name
     // The other have to be found in the regular hadoop logs
@@ -294,6 +299,12 @@ object Milestone3 {
     }
   }
 
+
+  /** Check if the log corresponds to a type 2 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt if it's a type 2 error, otherwise call error function 3 (i.e f3)
+    */
   def f2(lines: Iterable[String]): ErrorAttempt = {
     // Only case specified in forum for this is for missing data file
 
@@ -330,6 +341,11 @@ object Milestone3 {
     }
   }
 
+  /** Check if the log corresponds to a type 3 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt if it's a type 3 error, otherwise call error function 4 (i.e f4)
+    */
   def f3(lines: Iterable[String]): ErrorAttempt = {
     val error = "(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) INFO ApplicationMaster: Final app status: .*, exitCode: \\d*, " +
       "\\(reason: User class threw exception: (.*): .*" +
@@ -381,6 +397,11 @@ object Milestone3 {
     }
   }
 
+  /** Check if the log corresponds to a type 4 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt if it's a type 4 error, otherwise call error function 5 (i.e f5and6)
+    */
   def f4(lines: Iterable[String]): ErrorAttempt = {
     // find driver's container
     val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_(\\d*) on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
@@ -390,8 +411,8 @@ object Milestone3 {
 
     val driverContainer = mapContainers.get(1).get
 
-    var stageLine = (-1, -1)
     // determine the stage and the source line
+    var stageLine = (-1, -1)
     val stageLinePattern = ".*INFO DAGScheduler: Final stage: ResultStage (\\d*) .* at App\\d+.scala:(\\d+) *".r
     val stageLineLine = stageLinePattern.findFirstMatchIn(driverContainer)
     if (stageLineLine.isDefined) {
@@ -399,13 +420,16 @@ object Milestone3 {
       stageLine = (s.group(1).toInt, s.group(2).toInt)
     }
 
+    // initilize the potential Error Attempt
     var tempRes = ErrorAttempt(-1, "", -1, -1)
 
-    //1
+    // I. we start by studying the driver's container for type 4 error message
+
+    // checks that the error does not come from an insufficient space in the driver
     if (driverContainer.contains("than spark.driver.maxResultSize")) {
       tempRes = ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
     }
-    //2 -> driver
+    // checks that the error does come from a BlockManager failure
     else if (driverContainer.contains("WARN BlockManager: Failed to fetch")) {
       val warnBlockManagerPattern = ".*WARN BlockManager: Failed to fetch .* (.*Exception|.*Error): .*".r
       val excep2 = driverContainer.replace('\n', ' ') match {
@@ -416,7 +440,7 @@ object Milestone3 {
       // otherwise return exception in the line of the corresponding cases
       tempRes = chooseExcep(driverContainer, excep2, stageLine)
     }
-    //3 -> driver
+    // checks that the error does come from the TransportChannelHandler
     else if (driverContainer.contains("WARN TransportChannelHandler:")) {
       val TransportChannelHandlerPattern = ".*WARN TransportChannelHandler: .*\n(.*Exception|.*Error): .*".r
       val transportChannelHandelerLine = TransportChannelHandlerPattern.findFirstMatchIn(driverContainer)
@@ -426,11 +450,14 @@ object Milestone3 {
       }
       tempRes = chooseExcep(driverContainer, excep3, stageLine)
     }
-    //4 -> driver
+    // checks that the error comes from either the TaskResultGetter and not from YarnClusterScheduler
+    // the YarnClusterScheduler is responsible for keeping track of the executors launched by the driver
+    // Hence, if an error due to some code (or due to shuffling data) happen in the executor, the YarnClusterScheduler
+    // will mention it, and it will be a type 5 or 6 error (and not type 4)
     else if (driverContainer.contains("ERROR TaskResultGetter") && !driverContainer.contains("ERROR YarnClusterScheduler")) {
       tempRes = chooseExcep(driverContainer, "", stageLine)
     }
-    //5 -> driver
+    // checks that the error comes from either the TaskResultGetter and not from YarnClusterScheduler
     else if (driverContainer.contains("ERROR ResourceLeakDetector") || driverContainer.contains("ERROR TransportResponseHandler")) {
       tempRes = chooseExcep(driverContainer, "", stageLine)
     }
@@ -458,7 +485,7 @@ object Milestone3 {
       }
     }
 
-    // in executor container
+    // II. If no error messages of type 4 errors were found in the driver's container, look into the executor's container
     val execContainer = mapContainers.filter(x => x._1 > 1)
 
     if (tempRes.errorCategory == -1) {
@@ -514,7 +541,14 @@ object Milestone3 {
 
   }
 
-  // check and choose the exception to return
+  /** A helper method to find type 4 errors. It studies ERROR Utils messages and INFO/ERROR ApplicationMaster messages
+    * to find the appropriate exception
+    *
+    *  @param line an iterable[String], where each element is the log of a container for failed attempts
+    *  @param excep potential exception found with the ERROR Message studied earlier
+    *  @param stageLine tuple which contains the stage and source code line of the error
+    *  @return ErrorAttempt if exception found, otherwise null
+    */
   def chooseExcep(line: String, excep: String, stageLine: (Int, Int)): ErrorAttempt = {
     var exception = ""
     val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception):.*".r
@@ -538,6 +572,11 @@ object Milestone3 {
     }
   }
 
+  /** Check if the log corresponds to a type 5 or a type 6 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt if it's a type 4 error, otherwise call error function 7 (i.e f7)
+    */
   def f5and6(lines: Iterable[String]): ErrorAttempt = {
     val ContainerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_(\\d*) on (iccluster\\d*\\.iccluster\\.epfl\\.ch).*".r
 
@@ -630,6 +669,11 @@ object Milestone3 {
     }
   }
 
+  /** Check if the log corresponds to a type 7 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt if it's a type 7 error, otherwise call error function 8 (i.e f8)
+    */
   def f7(lines: Iterable[String], driverContainerLine: String): ErrorAttempt = {
     val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR".r
 
@@ -642,6 +686,11 @@ object Milestone3 {
     }
   }
 
+  /** Check if the log corresponds to a type 8 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt if it's a type 8 error, otherwise call error function 9 (i.e f9)
+    */
   def f8(lines: Iterable[String]): ErrorAttempt = {
     val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR".r
 
@@ -714,8 +763,12 @@ object Milestone3 {
     ErrorAttempt(errorCategory, exception, stage, lineNumber)
   }
 
+  /** Check if the log corresponds to a type 9 error
+    *
+    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
+    *  @return ErrorAttempt
+    */
   def f9(lines: Iterable[String]): ErrorAttempt = {
-    // TODO better?
     ErrorAttempt(9, "N/A", -1, -1)
   }
 
