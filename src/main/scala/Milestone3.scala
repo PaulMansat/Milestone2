@@ -481,7 +481,7 @@ object Milestone3 {
       val appMasterLine = appMasterPattern.findFirstMatchIn(driverContainer)
       if (appMasterLine.isDefined) {
         if (!appMasterLine.get.group(1).contains("ExecutorLostFailure")) {
-          val appMasterExceptionPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: .*: (.*Exception):*".r
+          val appMasterExceptionPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: .*: ([^:]*Exception):*".r
           val appMasterExceptionLine = appMasterExceptionPattern.findFirstMatchIn(driverContainer)
           if (appMasterExceptionLine.isDefined) {
             tempRes = chooseExcep(driverContainer, appMasterExceptionLine.get.group(1), stageLine)
