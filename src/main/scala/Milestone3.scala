@@ -207,7 +207,7 @@ object Milestone3 {
       .groupByKey()
       .persist()
 
-    //aggregatedFailedApps.map(x => (x._1, f1(x._2))).collect().foreach(x => print(x))
+    aggregatedFailedApps.map(x => (x._1, f1(x._2))).collect().foreach(x => println(x))
 
     // Start by checking all the application Ids from the logs
     // in [startId, endId]
@@ -531,7 +531,6 @@ object Milestone3 {
 
     val driverContainer = containers.get(1).get._2
 
-
     val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR (\\w*):*".r
     val errorDriverPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR YarnClusterScheduler: Lost executor \\d* on iccluster\\d*\\.iccluster\\.epfl\\.ch: Container marked as failed: container_e02_1580812675067_\\d{4}_\\d{2}_(\\d{6})*".r
 
@@ -616,10 +615,12 @@ object Milestone3 {
     val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR".r
 
     val firstError = firstErrorPattern.findFirstIn(driverContainerLine)
+
     if (firstError.isDefined) {
       genericFindErrorAttempt(7, driverContainerLine)
+    } else {
+      f8(lines)
     }
-    f8(lines)
   }
 
   def f8(lines: Iterable[String]): ErrorAttempt = {
@@ -628,8 +629,9 @@ object Milestone3 {
     val linesWithErrors = lines.filter(line => firstErrorPattern.findFirstIn(line).isDefined)
     if (linesWithErrors.nonEmpty) {
       genericFindErrorAttempt(8, linesWithErrors.head)
+    } else {
+      f9(lines)
     }
-    f9(lines)
   }
 
   def genericFindErrorAttempt(errorCategory: Int, line: String): ErrorAttempt = {
