@@ -17,13 +17,14 @@ case class Attempt(applicationId: String,
                    startTime: String,
                    endTime: String,
                    finalStatus: String,
+                   user: String,
                    containers: List[(Int, String)])
 
 case class ErrorAttempt(errorCategory: Int, exception: String, stage: Int, sourceCodeLine: Int) {
   override def toString: String = s"""errorCategory: $errorCategory, exception $exception, stage $stage, sourceCodeLine $sourceCodeLine"""
 }
 
-case class FullAttemptWithErrors(attemptNumber: Int,
+case class FullAttemptWithErrors(appAttempt: String,
                                  user: String,
                                  startTime: String,
                                  endTime: String,
@@ -35,7 +36,7 @@ case class FullAttemptWithErrors(attemptNumber: Int,
                                 ) {
   override def toString: String = {
     s"""
-       |\nAttemptNumber : $attemptNumber
+       |\nAppAttempt  : $appAttempt
        |
          |User          : $user
        |
@@ -165,8 +166,6 @@ object Milestone3 {
       // Filter for useful LineData, removing redundant information
       .filter {
       case LineData(_, _, "", _, false, "", null) => false
-      case LineData(_, _, _, _, _, "FINISHING", _) => false
-      case LineData(_, _, _, _, _, "KILLED", _) => false
       case _ => true
     }
       // Only retain the applications with ids between the provided interval endpoints
@@ -180,20 +179,22 @@ object Milestone3 {
 
     // Get a map of applicationId => all Attempts made on that ID, sorted by attempt number
     val attempts = logsFormatted
-      .filter(line => line.attemptNb > 0)
+      .filter(line => line.attemptNb >= 0)
       // Group lines by application ID and attempt number to enable aggregate on each attempt number
       .groupBy(line => (line.applicationId, line.attemptNb))
       // seqOptAttempts gets all the useful information from all the lines with a given attempt number,
       // then listJoiner simply join every list of attempt returned
       .aggregate[List[Attempt]](Nil)(seqOpAttempts, listJoiner)
+
+      //TODO FILTER ATTEMPTS by states == FAILED || KILLED (we check, KILLED is always exit code -1000) OR exit code != 0
+
       // Sorted by attempt number as requested
       .map(a => ((a.applicationId.toInt, a.attemptNumber), a))
       .toMap
 
     // RDD of the form (appId -> Array of logs of each containers)
     // Note: key is only None for the end of file (that just contains blank space)
-    //val delimiter = "***********************************************************************\n"
-    val aggregatedFailedApps = sc.textFile(aggregatedLogFile) /*.map(_.split("\n"))*/ .map(x => {
+    val aggregatedFailedApps = sc.textFile(aggregatedLogFile).map(x => {
       val appId = appLogContainerPattern.findFirstMatchIn(x)
       val attemptNumber = attemptNbPattern.findFirstMatchIn(x)
 
@@ -210,11 +211,11 @@ object Milestone3 {
 
     aggregatedFailedApps.map(x => (x._1, f1(x._2))).map {
       case (
-        Attempt(_, attemptNumber, startTime, endTime, _, containers),
+        Attempt(appId, attemptNumber, startTime, endTime, _, user, containers),
         ErrorAttempt(errorCategory, exception, stage, sourceCodeLine)) =>
         FullAttemptWithErrors(
-          attemptNumber,
-          "",
+          s"""appattempt_1580812675067_${appId}_${"%06d".format(attemptNumber)}""",
+          user,
           startTime,
           endTime,
           containers,
@@ -223,7 +224,7 @@ object Milestone3 {
           stage,
           sourceCodeLine
         )
-    }
+    }.foreach(println)
 
     /*
     // Start by checking all the application Ids from the logs
@@ -272,8 +273,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 1 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt if it's a type 1 error, otherwise call error function 2 (i.e f2)
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt if it's a type 1 error, otherwise call error function 2 (i.e f2)
     */
   def f1(lines: Iterable[String]): ErrorAttempt = {
     // From the forum, only case where this creates logs is for incorrect class name
@@ -302,8 +303,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 2 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt if it's a type 2 error, otherwise call error function 3 (i.e f3)
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt if it's a type 2 error, otherwise call error function 3 (i.e f3)
     */
   def f2(lines: Iterable[String]): ErrorAttempt = {
     // Only case specified in forum for this is for missing data file
@@ -343,8 +344,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 3 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt if it's a type 3 error, otherwise call error function 4 (i.e f4)
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt if it's a type 3 error, otherwise call error function 4 (i.e f4)
     */
   def f3(lines: Iterable[String]): ErrorAttempt = {
     val error = "(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) INFO ApplicationMaster: Final app status: .*, exitCode: \\d*, " +
@@ -399,8 +400,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 4 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt if it's a type 4 error, otherwise call error function 5 (i.e f5and6)
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt if it's a type 4 error, otherwise call error function 5 (i.e f5and6)
     */
   def f4(lines: Iterable[String]): ErrorAttempt = {
     // find driver's container
@@ -544,10 +545,10 @@ object Milestone3 {
   /** A helper method to find type 4 errors. It studies ERROR Utils messages and INFO/ERROR ApplicationMaster messages
     * to find the appropriate exception
     *
-    *  @param line an iterable[String], where each element is the log of a container for failed attempts
-    *  @param excep potential exception found with the ERROR Message studied earlier
-    *  @param stageLine tuple which contains the stage and source code line of the error
-    *  @return ErrorAttempt if exception found, otherwise null
+    * @param line      an iterable[String], where each element is the log of a container for failed attempts
+    * @param excep     potential exception found with the ERROR Message studied earlier
+    * @param stageLine tuple which contains the stage and source code line of the error
+    * @return ErrorAttempt if exception found, otherwise null
     */
   def chooseExcep(line: String, excep: String, stageLine: (Int, Int)): ErrorAttempt = {
     var exception = ""
@@ -574,8 +575,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 5 or a type 6 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt if it's a type 4 error, otherwise call error function 7 (i.e f7)
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt if it's a type 4 error, otherwise call error function 7 (i.e f7)
     */
   def f5and6(lines: Iterable[String]): ErrorAttempt = {
     val ContainerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_(\\d*) on (iccluster\\d*\\.iccluster\\.epfl\\.ch).*".r
@@ -671,8 +672,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 7 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt if it's a type 7 error, otherwise call error function 8 (i.e f8)
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt if it's a type 7 error, otherwise call error function 8 (i.e f8)
     */
   def f7(lines: Iterable[String], driverContainerLine: String): ErrorAttempt = {
     val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR".r
@@ -688,8 +689,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 8 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt if it's a type 8 error, otherwise call error function 9 (i.e f9)
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt if it's a type 8 error, otherwise call error function 9 (i.e f9)
     */
   def f8(lines: Iterable[String]): ErrorAttempt = {
     val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR".r
@@ -765,8 +766,8 @@ object Milestone3 {
 
   /** Check if the log corresponds to a type 9 error
     *
-    *  @param lines an iterable[String], where each element is the log of a container for failed attempts
-    *  @return ErrorAttempt
+    * @param lines an iterable[String], where each element is the log of a container for failed attempts
+    * @return ErrorAttempt
     */
   def f9(lines: Iterable[String]): ErrorAttempt = {
     ErrorAttempt(9, "N/A", -1, -1)
@@ -775,15 +776,44 @@ object Milestone3 {
   def listJoiner[U](l1: List[U], l2: List[U]): List[U] = l1 ++ l2
 
   def seqOpAttempts(list: List[Attempt], attempt: ((String, Int), Iterable[LineData])): List[Attempt] = {
-    def folder(agg: Attempt, line: LineData): Attempt = (agg, line) match {
-      case (Attempt(a1, a2, _d, endTime, finalStatus, containers), LineData(_, _, _, startTime, true, _, _)) => Attempt(a1, a2, startTime, endTime, finalStatus, containers)
-      case (Attempt(a1, a2, startTime, _, _, containers), LineData(_, _, _, endTime, false, finalStatus, null)) => Attempt(a1, a2, startTime, endTime, finalStatus, containers)
-      case (Attempt(a1, a2, startTime, endTime, finalStatus, containers), LineData(_, _, _, _, _, _, container)) => Attempt(a1, a2, startTime, endTime, finalStatus, container :: containers)
+    def getNonEmptyUser(user1: String, user2: String): String = {
+      if (user1.isEmpty) {
+        user2
+      } else {
+        user1
+      }
     }
 
-    val tempNewAttempt: Attempt = attempt._2.foldLeft[Attempt](Attempt(attempt._1._1, attempt._1._2, "", "", "", Nil))(folder)
+    def folder(agg: Attempt, line: LineData): Attempt = (agg, line) match {
+      case (Attempt(a1, a2, _d, endTime, finalStatus, user1, containers), LineData(_, _, user, startTime, true, _, _)) => {
+        println("c1")
+        println(user)
+        Attempt(a1, a2, startTime, endTime, finalStatus, getNonEmptyUser(user, user1), containers)
+      }
+      case (Attempt(a1, a2, startTime, _, _, user1, containers), LineData(_, _, user, endTime, false, finalStatus, null)) => {
+        println("c2")
+        println(user)
+        println(getNonEmptyUser(user, user1))
+        Attempt(a1, a2, startTime, endTime, finalStatus, getNonEmptyUser(user, user1), containers)
+      }
+      case (Attempt(a1, a2, startTime, endTime, finalStatus, user1, containers), LineData(_, _, user, _, _, _, container)) => {
+        println("c3")
+        println(user)
+        Attempt(a1, a2, startTime, endTime, finalStatus, getNonEmptyUser(user, user1), container :: containers)
+      }
+    }
 
-    val newAttempt = Attempt(tempNewAttempt.applicationId, tempNewAttempt.attemptNumber, tempNewAttempt.startTime, tempNewAttempt.endTime, tempNewAttempt.finalStatus, tempNewAttempt.containers.distinct.sortBy(_._1))
+    val tempNewAttempt: Attempt = attempt._2.foldLeft[Attempt](Attempt(attempt._1._1, attempt._1._2, "", "", "", "", Nil))(folder)
+
+    val newAttempt = Attempt(
+      tempNewAttempt.applicationId,
+      tempNewAttempt.attemptNumber,
+      tempNewAttempt.startTime,
+      tempNewAttempt.endTime,
+      tempNewAttempt.finalStatus,
+      tempNewAttempt.user,
+      tempNewAttempt.containers.distinct.sortBy(_._1)
+    )
 
     newAttempt :: list
   }
