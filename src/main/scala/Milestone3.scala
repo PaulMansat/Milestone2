@@ -1,3 +1,5 @@
+import java.io.{BufferedWriter, FileWriter}
+
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -25,7 +27,8 @@ case class ErrorAttempt(errorCategory: Int, exception: String, stage: Int, sourc
   override def toString: String = s"""errorCategory: $errorCategory, exception $exception, stage $stage, sourceCodeLine $sourceCodeLine"""
 }
 
-case class FullAttemptWithErrors(appAttempt: String,
+case class FullAttemptWithErrors(appId: String,
+                                 attemptNumber: Int,
                                  user: String,
                                  startTime: String,
                                  endTime: String,
@@ -37,7 +40,7 @@ case class FullAttemptWithErrors(appAttempt: String,
                                 ) {
   override def toString: String = {
     s"""
-       |\nAppAttempt  : $appAttempt
+       |\nAppAttempt  : appattempt_1580812675067_${appId}_${"%06d".format(attemptNumber)}
        |
          |User          : $user
        |
@@ -45,7 +48,7 @@ case class FullAttemptWithErrors(appAttempt: String,
        |
          |EndTime       : $endTime
        |
-         |Containers    : ${containers.map(c => s"(${c._1},${c._2})").mkString(", ")}
+         |Containers    : ${containers.map(c => s"container_e02_1580812675067_${appId}_${"%02d".format(attemptNumber)}_${"%06d".format(c._1)} -> ${c._2}").mkString(", ")}
        |
          |ErrorCategory : $errorCategory
        |
@@ -161,16 +164,6 @@ object Milestone3 {
         case _ => 0
       }
 
-      println(LineData(
-        res,
-        attemptNb,
-        exitCode,
-        user,
-        datePattern.findFirstIn(line).get,
-        line.matches(launchPattern),
-        finish,
-        container))
-
       LineData(
         res,
         attemptNb,
@@ -233,12 +226,13 @@ object Milestone3 {
       .groupByKey()
       .persist()
 
-    aggregatedFailedApps.map(x => (x._1, f1(x._2))).map {
+    val results = aggregatedFailedApps.map(x => (x._1, f1(x._2))).map {
       case (
         Attempt(appId, attemptNumber, startTime, endTime, _, _, containers),
         ErrorAttempt(errorCategory, exception, stage, sourceCodeLine)) =>
         FullAttemptWithErrors(
-          s"""appattempt_1580812675067_${appId}_${"%06d".format(attemptNumber)}""",
+          appId,
+          attemptNumber,
           appIdToUser(appId),
           startTime,
           endTime,
@@ -248,7 +242,7 @@ object Milestone3 {
           stage,
           sourceCodeLine
         )
-    }.foreach(println)
+    }
 
     /*
     // Start by checking all the application Ids from the logs
@@ -281,18 +275,12 @@ object Milestone3 {
     }).flatMap(x => x).map(x => (x.group(1).toInt, x.group(2))).filter(x => missingIds.contains(x._1)).map(x => (x._1, ErrorAttempt(1, x._2, -1, -1)))
     */
 
-    //val file = "answers.txt"
-    //val writer = new BufferedWriter(new FileWriter(file))
-    //
-    //// First point, show Applications with 121 <= appNb  <= 130
-    //apps.filter(app => {
-    //  val appNb = Integer.valueOf(app.applicationId)
-    //  appNb >= 121 && appNb <= 130
-    //})
-    //  .collect()
-    //  .foreach(a => writer.write(a.toString()))
-    //
-    //writer.close()
+    val file = "answers.txt"
+    val writer = new BufferedWriter(new FileWriter(file))
+
+    results.collect().foreach(a => writer.write(a.toString()))
+
+    writer.close()
   }
 
   /** Check if the log corresponds to a type 1 error
@@ -801,9 +789,11 @@ object Milestone3 {
 
   def seqOpAttempts(list: List[Attempt], attempt: ((String, Int), Iterable[LineData])): List[Attempt] = {
     def folder(agg: Attempt, line: LineData): Attempt = (agg, line) match {
-      case (Attempt(a1, a2, _d, endTime, finalStatus, exitCode, containers), LineData(_, _, _, _, startTime, true, _, _)) =>
+      case (Attempt(a1, a2, _, endTime, finalStatus, exitCode, containers), LineData(_, _, 0, _, startTime, true, _, _)) =>
         Attempt(a1, a2, startTime, endTime, finalStatus, exitCode, containers)
-      case (Attempt(a1, a2, startTime, _, _, exitCode, containers), LineData(_, _, _, _, endTime, false, finalStatus, null)) =>
+      case (Attempt(a1, a2, startTime, _, _, exitCode, containers), LineData(_, _, 0, _, endTime, false, finalStatus, null)) =>
+        Attempt(a1, a2, startTime, endTime, finalStatus, exitCode, containers)
+      case (Attempt(a1, a2, startTime, endTime, finalStatus, exitCode, containers), LineData(_, _, 0, _, _, _, _, null)) =>
         Attempt(a1, a2, startTime, endTime, finalStatus, exitCode, containers)
       case (Attempt(a1, a2, startTime, endTime, finalStatus, _, containers), LineData(_, _, exitCode, _, _, _, _, null)) =>
         Attempt(a1, a2, startTime, endTime, finalStatus, exitCode, containers)
@@ -812,8 +802,6 @@ object Milestone3 {
     }
 
     val tempNewAttempt: Attempt = attempt._2.foldLeft[Attempt](Attempt(attempt._1._1, attempt._1._2, "", "", "", 0, Nil))(folder)
-
-    println(tempNewAttempt)
 
     val newAttempt = Attempt(
       tempNewAttempt.applicationId,
