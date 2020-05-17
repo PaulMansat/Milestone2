@@ -205,19 +205,36 @@ object Milestone3 {
       .groupByKey()
       .persist()
 
-    aggregatedFailedApps.map(x => (x._1, f1(x._2))).collect().foreach(x => print(x))
+    //aggregatedFailedApps.map(x => (x._1, f1(x._2))).collect().foreach(x => print(x))
 
-    // Special case of error type 1 : A missing jar does not create
-    // containers (and thus containers logs)
-    // Of the form (appId, ErrorAttempt)
-    // /!\ awful
-    val missingJarCategory1 = logsFormattedPlain.map(x => {
+    // Start by checking all the application Ids from the logs
+    // in [startId, endId]
+    val allIds = logsFormattedPlain.map(_.split("\n")).flatMap(x => x).map(x => {
+      val idPattern = "application_1580812675067_(\\d*)".r
+
+      idPattern.findAllMatchIn(x)
+    }).flatMap(x => x).map(x => x.group(1).toInt).filter(x => (x >= startId) && (x <= endId)).collect().toSet
+
+    // Check all application Ids in [startId, endId]
+    // that appear in the aggregated logs
+    val logsIds =  sc.textFile(aggregatedLogFile).map(appLogContainerPattern.findFirstMatchIn(_))
+                                                  .filter(_.isDefined)
+                                                  .map(_.get.group(1).toInt)
+                                                  .filter(x => x >= startId && x <= endId).collect().toSet
+
+    // Take the set difference of both, to have only the app Ids
+    // that don't have container logs
+    val missingIds = allIds -- logsIds
+
+    // Finally, find the errors that made them fail
+    // and categorize them in category 1
+    val category1NoLogs = logsFormattedPlain.map(x => {
       val error = ".* INFO Client: Deleted staging directory .*iccluster\\d*\\.iccluster\\.epfl\\.ch" +
-        ".*application_1580812675067_(\\d*)\nException in thread \"main\" java.io.FileNotFoundException: File .* does not exist"
+        ".*application_1580812675067_(\\d*)\nException in thread \"main\" (.*): .*"
       val errorPattern = error.r
 
       errorPattern.findAllMatchIn(x)
-    }).flatMap(x => x).map(x => x.group(1).toInt).filter(x => (x >= startId) && (x <= endId)).map(x => (x, ErrorAttempt(1, "java.io.FileNotFoundException", -1, -1)))
+    }).flatMap(x => x).map(x => (x.group(1).toInt, x.group(2))).filter(x => missingIds.contains(x._1)).map(x => (x._1, ErrorAttempt(1, x._2, -1, -1)))
 
     //val file = "answers.txt"
     //val writer = new BufferedWriter(new FileWriter(file))
@@ -603,7 +620,7 @@ object Milestone3 {
 
   def f9(lines: Iterable[String]): ErrorAttempt = {
     // TODO better?
-    ErrorAttempt(9, "", -1, -1)
+    ErrorAttempt(9, "N/A", -1, -1)
   }
 
   def listJoiner[U](l1: List[U], l2: List[U]): List[U] = l1 ++ l2
