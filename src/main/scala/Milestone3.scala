@@ -35,23 +35,23 @@ case class FullAttemptWithErrors(attemptNumber: Int,
                                 ) {
   override def toString: String = {
     s"""
-       |\nAttemptNumber : ${attemptNumber}
+       |\nAttemptNumber : $attemptNumber
        |
-         |User          : ${user}
+         |User          : $user
        |
-         |StartTime     : ${startTime}
+         |StartTime     : $startTime
        |
-         |EndTime       : ${endTime}
+         |EndTime       : $endTime
        |
          |Containers    : ${containers.map(c => s"(${c._1},${c._2})").mkString(", ")}
        |
-         |ErrorCategory : ${errorCategory}
+         |ErrorCategory : $errorCategory
        |
-         |Exception     : ${exception}
+         |Exception     : $exception
        |
-         |Stage         : ${stage}
+         |Stage         : $stage
        |
-         |SourceCodeLine: ${sourceCodeLine} """.stripMargin
+         |SourceCodeLine: $sourceCodeLine """.stripMargin
   }
 }
 
@@ -101,7 +101,7 @@ object Milestone3 {
     val sc = SparkContext.getOrCreate(conf)
 
     // Delimiter for the aggregated application logs
-    val delimiter = "***********************************************************************\n"
+    val delimiter = "***********************************************************************" + System.lineSeparator()
 
     sc.hadoopConfiguration.set("textinputformat.record.delimiter", delimiter)
 
@@ -192,7 +192,8 @@ object Milestone3 {
 
     // RDD of the form (appId -> Array of logs of each containers)
     // Note: key is only None for the end of file (that just contains blank space)
-    val aggregatedFailedApps = sc.textFile(aggregatedLogFile).map(x => {
+    //val delimiter = "***********************************************************************\n"
+    val aggregatedFailedApps = sc.textFile(aggregatedLogFile) /*.map(_.split("\n"))*/ .map(x => {
       val appId = appLogContainerPattern.findFirstMatchIn(x)
       val attemptNumber = attemptNbPattern.findFirstMatchIn(x)
 
@@ -207,8 +208,24 @@ object Milestone3 {
       .groupByKey()
       .persist()
 
-    aggregatedFailedApps.map(x => (x._1, f1(x._2))).collect().foreach(x => println(x))
+    aggregatedFailedApps.map(x => (x._1, f1(x._2))).map {
+      case (
+        Attempt(_, attemptNumber, startTime, endTime, _, containers),
+        ErrorAttempt(errorCategory, exception, stage, sourceCodeLine)) =>
+        FullAttemptWithErrors(
+          attemptNumber,
+          "",
+          startTime,
+          endTime,
+          containers,
+          errorCategory,
+          exception,
+          stage,
+          sourceCodeLine
+        )
+    }
 
+    /*
     // Start by checking all the application Ids from the logs
     // in [startId, endId]
     val allIds = logsFormattedPlain.map(_.split("\n")).flatMap(x => x).map(x => {
@@ -219,10 +236,10 @@ object Milestone3 {
 
     // Check all application Ids in [startId, endId]
     // that appear in the aggregated logs
-    val logsIds =  sc.textFile(aggregatedLogFile).map(appLogContainerPattern.findFirstMatchIn(_))
-                                                  .filter(_.isDefined)
-                                                  .map(_.get.group(1).toInt)
-                                                  .filter(x => x >= startId && x <= endId).collect().toSet
+    val logsIds = sc.textFile(aggregatedLogFile).map(appLogContainerPattern.findFirstMatchIn(_))
+      .filter(_.isDefined)
+      .map(_.get.group(1).toInt)
+      .filter(x => x >= startId && x <= endId).collect().toSet
 
     // Take the set difference of both, to have only the app Ids
     // that don't have container logs
@@ -237,6 +254,7 @@ object Milestone3 {
 
       errorPattern.findAllMatchIn(x)
     }).flatMap(x => x).map(x => (x.group(1).toInt, x.group(2))).filter(x => missingIds.contains(x._1)).map(x => (x._1, ErrorAttempt(1, x._2, -1, -1)))
+    */
 
     //val file = "answers.txt"
     //val writer = new BufferedWriter(new FileWriter(file))
@@ -422,7 +440,7 @@ object Milestone3 {
       val appMasterPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: (.*)".r
       val appMasterLine = appMasterPattern.findFirstMatchIn(driverContainer)
       if (appMasterLine.isDefined) {
-        if(!appMasterLine.get.group(1).contains("ExecutorLostFailure")) {
+        if (!appMasterLine.get.group(1).contains("ExecutorLostFailure")) {
           val appMasterExceptionPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: .*: (.*Exception):*".r
           val appMasterExceptionLine = appMasterExceptionPattern.findFirstMatchIn(driverContainer)
           if (appMasterExceptionLine.isDefined) {
@@ -455,7 +473,7 @@ object Milestone3 {
             }
             chooseExcep(driverContainer, excep_, stageLine)
           }
-          else if (line.contains("ERROR ShortCircuitCache")){
+          else if (line.contains("ERROR ShortCircuitCache")) {
             val shortCircuitPattern = ".*ERROR ShortCircuitCache:.*\n([^:]*):*".r
             val shortCircuitLine = shortCircuitPattern.findFirstMatchIn(line)
             var excep4 = ""
@@ -495,8 +513,9 @@ object Milestone3 {
     }
 
   }
+
   // check and choose the exception to return
-  def chooseExcep(line: String,excep:String,stageLine:(Int, Int)): ErrorAttempt  ={
+  def chooseExcep(line: String, excep: String, stageLine: (Int, Int)): ErrorAttempt = {
     var exception = ""
     val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception):.*".r
     val firstUsefulUtilsMessage = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR Utils: .*\n([^:]*):*".r
@@ -511,9 +530,9 @@ object Milestone3 {
     }
 
     if (!excep.isEmpty) {
-      ErrorAttempt(4,excep,stageLine._1, stageLine._2)
+      ErrorAttempt(4, excep, stageLine._1, stageLine._2)
     } else if (!exception.isEmpty) {
-      ErrorAttempt(4,exception,stageLine._1, stageLine._2)
+      ErrorAttempt(4, exception, stageLine._1, stageLine._2)
     } else {
       null
     }
