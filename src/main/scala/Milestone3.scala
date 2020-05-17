@@ -362,122 +362,145 @@ object Milestone3 {
   }
 
   def f4(lines: Iterable[String]): ErrorAttempt = {
-    val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_000001 on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+
+    val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_(\\d*) on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
+    val mapContainers = lines.map(x => {
+      (containerPattern.findFirstMatchIn(x).get.group(1).toInt, x)
+    }).toMap
+    // find log of  driver's container
+    val driverContainer = mapContainers.get(1).get
+
+    var stageLine = (-1, -1)
     // determine the stage and the source line
     // INFO DAGScheduler: Final stage: ResultStage 0 (collect at App2.scala:22)
     val stageLinePattern = ".*INFO DAGScheduler: Final stage: ResultStage (\\d*) .* at App\\d+.scala:(\\d+) *".r
-    val stageLine = lines.map(
-      _ match {
-        case stageLinePattern(st, l) => (st.toInt, l.toInt)
-        case _ => (-1, -1)
-      }).head
+    val stageLineLine = stageLinePattern.findFirstMatchIn(driverContainer)
+    if (stageLineLine.isDefined) {
+      val s = stageLineLine.get
+      stageLine = (s.group(1).toInt, s.group(2).toInt)
+    }
 
-    val type4res = lines.filter(line => containerPattern.findFirstMatchIn(line).isDefined).map(line => {
-      // search exceptions in applicationMaster and utils
-      // otherwise return exception in the line of WARN Executor
-      val appli_utilExcep = f4_findErrorInAppMasterAndErrorUtil(lines)
+    var tempRes = ErrorAttempt(-1, "", -1, -1)
 
-      // 1
-      if (line.contains("WARN Executor: Issue communicating with driver in heartbeater") && line.contains("org.apache.spark.rpc.RpcTimeoutException")) {
-        val e1 = chooseExcep(lines, "org.apache.spark.rpc.RpcTimeoutException", appli_utilExcep, stageLine)
-        e1
+    //1
+    if (driverContainer.contains("than spark.driver.maxResultSize")) {
+      tempRes = ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
+    }
+
+    //3 -> driver
+    else if (driverContainer.contains("WARN BlockManager: Failed to fetch")) {
+      val warnBlockManagerPattern = ".*WARN BlockManager: Failed to fetch .* (.*Exception|.*Error): .*".r
+      val excep3 = driverContainer.replace('\n', ' ') match {
+        case warnBlockManagerPattern(e) => e.split(":").take(1)(0)
+        case _ => ""
       }
-      //2
-      else if (line.contains("WARN BlockManager: Failed to fetch")) {
-        //WARN BlockManager: Failed to fetch ... (*Exception): Exception thrown in awaitResult:
-        val warnBlockManagerPattern = ".*WARN BlockManager: Failed to fetch .* (.*Exception|.*Error): .*".r
-        val excep2 = line.replace('\n', ' ') match {
-          case warnBlockManagerPattern(e) => e
-          case _ => ""
+      // search exceptions in INFO/ERROR applicationMaster and ERROR Utils
+      // otherwise return exception in the line of the corresponding cases
+      tempRes = chooseExcep(driverContainer, excep3, stageLine)
+    }
+    //4 -> driver
+    else if (driverContainer.contains("WARN TransportChannelHandler:")) {
+      val TransportChannelHandlerPattern = ".*WARN TransportChannelHandler: .* (.*Exception|.*Error): .*".r
+      val excep4 = driverContainer.replace('\n', ' ') match {
+        case TransportChannelHandlerPattern(e) => e.split(":").take(1)(0)
+        case _ => ""
+      }
+      tempRes = chooseExcep(driverContainer, excep4, stageLine)
+    }
+    //6 -> driver
+    else if (driverContainer.contains("ERROR TaskResultGetter")) {
+      val taskResultGetterPattern = ".*ERROR TaskResultGetter: .* (.*Exception|.*Error): .*".r
+      val excep6 = driverContainer.replace('\n', ' ') match {
+        case taskResultGetterPattern(e) => e.split(":").take(1)(0)
+        case _ => ""
+      }
+      tempRes = chooseExcep(driverContainer, excep6, stageLine)
+    }
+    //7 -> driver
+    else if (driverContainer.contains("ERROR ResourceLeakDetector") || driverContainer.contains("ERROR TransportResponseHandler")) {
+      tempRes = chooseExcep(driverContainer, "", stageLine)
+
+
+    }
+    // TBD -> Driver
+    else {
+      val taskSetManagerPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR TaskSetManager: (.*)\n".r
+      val taskSetManagerLine = taskSetManagerPattern.findFirstMatchIn(driverContainer)
+
+      var bool = 0
+      if (taskSetManagerLine.isDefined) {
+        if (taskSetManagerLine.get.group(1).contains("driver")) {
+          tempRes = chooseExcep(driverContainer, "", stageLine)
         }
+      }
+    }
 
-        chooseExcep(lines, excep2, appli_utilExcep, stageLine)
+    val execContainer = mapContainers.filter(x => x._1 > 1)
 
-      }
-      //3 
-      else if (line.contains("spark.driver.maxResultSize")) {
-        val maxResultPattern = ".*ApplicationMaster: .* (.*Exception|.*Error): Job aborted due to stage failure: Total size of serialized results of .* than spark.driver.maxResultSize .*".r
-        val excep3 = line.replace('\n', ' ') match {
-          case maxResultPattern(e) => e
-          case _ => ""
+    if (tempRes.errorCategory == -1) {
+      tempRes = execContainer.foldLeft(tempRes)((z, x) => {
+        if (z.errorCategory == -1) {
+          val line = x._2
+          //2 -> executor
+          if (line.contains("WARN Executor: Issue communicating with driver in heartbeater") && line.contains("org.apache.spark.rpc.RpcTimeoutException")) {
+            chooseExcep(driverContainer, "org.apache.spark.rpc.RpcTimeoutException", stageLine)
+          }
+          //5 -> executor
+          else if (line.contains("ERROR OneForOneBlockFetcher: Failed while starting block fetches")) {
+            val blockFetcherPattern = ".*ERROR OneForOneBlockFetcher: Failed while starting block fetches (.*Exception|.*Error): .*".r
+            val excep5 = line.replace('\n', ' ') match {
+              case blockFetcherPattern(e) => e.split(":").take(1)(0)
+              case _ => ""
+            }
+            chooseExcep(driverContainer, excep5, stageLine)
+          }
+          // 8
+          else if (line.replace('\n', ' ').matches(".*ERROR Executor:.* driver .*")) {
+            ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
+          } else {
+            z
+          }
+        } else {
+          z
         }
-        chooseExcep(lines, excep3, appli_utilExcep, stageLine)
-      }
-      //4
-      else if (line.contains("WARN TransportChannelHandler:")) {
-        val TransportChannelHandlerPattern = ".*WARN TransportChannelHandler: .* (.*Exception|.*Error): .*".r
-        val excep4 = line.replace('\n', ' ') match {
-          case TransportChannelHandlerPattern(e) => e
-          case _ => ""
-        }
-        chooseExcep(lines, excep4, appli_utilExcep, stageLine)
-      }
-      //5
-      else if (line.contains("ERROR OneForOneBlockFetcher: Failed while starting block fetches")) {
-        val blockFetcherPattern = ".*ERROR OneForOneBlockFetcher: Failed while starting block fetches (.*Exception|.*Error): .*".r
-        val excep5 = line.replace('\n', ' ') match {
-          case blockFetcherPattern(e) => e
-          case _ => ""
-        }
-        chooseExcep(lines, excep5, appli_utilExcep, stageLine)
-      }
-      //6
-      else if (line.contains("ERROR Executor:")) {
-        val excutorErrorWithDriverPattern = ".*ERROR Executor: .* driver .*"
-        val excep5 = line.replace('\n', ' ').matches(excutorErrorWithDriverPattern)
-        ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
-      }
-      //7
-      else if (line.contains("ERROR ResourceLeakDetector") || line.contains("ERROR TaskResultGetter") || line.contains("ERROR TransportResponseHandler")) {
-        chooseExcep(lines, "", appli_utilExcep, stageLine)
-      }
-      else {
-        null
-      }
+      })
+    }
 
-      // end map
-    }).headOption
 
     // if all is not the case
     // call next function
-    val res = type4res.orNull
-    if (res == null) {
+    if (tempRes.errorCategory != -1) {
+      tempRes
+    } else {
       f5and6(lines)
-    } else {
-      res
     }
-  }
 
+  }
   // check and choose the exception to return
-  def chooseExcep(lines: Iterable[String], excep: String, appli_utilExcep: (String, String), stageLine: (Int, Int)): ErrorAttempt = {
-    if (!appli_utilExcep._1.isEmpty) {
-      ErrorAttempt(4, appli_utilExcep._1, stageLine._1, stageLine._2)
-    } else if (!appli_utilExcep._2.isEmpty) {
-      ErrorAttempt(4, appli_utilExcep._2, stageLine._1, stageLine._2)
-    } else if (!excep.isEmpty) {
-      ErrorAttempt(4, excep, stageLine._1, stageLine._2)
-    } else {
+  def chooseExcep(line: String,excep:String,stageLine:(Int, Int)): ErrorAttempt  ={
+
+    var exception = ""
+    val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception):.*".r
+
+    val firstUsefulUtilsMessage = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR Utils: .*\n([^:]*):*".r
+    val UtilsExceptionLine = firstUsefulUtilsMessage.findFirstMatchIn(line)
+    if (UtilsExceptionLine.isDefined)
+      exception = UtilsExceptionLine.get.group(1)
+
+
+    if (exception.isEmpty) {
+      val appliExcep = appliMasterPattern.findFirstMatchIn(line)
+      if (appliExcep.isDefined)
+        exception = appliExcep.get.group(2)
+    }
+
+    if (!exception.isEmpty ){
+      ErrorAttempt(4,exception,stageLine._1, stageLine._2)
+    } else if (!excep.isEmpty){
+      ErrorAttempt(4,excep,stageLine._1, stageLine._2)
+    } else{
       null
     }
-  }
-
-  def f4_findErrorInAppMasterAndErrorUtil(lines: Iterable[String]): (String, String) = {
-    val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception:) .*".r
-    val appliExcep = lines.filter(l => l.contains("ApplicationMaster:")).map(_.replace('\n', ' ')).map {
-      _ match {
-        case appliMasterPattern(_, e) => e.split(":").take(1)(0)
-        case _ => ""
-      }
-    }
-
-    val errUtilsPattern = ".*ERROR Utils: .* task-result-getter-\\d+(.*) .*".r
-    val utilExcep = lines.filter(l => l.contains("ERROR Utils:")).map(_.replace('\n', ' ')).map {
-      _ match {
-        case errUtilsPattern(e) => e.split(":").take(1)(0)
-        case _ => ""
-      }
-    }
-    (appliExcep.toString(), utilExcep.toString())
   }
 
   def f5and6(lines: Iterable[String]): ErrorAttempt = {
