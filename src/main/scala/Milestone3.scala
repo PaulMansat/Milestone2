@@ -364,17 +364,16 @@ object Milestone3 {
   }
 
   def f4(lines: Iterable[String]): ErrorAttempt = {
-
+    // find driver's container
     val containerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_(\\d*) on iccluster\\d*\\.iccluster\\.epfl\\.ch.*".r
     val mapContainers = lines.map(x => {
       (containerPattern.findFirstMatchIn(x).get.group(1).toInt, x)
     }).toMap
-    // find log of  driver's container
+
     val driverContainer = mapContainers.get(1).get
 
     var stageLine = (-1, -1)
     // determine the stage and the source line
-    // INFO DAGScheduler: Final stage: ResultStage 0 (collect at App2.scala:22)
     val stageLinePattern = ".*INFO DAGScheduler: Final stage: ResultStage (\\d*) .* at App\\d+.scala:(\\d+) *".r
     val stageLineLine = stageLinePattern.findFirstMatchIn(driverContainer)
     if (stageLineLine.isDefined) {
@@ -388,48 +387,52 @@ object Milestone3 {
     if (driverContainer.contains("than spark.driver.maxResultSize")) {
       tempRes = ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
     }
-
-    //3 -> driver
+    //2 -> driver
     else if (driverContainer.contains("WARN BlockManager: Failed to fetch")) {
       val warnBlockManagerPattern = ".*WARN BlockManager: Failed to fetch .* (.*Exception|.*Error): .*".r
-      val excep3 = driverContainer.replace('\n', ' ') match {
+      val excep2 = driverContainer.replace('\n', ' ') match {
         case warnBlockManagerPattern(e) => e.split(":").take(1)(0)
         case _ => ""
       }
       // search exceptions in INFO/ERROR applicationMaster and ERROR Utils
       // otherwise return exception in the line of the corresponding cases
+      tempRes = chooseExcep(driverContainer, excep2, stageLine)
+    }
+    //3 -> driver
+    else if (driverContainer.contains("WARN TransportChannelHandler:")) {
+      val TransportChannelHandlerPattern = ".*WARN TransportChannelHandler: .*\n(.*Exception|.*Error): .*".r
+      val transportChannelHandelerLine = TransportChannelHandlerPattern.findFirstMatchIn(driverContainer)
+      var excep3 = ""
+      if (transportChannelHandelerLine.isDefined) {
+        excep3 = transportChannelHandelerLine.get.group(1)
+      }
       tempRes = chooseExcep(driverContainer, excep3, stageLine)
     }
     //4 -> driver
-    else if (driverContainer.contains("WARN TransportChannelHandler:")) {
-      val TransportChannelHandlerPattern = ".*WARN TransportChannelHandler: .* (.*Exception|.*Error): .*".r
-      val excep4 = driverContainer.replace('\n', ' ') match {
-        case TransportChannelHandlerPattern(e) => e.split(":").take(1)(0)
-        case _ => ""
-      }
-      tempRes = chooseExcep(driverContainer, excep4, stageLine)
+    else if (driverContainer.contains("ERROR TaskResultGetter") && !driverContainer.contains("ERROR YarnClusterScheduler")) {
+      tempRes = chooseExcep(driverContainer, "", stageLine)
     }
-    //6 -> driver
-    else if (driverContainer.contains("ERROR TaskResultGetter")) {
-      val taskResultGetterPattern = ".*ERROR TaskResultGetter: .* (.*Exception|.*Error): .*".r
-      val excep6 = driverContainer.replace('\n', ' ') match {
-        case taskResultGetterPattern(e) => e.split(":").take(1)(0)
-        case _ => ""
-      }
-      tempRes = chooseExcep(driverContainer, excep6, stageLine)
-    }
-    //7 -> driver
+    //5 -> driver
     else if (driverContainer.contains("ERROR ResourceLeakDetector") || driverContainer.contains("ERROR TransportResponseHandler")) {
       tempRes = chooseExcep(driverContainer, "", stageLine)
-
-
     }
-    // TBD -> Driver
+    // 6 -> driver
     else {
+      // ERROR ApplicationMaster without ExecutorLostFailure
+      val appMasterPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: (.*)".r
+      val appMasterLine = appMasterPattern.findFirstMatchIn(driverContainer)
+      if (appMasterLine.isDefined) {
+        if(!appMasterLine.get.group(1).contains("ExecutorLostFailure")) {
+          val appMasterExceptionPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: User class threw exception: org.apache.spark.SparkException: .*: (.*Exception):*".r
+          val appMasterExceptionLine = appMasterExceptionPattern.findFirstMatchIn(driverContainer)
+          if (appMasterExceptionLine.isDefined) {
+            tempRes = chooseExcep(driverContainer, appMasterExceptionLine.get.group(1), stageLine)
+          }
+        }
+      }
+      // ERROR TaskSetManager
       val taskSetManagerPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR TaskSetManager: (.*)\n".r
       val taskSetManagerLine = taskSetManagerPattern.findFirstMatchIn(driverContainer)
-
-      var bool = 0
       if (taskSetManagerLine.isDefined) {
         if (taskSetManagerLine.get.group(1).contains("driver")) {
           tempRes = chooseExcep(driverContainer, "", stageLine)
@@ -437,28 +440,42 @@ object Milestone3 {
       }
     }
 
+    // in executor container
     val execContainer = mapContainers.filter(x => x._1 > 1)
 
     if (tempRes.errorCategory == -1) {
       tempRes = execContainer.foldLeft(tempRes)((z, x) => {
         if (z.errorCategory == -1) {
           val line = x._2
-          //2 -> executor
-          if (line.contains("WARN Executor: Issue communicating with driver in heartbeater") && line.contains("org.apache.spark.rpc.RpcTimeoutException")) {
-            chooseExcep(driverContainer, "org.apache.spark.rpc.RpcTimeoutException", stageLine)
-          }
-          //5 -> executor
-          else if (line.contains("ERROR OneForOneBlockFetcher: Failed while starting block fetches")) {
+          if (line.contains("ERROR OneForOneBlockFetcher: Failed while starting block fetches")) {
             val blockFetcherPattern = ".*ERROR OneForOneBlockFetcher: Failed while starting block fetches (.*Exception|.*Error): .*".r
-            val excep5 = line.replace('\n', ' ') match {
+            val excep_ = line.replace('\n', ' ') match {
               case blockFetcherPattern(e) => e.split(":").take(1)(0)
               case _ => ""
             }
-            chooseExcep(driverContainer, excep5, stageLine)
+            chooseExcep(driverContainer, excep_, stageLine)
           }
-          // 8
-          else if (line.replace('\n', ' ').matches(".*ERROR Executor:.* driver .*")) {
-            ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
+          else if (line.contains("ERROR ShortCircuitCache")){
+            val shortCircuitPattern = ".*ERROR ShortCircuitCache:.*\n([^:]*):*".r
+            val shortCircuitLine = shortCircuitPattern.findFirstMatchIn(line)
+            var excep4 = ""
+            if (shortCircuitLine.isDefined) {
+              excep4 = shortCircuitLine.get.group(1)
+            }
+            chooseExcep(driverContainer, excep4, stageLine)
+          }
+          else if (line.contains("ERROR Executor:")) {
+            val executorPattern = ".* ERROR Executor: (.*)".r
+            val executorLine = executorPattern.findFirstMatchIn(line)
+            if (executorLine.isDefined) {
+              if (executorLine.get.group(1).contains("driver")) {
+                ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
+              } else {
+                z
+              }
+            } else {
+              z
+            }
           } else {
             z
           }
@@ -480,27 +497,24 @@ object Milestone3 {
   }
   // check and choose the exception to return
   def chooseExcep(line: String,excep:String,stageLine:(Int, Int)): ErrorAttempt  ={
-
     var exception = ""
     val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception):.*".r
-
     val firstUsefulUtilsMessage = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR Utils: .*\n([^:]*):*".r
     val UtilsExceptionLine = firstUsefulUtilsMessage.findFirstMatchIn(line)
-    if (UtilsExceptionLine.isDefined)
+    if (UtilsExceptionLine.isDefined) {
       exception = UtilsExceptionLine.get.group(1)
-
-
+    }
     if (exception.isEmpty) {
       val appliExcep = appliMasterPattern.findFirstMatchIn(line)
       if (appliExcep.isDefined)
         exception = appliExcep.get.group(2)
     }
 
-    if (!exception.isEmpty ){
-      ErrorAttempt(4,exception,stageLine._1, stageLine._2)
-    } else if (!excep.isEmpty){
+    if (!excep.isEmpty) {
       ErrorAttempt(4,excep,stageLine._1, stageLine._2)
-    } else{
+    } else if (!exception.isEmpty) {
+      ErrorAttempt(4,exception,stageLine._1, stageLine._2)
+    } else {
       null
     }
   }
