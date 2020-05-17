@@ -1,5 +1,9 @@
+import java.io.File
+
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
+
+import scala.io.Source
 
 // Various data structures for simplifying understanding of the code
 case class LineData(applicationId: String,
@@ -19,7 +23,9 @@ case class Attempt(applicationId: String,
                    finalStatus: String,
                    containers: List[(Int, String)])
 
-case class ErrorAttempt(errorCategory: Int, exception: String, stage: Int, sourceCodeLine: Int)
+case class ErrorAttempt(errorCategory: Int, exception: String, stage: Int, sourceCodeLine: Int) {
+  override def toString: String = s"""errorCategory: $errorCategory, exception $exception, stage $stage, sourceCodeLine $sourceCodeLine"""
+}
 
 case class FullAttemptWithErrors(attemptNumber: Int,
                                  user: String,
@@ -447,18 +453,14 @@ object Milestone3 {
   def f4_findErrorInAppMasterAndErrorUtil(lines: Iterable[String]): (String, String) = {
     val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception:) .*".r
     val appliExcep = lines.filter(l => l.contains("ApplicationMaster:")).map(_.replace('\n', ' ')).map {
-      _ match {
-        case appliMasterPattern(_, e) => e.split(":").take(1)(0)
-        case _ => ""
-      }
+      case appliMasterPattern(_, e) => e.split(":").take(1)(0)
+      case _ => ""
     }
 
     val errUtilsPattern = ".*ERROR Utils: .* task-result-getter-\\d+(.*) .*".r
     val utilExcep = lines.filter(l => l.contains("ERROR Utils:")).map(_.replace('\n', ' ')).map {
-      _ match {
-        case errUtilsPattern(e) => e.split(":").take(1)(0)
-        case _ => ""
-      }
+      case errUtilsPattern(e) => e.split(":").take(1)(0)
+      case _ => ""
     }
     (appliExcep.toString(), utilExcep.toString())
   }
@@ -574,31 +576,64 @@ object Milestone3 {
   }
 
   def genericFindErrorAttempt(errorCategory: Int, line: String): ErrorAttempt = {
-    // Get stage (highest stage information in the log => TODO probably not correct to do that here)
+    // Get stage (highest stage information in the log => TODO probably not correct to do that)
     val stagePattern = "stage (\\d)".r
-    val stages = stagePattern.findAllIn(line)
+    val stages = stagePattern.findAllMatchIn(line)
     var stage = -1
-    if (!stages.hasNext) {
-      stage = stages.map(_.toInt).max
+    if (stages.nonEmpty) {
+      stage = stages.map(x => {
+        var res = -1
+        try {
+          res = x.group(1).toInt
+        } catch {
+          case _: NumberFormatException =>
+        }
+        res
+      }).max
     }
 
-    // Get exception (take the first one available currently)
+    // Get exception (take the first one available currently and any more specific than org.apache.spark.SparkException)
     val exceptionPattern = "((java\\.[^(\\s|$)]*(Exception|Error)|org\\.apache\\.spark\\.[^(\\s|$)]*(Exception|Error)))".r
-    var exception = ""
-    val res = exceptionPattern.findFirstIn(line)
-    if (res.isDefined) {
-      exception = res.get
+    val defaultException = "org.apache.spark.SparkException"
+    var exception = defaultException
+    val exceptionMatches = exceptionPattern.findAllMatchIn(line)
+    if (exceptionMatches.nonEmpty) {
+      exception = exceptionMatches.map(_.group(1)).reduce((acc, newVal) => (acc, newVal) match {
+        case (`defaultException`, any) => any
+        case (any, `defaultException`) => any
+        case (any, _) => any
+      })
     }
 
     // Get line (lowest line information in the log)
-    val lineExecutorPattern = "(App\\d$.main\\(App\\d*.scala:(\\d*)\\)|App7.scala:(\\d)\\) failed)".r
-    val lines = lineExecutorPattern.findAllIn(line)
-    var linNumber = -1
-    if (!lines.hasNext) {
-      linNumber = stages.map(_.toInt).min
+    val lineExecutorPattern = ("(\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} INFO DAGScheduler: .* \\(.* at App\\d*.scala:(\\d*)\\) failed" +
+      "|App\\d\\$.main\\(App\\d*.scala:(\\d+)\\)" +
+      "|App\\d.scala:(\\d+)\\) failed)").r
+    val lines = lineExecutorPattern.findAllMatchIn(line)
+    var lineNumber = Int.MaxValue
+    if (lines.nonEmpty) {
+      lineNumber = lines.map(x => {
+        var res = Int.MaxValue
+        try {
+          res = x.group(1).toInt
+        } catch {
+          case _: NumberFormatException =>
+        }
+        if (res == Int.MaxValue) {
+          try {
+            res = x.group(2).toInt
+          } catch {
+            case _: NumberFormatException =>
+          }
+        }
+        res
+      }).min
+    }
+    if (lineNumber == Int.MaxValue) {
+      lineNumber = -1
     }
 
-    ErrorAttempt(errorCategory, exception, stage, linNumber)
+    ErrorAttempt(errorCategory, exception, stage, lineNumber)
   }
 
   def f9(lines: Iterable[String]): ErrorAttempt = {
