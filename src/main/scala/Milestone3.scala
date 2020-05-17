@@ -465,10 +465,12 @@ object Milestone1 {
   def f5and6(lines: Iterable[String]): ErrorAttempt = {
     val ContainerPattern = "Container: container_e02_1580812675067_\\d*_\\d*_(\\d*) on (iccluster\\d*\\.iccluster\\.epfl\\.ch).*".r
 
+    // CHANGE
     val containers = lines.map(x => {
       val containerLine = ContainerPattern.findFirstMatchIn(x)
       (containerLine.get.group(1).toInt, (containerLine.get.group(2), x))
     }).toMap
+
 
     val driverContainer = containers.get(1).get._2
 
