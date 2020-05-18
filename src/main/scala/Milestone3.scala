@@ -1,10 +1,6 @@
-import java.io.{BufferedWriter, File, FileWriter}
-import java.util.Scanner
+import java.io.{BufferedWriter, FileWriter}
 
-import org.apache.hadoop.fs.{FileSystem, Path}
-import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
-import scala.collection.JavaConverters._
 
 // Various data structures for simplifying understanding of the code
 case class LineData(applicationId: String,
@@ -605,7 +601,7 @@ object Milestone3 {
     } else if (!exception.isEmpty) {
       ErrorAttempt(4, exception, stageLine._1, stageLine._2)
     } else {
-      null
+      ErrorAttempt(-1, "", -1, -1)
     }
   }
 
