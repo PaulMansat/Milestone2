@@ -1,7 +1,10 @@
-import java.io.{BufferedWriter, FileWriter}
+import java.io.{BufferedWriter, File, FileWriter}
+import java.util.Scanner
 
+import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
+import scala.collection.JavaConverters._
 
 // Various data structures for simplifying understanding of the code
 case class LineData(applicationId: String,
@@ -99,16 +102,14 @@ object Milestone3 {
 
   def main(args: Array[String]): Unit = {
     // Remove unwanted spark logs
-    Logger.getLogger("org").setLevel(Level.OFF)
-    Logger.getLogger("akka").setLevel(Level.OFF)
+    /*Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)*/
 
     val conf = new SparkConf().setAppName("app").setMaster("local[*]")
     val sc = SparkContext.getOrCreate(conf)
 
     // Delimiter for the aggregated application logs
-    val delimiter = "***********************************************************************" + System.lineSeparator()
-
-    sc.hadoopConfiguration.set("textinputformat.record.delimiter", delimiter)
+    val delimiter = "\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*" + System.lineSeparator()
 
     // Patterns declaration for parsing the data we're interested by or filtering it
     val datePattern = "(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3})".r
@@ -186,7 +187,7 @@ object Milestone3 {
       appId >= startId && appId <= endId
     })
       // Persist the result as it will be used multiple times
-      .persist()
+      //.persist()
 
     // Get a map of applicationId => all Attempts made on that ID, sorted by attempt number
     val attempts = logsFormatted
@@ -211,7 +212,9 @@ object Milestone3 {
 
     // RDD of the form (appId -> Array of logs of each containers)
     // Note: key is only None for the end of file (that just contains blank space)
-    val aggregatedFailedApps = sc.textFile(aggregatedLogFile).map(x => {
+    //TODO : CONVERT THIS BACK TO RDD[Iterator[String]]
+  val aggregatedFailedApps = sc.textFile(aggregatedLogFile)
+      .map(x => {
       val appId = appLogContainerPattern.findFirstMatchIn(x)
       val attemptNumber = attemptNbPattern.findFirstMatchIn(x)
 
