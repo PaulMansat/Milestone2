@@ -303,8 +303,9 @@ object Milestone3 {
         null
     }).headOption
 
+    // If ErrorAttempt is well defined, return the result
+    // Otherwise, it means that all checks are not passed. Then call next error function 2 (i.e f2)
     val res = missingClass.orNull
-
     if (res == null) {
       f2(lines)
     } else {
@@ -346,6 +347,8 @@ object Milestone3 {
         null
     }).find(_ != null)
 
+    // If ErrorAttempt is well defined, return the result
+    // Otherwise, it means that all checks are not passed. Then call next error function 3 (i.e f3)
     val res = missingFile.orNull
     if (res == null) {
       f3(lines)
@@ -403,6 +406,8 @@ object Milestone3 {
 
     val res = drvierError.orNull
 
+    // If ErrorAttempt is well defined, return the result
+    // Otherwise, it means that all checks are not passed. Then call next error function 4 (i.e f4)
     if (res == null) {
       f4(lines)
     } else {
@@ -433,7 +438,7 @@ object Milestone3 {
       stageLine = (s.group(1).toInt, s.group(2).toInt)
     }
 
-    // initilize the potential Error Attempt
+    // initialize the potential Error Attempt
     var tempRes = ErrorAttempt(-1, "", -1, -1)
 
     // I. we start by studying the driver's container for type 4 error message
@@ -474,7 +479,8 @@ object Milestone3 {
     else if (driverContainer.contains("ERROR ResourceLeakDetector") || driverContainer.contains("ERROR TransportResponseHandler")) {
       tempRes = chooseExcep(driverContainer, "", stageLine)
     }
-    // 6 -> driver
+    // checks that the error comes from ERROR ApplicationMaster and make sure that the error message does
+    // not contains ExecutorLostFailure, which is not a type 4 error
     else {
       // ERROR ApplicationMaster without ExecutorLostFailure
       val appMasterPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR ApplicationMaster: (.*)".r
@@ -488,7 +494,8 @@ object Milestone3 {
           }
         }
       }
-      // ERROR TaskSetManager
+      // checks that the error comes from ERROR TaskSetManager and make sure that the error message does
+      // contain "driver"
       val taskSetManagerPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR TaskSetManager: (.*)\n".r
       val taskSetManagerLine = taskSetManagerPattern.findFirstMatchIn(driverContainer)
       if (taskSetManagerLine.isDefined) {
@@ -502,9 +509,12 @@ object Milestone3 {
     val execContainer = mapContainers.filter(x => x._1 > 1)
 
     if (tempRes.errorCategory == -1) {
+      // Go through executor's log and check error cases
       tempRes = execContainer.foldLeft(tempRes)((z, x) => {
         if (z.errorCategory == -1) {
+          // fetch the executor's log
           val line = x._2
+          // checks that the error comes from ERROR OneForOneBlockFetcher
           if (line.contains("ERROR OneForOneBlockFetcher: Failed while starting block fetches")) {
             val blockFetcherPattern = ".*ERROR OneForOneBlockFetcher: Failed while starting block fetches (.*Exception|.*Error): .*".r
             val excep_ = line.replace('\n', ' ') match {
@@ -513,6 +523,7 @@ object Milestone3 {
             }
             chooseExcep(driverContainer, excep_, stageLine)
           }
+          // checks that the error comes from ERROR ShortCircuitCache
           else if (line.contains("ERROR ShortCircuitCache")) {
             val shortCircuitPattern = ".*ERROR ShortCircuitCache:.*\n([^:]*):*".r
             val shortCircuitLine = shortCircuitPattern.findFirstMatchIn(line)
@@ -522,30 +533,35 @@ object Milestone3 {
             }
             chooseExcep(driverContainer, excep4, stageLine)
           }
+          // checks that the error comes from ERROR Executor and make sure that the error
+          // does contain "driver"
           else if (line.contains("ERROR Executor:")) {
             val executorPattern = ".* ERROR Executor: (.*)".r
             val executorLine = executorPattern.findFirstMatchIn(line)
             if (executorLine.isDefined) {
               if (executorLine.get.group(1).contains("driver")) {
                 ErrorAttempt(4, "org.apache.spark.SparkException", stageLine._1, stageLine._2)
+              // Otherwise, return the original accumulator
               } else {
                 z
               }
+            // Otherwise, return the original accumulator
             } else {
               z
             }
+            // Otherwise, return the original accumulator
           } else {
             z
           }
+        // Otherwise, return the original accumulator
         } else {
           z
         }
       })
     }
 
-
-    // if all is not the case
-    // call next function
+    // If ErrorAttempt is well defined, return the result
+    // Otherwise, it means that all checks are not passed. Then call next error function 5 (i.e f5and6)
     if (tempRes.errorCategory != -1) {
       tempRes
     } else {
@@ -564,18 +580,23 @@ object Milestone3 {
     */
   def chooseExcep(line: String, excep: String, stageLine: (Int, Int)): ErrorAttempt = {
     var exception = ""
+    // Determine the regex pattern for error messages coming from INFO/ERROR ApplicationMaster and ERROR Utils
     val appliMasterPattern = ".*(ERROR|INFO) ApplicationMaster: .* threw exception: (.*Exception):.*".r
     val firstUsefulUtilsMessage = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR Utils: .*\n([^:]*):*".r
     val UtilsExceptionLine = firstUsefulUtilsMessage.findFirstMatchIn(line)
+    // When ERROR Utils returns the exception
     if (UtilsExceptionLine.isDefined) {
       exception = UtilsExceptionLine.get.group(1)
     }
+    // When ERROR Utils does not return the exception, search for the exception in INFO/ERROR ApplicationMaster
     if (exception.isEmpty) {
       val appliExcep = appliMasterPattern.findFirstMatchIn(line)
       if (appliExcep.isDefined)
         exception = appliExcep.get.group(2)
     }
 
+    // When the excep is not empty, return the corresponding ErrorAttempt with excep as the final exception.
+    // Otherwise, use exception found in ERROR Utils or INFO/ERROR ApplicationMaster (if defined)
     if (!excep.isEmpty) {
       ErrorAttempt(4, excep, stageLine._1, stageLine._2)
     } else if (!exception.isEmpty) {
@@ -674,6 +695,8 @@ object Milestone3 {
         stage = stageLine.get.group(1).toInt
     }
 
+    // If ErrorAttempt is well defined, return the result
+    // Otherwise, it means that all checks are not passed. Then call next error function 7 (i.e f7)
     if (exceptionAndType._1 != "" && exceptionAndType._2 != -1 && stage != -1) {
       //println(exceptionAndType._2 + ", "+ exceptionAndType._1 + ", " + stage + ", " + line)
       ErrorAttempt(exceptionAndType._2, exceptionAndType._1, stage, line)
@@ -692,6 +715,8 @@ object Milestone3 {
 
     val firstError = firstErrorPattern.findFirstIn(driverContainerLine)
 
+    // If firstError is well defined, return the result ErrorAttempt
+    // Otherwise, it means that all checks are not passed. Then call next error function 8 (i.e f8)
     if (firstError.isDefined) {
       genericFindErrorAttempt(7, driverContainerLine)
     } else {
@@ -708,6 +733,8 @@ object Milestone3 {
     val firstErrorPattern = "\\d{2}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} ERROR".r
 
     val linesWithErrors = lines.filter(line => firstErrorPattern.findFirstIn(line).isDefined)
+    // If linesWithErrors is well defined, return the result ErrorAttempt
+    // Otherwise, it means that all checks are not passed. Then call next error function 9 (i.e f9)
     if (linesWithErrors.nonEmpty) {
       genericFindErrorAttempt(8, linesWithErrors.head)
     } else {
