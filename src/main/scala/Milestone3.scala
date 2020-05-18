@@ -397,10 +397,14 @@ object Milestone3 {
         if (stageMatch.nonEmpty)
           stage = stageMatch.last.group(2).toInt
 
+        if (errorMatch.isDefined) {
+          val errorString = errorMatch.get.group(2)
 
-        if (errorMatch.isDefined)
-          ErrorAttempt(3, errorMatch.get.group(2), stage, errorLine)
-
+          if (errorString.indexOf(":") != -1)
+            ErrorAttempt(3, errorString.substring(0, errorString.indexOf(":")), stage, errorLine)
+          else
+            ErrorAttempt(3, errorString, stage, errorLine)
+        }
         else
           null
       } else
